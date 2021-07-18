@@ -8,14 +8,44 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var oo = ContentViewOO()
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            List(oo.data) { datum in
+                Text(datum.name)
+            }
+        }
+        .onAppear {
+            oo.fetch()
+        }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct ContentView_Preview: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
+}
+
+// Observable Object
+import Combine
+import SwiftUI
+
+class ContentViewOO: ObservableObject {
+    @Published var data: [ContentViewDO] = []
+    
+    func fetch() {
+        data = [ContentViewDO(name: "Datum 1"),
+                ContentViewDO(name: "Datum 2"),
+                ContentViewDO(name: "Datum 3")]
+    }
+}
+
+// Data Object
+import Foundation
+
+struct ContentViewDO: Identifiable {
+    let id = UUID()
+    var name: String
 }
