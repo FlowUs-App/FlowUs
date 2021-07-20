@@ -11,6 +11,8 @@
 		4DBDB0CA26A4D85300B01255 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDB0C926A4D85300B01255 /* ContentView.swift */; };
 		4DBDB0CC26A4D85300B01255 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DBDB0CB26A4D85300B01255 /* Assets.xcassets */; };
 		4DBDB0CF26A4D85300B01255 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DBDB0CE26A4D85300B01255 /* Preview Assets.xcassets */; };
+		4DE3146126A78F6A007A51FE /* ContentOO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE3146026A78F6A007A51FE /* ContentOO.swift */; };
+		4DE3146526A78FDE007A51FE /* ContentDO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE3146426A78FDE007A51FE /* ContentDO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		4DBDB0CB26A4D85300B01255 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DBDB0CE26A4D85300B01255 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4DBDB0D026A4D85300B01255 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DE3146026A78F6A007A51FE /* ContentOO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentOO.swift; sourceTree = "<group>"; };
+		4DE3146426A78FDE007A51FE /* ContentDO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,9 @@
 		4DBDB0C626A4D85300B01255 /* FlowUs */ = {
 			isa = PBXGroup;
 			children = (
+				4DE3145F26A78F2F007A51FE /* DataObjects */,
+				4DE3145E26A78F1F007A51FE /* ObservableObjects */,
+				4DE3145D26A78EF4007A51FE /* Views */,
 				4DBDB0C726A4D85300B01255 /* FlowUsApp.swift */,
 				4DBDB0C926A4D85300B01255 /* ContentView.swift */,
 				4DBDB0CB26A4D85300B01255 /* Assets.xcassets */,
@@ -67,6 +74,29 @@
 				4DBDB0CE26A4D85300B01255 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4DE3145D26A78EF4007A51FE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4DE3145E26A78F1F007A51FE /* ObservableObjects */ = {
+			isa = PBXGroup;
+			children = (
+				4DE3146026A78F6A007A51FE /* ContentOO.swift */,
+			);
+			path = ObservableObjects;
+			sourceTree = "<group>";
+		};
+		4DE3145F26A78F2F007A51FE /* DataObjects */ = {
+			isa = PBXGroup;
+			children = (
+				4DE3146426A78FDE007A51FE /* ContentDO.swift */,
+			);
+			path = DataObjects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +168,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DE3146526A78FDE007A51FE /* ContentDO.swift in Sources */,
 				4DBDB0CA26A4D85300B01255 /* ContentView.swift in Sources */,
 				4DBDB0C826A4D85300B01255 /* FlowUsApp.swift in Sources */,
+				4DE3146126A78F6A007A51FE /* ContentOO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
