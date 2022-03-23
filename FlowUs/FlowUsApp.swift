@@ -11,7 +11,7 @@ import SwiftUI
 struct FlowUsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Navigator()
         }
     }
 }
