@@ -8,24 +8,27 @@
 import SwiftUI
 
 struct Navigator: View {
-    @State var open = false;
+    @State var open = false
     
     var body: some View {
-        ZStack{
-            Button(action: {self.open.toggle()}){
-                Image(systemName: "plus").rotationEffect(.degrees(open ? 45: 90)).foregroundColor(.white).font(.system(size: 38, weight: .bold)).animation(.spring(response: 0.2, dampingFraction: 0.4, blendDuration: 0))
+        ZStack {
+            Button(action: {self.open.toggle()}) {
+                Image(systemName: "plus")
+                    .rotationEffect(.degrees(open ? 45: 90))
+                    .foregroundColor(.white)
+                    .font(.system(size: 38, weight: .bold))
+                    .animation(.spring(response: 0.2, dampingFraction: 0.4, blendDuration: 0))
             }
             .padding(24).background(Color.pink).mask(Circle()).shadow(color: Color.pink, radius: 10).zIndex(10)
             
             SecondaryButton(open: $open, icon: "bubble.left.fill", color: Color.blue, offsetY: -90)
             
-            SecondaryButton(open: $open, icon: "trash", color: Color.red, offsetX: -60 ,offsetY: -60, delay: 0.2)
+            SecondaryButton(open: $open, icon: "trash", color: Color.red, offsetX: -60, offsetY: -60, delay: 0.2)
             
-            SecondaryButton(open: $open, icon: "pencil", color: Color.purple, offsetX: -90 , delay: 0.4)
+            SecondaryButton(open: $open, icon: "pencil", color: Color.purple, offsetX: -90, delay: 0.4)
         }
     }
 }
-
 
 struct SecondaryButton: View {
     @Binding var open: Bool
@@ -36,12 +39,16 @@ struct SecondaryButton: View {
     var delay = 0.0
     
     var body: some View {
-        Button(action: {}){
+        Button(action: {}) {
             Image(systemName: icon).foregroundColor(.white).font(.system(size: 16, weight: .bold))
-        }.padding().background(color).mask(Circle()).offset(x: open ? CGFloat(offsetX) : 0, y: open ? CGFloat(offsetY) : 0).scaleEffect(open ? 1 : 0).animation(Animation.spring(response: 0.2, dampingFraction: 0.5, blendDuration: 0).delay(delay))
+        }.padding()
+            .background(color)
+            .mask(Circle())
+            .offset(x: open ? CGFloat(offsetX) : 0, y: open ? CGFloat(offsetY) : 0)
+            .scaleEffect(open ? 1 : 0)
+            .animation(Animation.spring(response: 0.2, dampingFraction: 0.5, blendDuration: 0).delay(delay))
     }
 }
-
 
 struct Navigator_Previews: PreviewProvider {
     static var previews: some View {
