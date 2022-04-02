@@ -5,26 +5,27 @@
 //  Created by Lucas Goldner on 23.03.22.
 //
 
+import FirebaseFirestore
 import SwiftUI
 
 struct Navigator: View {
     @State var open = false
-    
+
     var body: some View {
         ZStack {
-            Button(action: {self.open.toggle()}) {
+            Button(action: { self.open.toggle() }) {
                 Image(systemName: "plus")
-                    .rotationEffect(.degrees(open ? 45: 90))
+                    .rotationEffect(.degrees(open ? 45 : 90))
                     .foregroundColor(.white)
                     .font(.system(size: 38, weight: .bold))
                     .animation(.spring(response: 0.2, dampingFraction: 0.4, blendDuration: 0))
             }
             .padding(24).background(Color.pink).mask(Circle()).shadow(color: Color.pink, radius: 10).zIndex(10)
-            
+
             SecondaryButton(open: $open, icon: "bubble.left.fill", color: Color.blue, offsetY: -90)
-            
+
             SecondaryButton(open: $open, icon: "trash", color: Color.red, offsetX: -60, offsetY: -60, delay: 0.2)
-            
+
             SecondaryButton(open: $open, icon: "pencil", color: Color.purple, offsetX: -90, delay: 0.4)
         }
     }
@@ -37,7 +38,7 @@ struct SecondaryButton: View {
     var offsetX = 0
     var offsetY = 0
     var delay = 0.0
-    
+
     var body: some View {
         Button(action: {}) {
             Image(systemName: icon).foregroundColor(.white).font(.system(size: 16, weight: .bold))
