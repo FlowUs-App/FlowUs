@@ -602,7 +602,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"FlowUs/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = MGA58Y526H;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = FlowUs/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -610,7 +610,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.lucas-goldner.FlowUs-dev\n";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lucas-goldner.FlowUs-dev";
 				PRODUCT_NAME = "$(TARGET_NAME)-Dev";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -624,7 +624,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"FlowUs/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = MGA58Y526H;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = FlowUs/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -655,7 +655,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlowUs.app/FlowUs";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlowUs-Dev.app/FlowUs-Dev";
 			};
 			name = Dev;
 		};
@@ -675,7 +675,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlowUs.app/FlowUs";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlowUs-Dev.app/FlowUs-Dev";
 			};
 			name = Production;
 		};
@@ -785,7 +785,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"FlowUs/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = MGA58Y526H;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = FlowUs/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -816,7 +816,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlowUs.app/FlowUs";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlowUs-Dev.app/FlowUs-Dev";
 			};
 			name = Staging;
 		};

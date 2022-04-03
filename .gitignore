@@ -1,4 +1,16 @@
+#Firebase key value files
 /FlowUs/Firebase/Production
 /FlowUs/Firebase/Staging
 /FlowUs/Firebase/Dev
-/fastlane
+
+#Fastlane related files
+/fastlane/Appfile
+/fastlane/README.md
+/fastlane/report.xml
+/fastlane/test_output
+
+#Builds
+FlowUs.ipa
+
+#Stuff
+.DS_Store
