@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,18 @@
 		4DE3146526A78FDE007A51FE /* ContentDO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE3146426A78FDE007A51FE /* ContentDO.swift */; };
 		4DE3147126A7912E007A51FE /* FlowUsUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE3147026A7912E007A51FE /* FlowUsUnitTests.swift */; };
 		4DE3148326A7935B007A51FE /* FlowUsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE3148226A7935B007A51FE /* FlowUsUITests.swift */; };
+		4DE33C1E27F902BB0029E0CF /* FirebaseAnalyticsSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 4DE33C1D27F902BB0029E0CF /* FirebaseAnalyticsSwift-Beta */; };
+		4DE33C2027F902BB0029E0CF /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 4DE33C1F27F902BB0029E0CF /* FirebaseAppCheck */; };
+		4DE33C2227F902BB0029E0CF /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 4DE33C2127F902BB0029E0CF /* FirebaseAuth */; };
+		4DE33C2427F902BB0029E0CF /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 4DE33C2327F902BB0029E0CF /* FirebaseCrashlytics */; };
+		4DE33C2627F902BB0029E0CF /* FirebaseDatabaseSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 4DE33C2527F902BB0029E0CF /* FirebaseDatabaseSwift-Beta */; };
+		4DE33C2827F902BB0029E0CF /* FirebaseDynamicLinks in Frameworks */ = {isa = PBXBuildFile; productRef = 4DE33C2727F902BB0029E0CF /* FirebaseDynamicLinks */; };
+		4DE33C2A27F902BB0029E0CF /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 4DE33C2927F902BB0029E0CF /* FirebaseFirestoreSwift-Beta */; };
+		4DE33C2C27F902BB0029E0CF /* FirebaseFunctionsSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 4DE33C2B27F902BB0029E0CF /* FirebaseFunctionsSwift-Beta */; };
+		4DE33C2E27F902BB0029E0CF /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 4DE33C2D27F902BB0029E0CF /* FirebaseMessaging */; };
+		4DE33C3027F902BB0029E0CF /* FirebasePerformance in Frameworks */ = {isa = PBXBuildFile; productRef = 4DE33C2F27F902BB0029E0CF /* FirebasePerformance */; };
+		4DE33C3227F902BB0029E0CF /* FirebaseRemoteConfigSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 4DE33C3127F902BB0029E0CF /* FirebaseRemoteConfigSwift-Beta */; };
+		4DE33C3427F902BB0029E0CF /* FirebaseStorageSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 4DE33C3327F902BB0029E0CF /* FirebaseStorageSwift-Beta */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +51,7 @@
 /* Begin PBXFileReference section */
 		4D112F5E27F3BBB2002957E8 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		4D44F56127EBD55400FE8CCB /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
-		4DBDB0C426A4D85300B01255 /* FlowUs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlowUs.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DBDB0C426A4D85300B01255 /* FlowUs-Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FlowUs-Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DBDB0C726A4D85300B01255 /* FlowUsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowUsApp.swift; sourceTree = "<group>"; };
 		4DBDB0C926A4D85300B01255 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4DBDB0CB26A4D85300B01255 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -53,6 +65,9 @@
 		4DE3148026A7935B007A51FE /* FlowUsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlowUsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DE3148226A7935B007A51FE /* FlowUsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowUsUITests.swift; sourceTree = "<group>"; };
 		4DE3148426A7935B007A51FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DE33C1127F8FE9B0029E0CF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4DE33C1327F8FEB70029E0CF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4DE33C1527F8FF250029E0CF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +75,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DE33C2E27F902BB0029E0CF /* FirebaseMessaging in Frameworks */,
+				4DE33C2627F902BB0029E0CF /* FirebaseDatabaseSwift-Beta in Frameworks */,
+				4DE33C3227F902BB0029E0CF /* FirebaseRemoteConfigSwift-Beta in Frameworks */,
+				4DE33C3027F902BB0029E0CF /* FirebasePerformance in Frameworks */,
+				4DE33C2027F902BB0029E0CF /* FirebaseAppCheck in Frameworks */,
+				4DE33C3427F902BB0029E0CF /* FirebaseStorageSwift-Beta in Frameworks */,
+				4DE33C2A27F902BB0029E0CF /* FirebaseFirestoreSwift-Beta in Frameworks */,
+				4DE33C2C27F902BB0029E0CF /* FirebaseFunctionsSwift-Beta in Frameworks */,
+				4DE33C2427F902BB0029E0CF /* FirebaseCrashlytics in Frameworks */,
+				4DE33C2227F902BB0029E0CF /* FirebaseAuth in Frameworks */,
+				4DE33C1E27F902BB0029E0CF /* FirebaseAnalyticsSwift-Beta in Frameworks */,
+				4DE33C2827F902BB0029E0CF /* FirebaseDynamicLinks in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,7 +110,6 @@
 		4D44F55E27EBD4FF00FE8CCB /* shared */ = {
 			isa = PBXGroup;
 			children = (
-				4D44F56127EBD55400FE8CCB /* Navigator.swift */,
 			);
 			path = shared;
 			sourceTree = "<group>";
@@ -91,6 +117,7 @@
 		4D44F55F27EBD50A00FE8CCB /* navigation */ = {
 			isa = PBXGroup;
 			children = (
+				4D44F56127EBD55400FE8CCB /* Navigator.swift */,
 			);
 			path = navigation;
 			sourceTree = "<group>";
@@ -116,7 +143,7 @@
 		4DBDB0C526A4D85300B01255 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4DBDB0C426A4D85300B01255 /* FlowUs.app */,
+				4DBDB0C426A4D85300B01255 /* FlowUs-Dev.app */,
 				4DE3146E26A7912E007A51FE /* FlowUsUnitTests.xctest */,
 				4DE3148026A7935B007A51FE /* FlowUsUITests.xctest */,
 			);
@@ -126,6 +153,7 @@
 		4DBDB0C626A4D85300B01255 /* FlowUs */ = {
 			isa = PBXGroup;
 			children = (
+				4DE33C0D27F8FE470029E0CF /* Firebase */,
 				4DE3145F26A78F2F007A51FE /* DataObjects */,
 				4DE3145E26A78F1F007A51FE /* ObservableObjects */,
 				4DE3145D26A78EF4007A51FE /* Views */,
@@ -190,6 +218,40 @@
 			path = FlowUsUITests;
 			sourceTree = "<group>";
 		};
+		4DE33C0D27F8FE470029E0CF /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				4DE33C1027F8FE5E0029E0CF /* Production */,
+				4DE33C0F27F8FE570029E0CF /* Staging */,
+				4DE33C0E27F8FE530029E0CF /* Dev */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		4DE33C0E27F8FE530029E0CF /* Dev */ = {
+			isa = PBXGroup;
+			children = (
+				4DE33C1127F8FE9B0029E0CF /* GoogleService-Info.plist */,
+			);
+			path = Dev;
+			sourceTree = "<group>";
+		};
+		4DE33C0F27F8FE570029E0CF /* Staging */ = {
+			isa = PBXGroup;
+			children = (
+				4DE33C1527F8FF250029E0CF /* GoogleService-Info.plist */,
+			);
+			path = Staging;
+			sourceTree = "<group>";
+		};
+		4DE33C1027F8FE5E0029E0CF /* Production */ = {
+			isa = PBXGroup;
+			children = (
+				4DE33C1327F8FEB70029E0CF /* GoogleService-Info.plist */,
+			);
+			path = Production;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -200,6 +262,7 @@
 				4DBDB0C026A4D85300B01255 /* Sources */,
 				4DBDB0C126A4D85300B01255 /* Frameworks */,
 				4DBDB0C226A4D85300B01255 /* Resources */,
+				4DE33C1727F8FFAB0029E0CF /* Run Script */,
 				4D112F5D27F3BAFC002957E8 /* ShellScript */,
 			);
 			buildRules = (
@@ -207,8 +270,22 @@
 			dependencies = (
 			);
 			name = FlowUs;
+			packageProductDependencies = (
+				4DE33C1D27F902BB0029E0CF /* FirebaseAnalyticsSwift-Beta */,
+				4DE33C1F27F902BB0029E0CF /* FirebaseAppCheck */,
+				4DE33C2127F902BB0029E0CF /* FirebaseAuth */,
+				4DE33C2327F902BB0029E0CF /* FirebaseCrashlytics */,
+				4DE33C2527F902BB0029E0CF /* FirebaseDatabaseSwift-Beta */,
+				4DE33C2727F902BB0029E0CF /* FirebaseDynamicLinks */,
+				4DE33C2927F902BB0029E0CF /* FirebaseFirestoreSwift-Beta */,
+				4DE33C2B27F902BB0029E0CF /* FirebaseFunctionsSwift-Beta */,
+				4DE33C2D27F902BB0029E0CF /* FirebaseMessaging */,
+				4DE33C2F27F902BB0029E0CF /* FirebasePerformance */,
+				4DE33C3127F902BB0029E0CF /* FirebaseRemoteConfigSwift-Beta */,
+				4DE33C3327F902BB0029E0CF /* FirebaseStorageSwift-Beta */,
+			);
 			productName = FlowUs;
-			productReference = 4DBDB0C426A4D85300B01255 /* FlowUs.app */;
+			productReference = 4DBDB0C426A4D85300B01255 /* FlowUs-Dev.app */;
 			productType = "com.apple.product-type.application";
 		};
 		4DE3146D26A7912E007A51FE /* FlowUsUnitTests */ = {
@@ -278,6 +355,9 @@
 				Base,
 			);
 			mainGroup = 4DBDB0BB26A4D85300B01255;
+			packageReferences = (
+				4DE33C1C27F902BB0029E0CF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 4DBDB0C526A4D85300B01255 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -334,6 +414,24 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
+		4DE33C1727F8FFAB0029E0CF /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "## Name of the resource we're selectively copying\nGOOGLESERVICE_INFO_PLIST=GoogleService-Info.plist\n\n# Get references to dev and prod versions of the GoogleService-Info.plist\n# NOTE: These should only live on the file system and should NOT be part of the target (since we'll be adding them to the target manually)\nGOOGLESERVICE_INFO_DEV=${PROJECT_DIR}/${TARGET_NAME}/Firebase/Dev/${GOOGLESERVICE_INFO_PLIST}\nGOOGLESERVICE_INFO_STAGING=${PROJECT_DIR}/${TARGET_NAME}/Firebase/Staging/${GOOGLESERVICE_INFO_PLIST}\nGOOGLESERVICE_INFO_PROD=${PROJECT_DIR}/${TARGET_NAME}/Firebase/Production/${GOOGLESERVICE_INFO_PLIST}\n\n# Make sure the dev version of GoogleService-Info.plist exists\necho \"Looking for ${GOOGLESERVICE_INFO_PLIST} in ${GOOGLESERVICE_INFO_DEV}\"\nif [ ! -f $GOOGLESERVICE_INFO_DEV ]\nthen\n    echo \"No Development GoogleService-Info.plist found. Please ensure it's in the proper directory.\"\n    exit 1\nfi\n\n# Make sure the staging version of GoogleService-Info.plist exists\necho \"Looking for ${GOOGLESERVICE_INFO_PLIST} in ${GOOGLESERVICE_INFO_STAGING}\"\nif [ ! -f $GOOGLESERVICE_INFO_STAGING ]\nthen\n    echo \"No Staging GoogleService-Info.plist found. Please ensure it's in the proper directory.\"\n    exit 1\nfi\n\n# Make sure the prod version of GoogleService-Info.plist exists\necho \"Looking for ${GOOGLESERVICE_INFO_PLIST} in ${GOOGLESERVICE_INFO_PROD}\"\nif [ ! -f $GOOGLESERVICE_INFO_PROD ]\nthen\n    echo \"No Production GoogleService-Info.plist found. Please ensure it's in the proper directory.\"\n    exit 1\nfi\n\n# Get a reference to the destination location for the GoogleService-Info.plist\nPLIST_DESTINATION=${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app\necho \"Will copy ${GOOGLESERVICE_INFO_PLIST} to final destination: ${PLIST_DESTINATION}\"\n\n# Copy over the prod GoogleService-Info.plist for Release builds\nif [ \"${CONFIGURATION}\" == \"Production\" ]\nthen\n    echo \"Using ${GOOGLESERVICE_INFO_PROD}\"\n    cp \"${GOOGLESERVICE_INFO_PROD}\" \"${PLIST_DESTINATION}\"\nelif [ \"${CONFIGURATION}\" == \"Staging\" ]\nthen\n    echo \"Using ${GOOGLESERVICE_INFO_STAGING}\"\n    cp \"${GOOGLESERVICE_INFO_STAGING}\" \"${PLIST_DESTINATION}\"\nelse\n    echo \"Using ${GOOGLESERVICE_INFO_DEV}\"\n    cp \"${GOOGLESERVICE_INFO_DEV}\" \"${PLIST_DESTINATION}\"\nfi\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -381,7 +479,7 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		4DBDB0D126A4D85300B01255 /* Debug */ = {
+		4DBDB0D126A4D85300B01255 /* Dev */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -440,9 +538,9 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
-			name = Debug;
+			name = Dev;
 		};
-		4DBDB0D226A4D85300B01255 /* Release */ = {
+		4DBDB0D226A4D85300B01255 /* Production */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -495,9 +593,31 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = Production;
 		};
-		4DBDB0D426A4D85300B01255 /* Debug */ = {
+		4DBDB0D426A4D85300B01255 /* Dev */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Dev";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"FlowUs/Preview Content\"";
+				DEVELOPMENT_TEAM = MGA58Y526H;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = FlowUs/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lucas-goldner.FlowUs-dev";
+				PRODUCT_NAME = "$(TARGET_NAME)-Dev";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Dev;
+		};
+		4DBDB0D526A4D85300B01255 /* Production */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -517,12 +637,151 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
-			name = Debug;
+			name = Production;
 		};
-		4DBDB0D526A4D85300B01255 /* Release */ = {
+		4DE3147626A7912F007A51FE /* Dev */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MGA58Y526H;
+				INFOPLIST_FILE = FlowUsUnitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.LucasGoldner.FlowUsUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlowUs-Dev.app/FlowUs-Dev";
+			};
+			name = Dev;
+		};
+		4DE3147726A7912F007A51FE /* Production */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MGA58Y526H;
+				INFOPLIST_FILE = FlowUsUnitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.LucasGoldner.FlowUsUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlowUs-Dev.app/FlowUs-Dev";
+			};
+			name = Production;
+		};
+		4DE3148826A7935B007A51FE /* Dev */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MGA58Y526H;
+				INFOPLIST_FILE = FlowUsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.LucasGoldner.FlowUsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FlowUs;
+			};
+			name = Dev;
+		};
+		4DE3148926A7935B007A51FE /* Production */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MGA58Y526H;
+				INFOPLIST_FILE = FlowUsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.LucasGoldner.FlowUsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FlowUs;
+			};
+			name = Production;
+		};
+		4DE33C1827F900550029E0CF /* Staging */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Staging;
+		};
+		4DE33C1927F900550029E0CF /* Staging */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Staging";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"FlowUs/Preview Content\"";
@@ -534,14 +793,14 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.lucas-goldner.FlowUs";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lucas-goldner.FlowUs-staging";
+				PRODUCT_NAME = "$(TARGET_NAME)-Staging";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
-			name = Release;
+			name = Staging;
 		};
-		4DE3147626A7912F007A51FE /* Debug */ = {
+		4DE33C1A27F900550029E0CF /* Staging */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -557,31 +816,11 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlowUs.app/FlowUs";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlowUs-Dev.app/FlowUs-Dev";
 			};
-			name = Debug;
+			name = Staging;
 		};
-		4DE3147726A7912F007A51FE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MGA58Y526H;
-				INFOPLIST_FILE = FlowUsUnitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.LucasGoldner.FlowUsUnitTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlowUs.app/FlowUs";
-			};
-			name = Release;
-		};
-		4DE3148826A7935B007A51FE /* Debug */ = {
+		4DE33C1B27F900550029E0CF /* Staging */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -598,26 +837,7 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = FlowUs;
 			};
-			name = Debug;
-		};
-		4DE3148926A7935B007A51FE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MGA58Y526H;
-				INFOPLIST_FILE = FlowUsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.LucasGoldner.FlowUsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = FlowUs;
-			};
-			name = Release;
+			name = Staging;
 		};
 /* End XCBuildConfiguration section */
 
@@ -625,40 +845,118 @@
 		4DBDB0BF26A4D85300B01255 /* Build configuration list for PBXProject "FlowUs" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4DBDB0D126A4D85300B01255 /* Debug */,
-				4DBDB0D226A4D85300B01255 /* Release */,
+				4DBDB0D126A4D85300B01255 /* Dev */,
+				4DE33C1827F900550029E0CF /* Staging */,
+				4DBDB0D226A4D85300B01255 /* Production */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Production;
 		};
 		4DBDB0D326A4D85300B01255 /* Build configuration list for PBXNativeTarget "FlowUs" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4DBDB0D426A4D85300B01255 /* Debug */,
-				4DBDB0D526A4D85300B01255 /* Release */,
+				4DBDB0D426A4D85300B01255 /* Dev */,
+				4DE33C1927F900550029E0CF /* Staging */,
+				4DBDB0D526A4D85300B01255 /* Production */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Production;
 		};
 		4DE3147526A7912F007A51FE /* Build configuration list for PBXNativeTarget "FlowUsUnitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4DE3147626A7912F007A51FE /* Debug */,
-				4DE3147726A7912F007A51FE /* Release */,
+				4DE3147626A7912F007A51FE /* Dev */,
+				4DE33C1A27F900550029E0CF /* Staging */,
+				4DE3147726A7912F007A51FE /* Production */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Production;
 		};
 		4DE3148726A7935B007A51FE /* Build configuration list for PBXNativeTarget "FlowUsUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4DE3148826A7935B007A51FE /* Debug */,
-				4DE3148926A7935B007A51FE /* Release */,
+				4DE3148826A7935B007A51FE /* Dev */,
+				4DE33C1B27F900550029E0CF /* Staging */,
+				4DE3148926A7935B007A51FE /* Production */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Production;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4DE33C1C27F902BB0029E0CF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4DE33C1D27F902BB0029E0CF /* FirebaseAnalyticsSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4DE33C1C27F902BB0029E0CF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAnalyticsSwift-Beta";
+		};
+		4DE33C1F27F902BB0029E0CF /* FirebaseAppCheck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4DE33C1C27F902BB0029E0CF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAppCheck;
+		};
+		4DE33C2127F902BB0029E0CF /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4DE33C1C27F902BB0029E0CF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		4DE33C2327F902BB0029E0CF /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4DE33C1C27F902BB0029E0CF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		4DE33C2527F902BB0029E0CF /* FirebaseDatabaseSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4DE33C1C27F902BB0029E0CF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseDatabaseSwift-Beta";
+		};
+		4DE33C2727F902BB0029E0CF /* FirebaseDynamicLinks */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4DE33C1C27F902BB0029E0CF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDynamicLinks;
+		};
+		4DE33C2927F902BB0029E0CF /* FirebaseFirestoreSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4DE33C1C27F902BB0029E0CF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreSwift-Beta";
+		};
+		4DE33C2B27F902BB0029E0CF /* FirebaseFunctionsSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4DE33C1C27F902BB0029E0CF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFunctionsSwift-Beta";
+		};
+		4DE33C2D27F902BB0029E0CF /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4DE33C1C27F902BB0029E0CF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		4DE33C2F27F902BB0029E0CF /* FirebasePerformance */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4DE33C1C27F902BB0029E0CF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebasePerformance;
+		};
+		4DE33C3127F902BB0029E0CF /* FirebaseRemoteConfigSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4DE33C1C27F902BB0029E0CF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseRemoteConfigSwift-Beta";
+		};
+		4DE33C3327F902BB0029E0CF /* FirebaseStorageSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4DE33C1C27F902BB0029E0CF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseStorageSwift-Beta";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4DBDB0BC26A4D85300B01255 /* Project object */;
 }
