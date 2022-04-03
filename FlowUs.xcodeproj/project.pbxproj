@@ -51,7 +51,7 @@
 /* Begin PBXFileReference section */
 		4D112F5E27F3BBB2002957E8 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		4D44F56127EBD55400FE8CCB /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
-		4DBDB0C426A4D85300B01255 /* FlowUs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlowUs.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DBDB0C426A4D85300B01255 /* FlowUs-Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FlowUs-Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DBDB0C726A4D85300B01255 /* FlowUsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowUsApp.swift; sourceTree = "<group>"; };
 		4DBDB0C926A4D85300B01255 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4DBDB0CB26A4D85300B01255 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -143,7 +143,7 @@
 		4DBDB0C526A4D85300B01255 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4DBDB0C426A4D85300B01255 /* FlowUs.app */,
+				4DBDB0C426A4D85300B01255 /* FlowUs-Dev.app */,
 				4DE3146E26A7912E007A51FE /* FlowUsUnitTests.xctest */,
 				4DE3148026A7935B007A51FE /* FlowUsUITests.xctest */,
 			);
@@ -285,7 +285,7 @@
 				4DE33C3327F902BB0029E0CF /* FirebaseStorageSwift-Beta */,
 			);
 			productName = FlowUs;
-			productReference = 4DBDB0C426A4D85300B01255 /* FlowUs.app */;
+			productReference = 4DBDB0C426A4D85300B01255 /* FlowUs-Dev.app */;
 			productType = "com.apple.product-type.application";
 		};
 		4DE3146D26A7912E007A51FE /* FlowUsUnitTests */ = {
@@ -598,7 +598,7 @@
 		4DBDB0D426A4D85300B01255 /* Dev */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Dev";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"FlowUs/Preview Content\"";
@@ -610,8 +610,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.lucas-goldner.FlowUs";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lucas-goldner.FlowUs-dev\n";
+				PRODUCT_NAME = "$(TARGET_NAME)-Dev";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -781,7 +781,7 @@
 		4DE33C1927F900550029E0CF /* Staging */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Staging";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"FlowUs/Preview Content\"";
@@ -793,8 +793,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.lucas-goldner.FlowUs";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lucas-goldner.FlowUs-staging";
+				PRODUCT_NAME = "$(TARGET_NAME)-Staging";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -1,3 +1,4 @@
-FlowUs/Firebase/Production
-FlowUs/Firebase/Staging
-FlowUs/Firebase/Dev
+/FlowUs/Firebase/Production
+/FlowUs/Firebase/Staging
+/FlowUs/Firebase/Dev
+/fastlane
