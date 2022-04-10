@@ -10,6 +10,9 @@
 		4D112F5F27F3BBB2002957E8 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 4D112F5E27F3BBB2002957E8 /* .swiftlint.yml */; };
 		4D44F56227EBD55400FE8CCB /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44F56127EBD55400FE8CCB /* Navigator.swift */; };
 		4D796D39280370140020FF26 /* GlasmorphicCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D796D38280370140020FF26 /* GlasmorphicCard.swift */; };
+		4D796D78280394ED0020FF26 /* DeviceNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D796D77280394ED0020FF26 /* DeviceNames.swift */; };
+		4D796D7A2803986E0020FF26 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D796D792803986E0020FF26 /* Extensions.swift */; };
+		4D796D7D28039AFA0020FF26 /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = 4D796D7C28039AFA0020FF26 /* SwiftUIX */; };
 		4DBDB0C826A4D85300B01255 /* FlowUsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDB0C726A4D85300B01255 /* FlowUsApp.swift */; };
 		4DBDB0CA26A4D85300B01255 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDB0C926A4D85300B01255 /* ContentView.swift */; };
 		4DBDB0CC26A4D85300B01255 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DBDB0CB26A4D85300B01255 /* Assets.xcassets */; };
@@ -53,6 +56,8 @@
 		4D112F5E27F3BBB2002957E8 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		4D44F56127EBD55400FE8CCB /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
 		4D796D38280370140020FF26 /* GlasmorphicCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlasmorphicCard.swift; sourceTree = "<group>"; };
+		4D796D77280394ED0020FF26 /* DeviceNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceNames.swift; sourceTree = "<group>"; };
+		4D796D792803986E0020FF26 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		4DBDB0C426A4D85300B01255 /* FlowUs-Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FlowUs-Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DBDB0C726A4D85300B01255 /* FlowUsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowUsApp.swift; sourceTree = "<group>"; };
 		4DBDB0C926A4D85300B01255 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -88,6 +93,7 @@
 				4DE33C2427F902BB0029E0CF /* FirebaseCrashlytics in Frameworks */,
 				4DE33C2227F902BB0029E0CF /* FirebaseAuth in Frameworks */,
 				4DE33C1E27F902BB0029E0CF /* FirebaseAnalyticsSwift-Beta in Frameworks */,
+				4D796D7D28039AFA0020FF26 /* SwiftUIX in Frameworks */,
 				4DE33C2827F902BB0029E0CF /* FirebaseDynamicLinks in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,6 +147,15 @@
 			path = display;
 			sourceTree = "<group>";
 		};
+		4D796D76280394E20020FF26 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4D796D77280394ED0020FF26 /* DeviceNames.swift */,
+				4D796D792803986E0020FF26 /* Extensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		4DBDB0BB26A4D85300B01255 = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +179,7 @@
 		4DBDB0C626A4D85300B01255 /* FlowUs */ = {
 			isa = PBXGroup;
 			children = (
+				4D796D76280394E20020FF26 /* Utils */,
 				4DE33C0D27F8FE470029E0CF /* Firebase */,
 				4DE3145F26A78F2F007A51FE /* DataObjects */,
 				4DE3145E26A78F1F007A51FE /* ObservableObjects */,
@@ -294,6 +310,7 @@
 				4DE33C2F27F902BB0029E0CF /* FirebasePerformance */,
 				4DE33C3127F902BB0029E0CF /* FirebaseRemoteConfigSwift-Beta */,
 				4DE33C3327F902BB0029E0CF /* FirebaseStorageSwift-Beta */,
+				4D796D7C28039AFA0020FF26 /* SwiftUIX */,
 			);
 			productName = FlowUs;
 			productReference = 4DBDB0C426A4D85300B01255 /* FlowUs-Dev.app */;
@@ -368,6 +385,7 @@
 			mainGroup = 4DBDB0BB26A4D85300B01255;
 			packageReferences = (
 				4DE33C1C27F902BB0029E0CF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				4D796D7B28039AFA0020FF26 /* XCRemoteSwiftPackageReference "SwiftUIX" */,
 			);
 			productRefGroup = 4DBDB0C526A4D85300B01255 /* Products */;
 			projectDirPath = "";
@@ -450,8 +468,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D796D78280394ED0020FF26 /* DeviceNames.swift in Sources */,
 				4DE3146526A78FDE007A51FE /* ContentDO.swift in Sources */,
 				4D44F56227EBD55400FE8CCB /* Navigator.swift in Sources */,
+				4D796D7A2803986E0020FF26 /* Extensions.swift in Sources */,
 				4DBDB0CA26A4D85300B01255 /* ContentView.swift in Sources */,
 				4D796D39280370140020FF26 /* GlasmorphicCard.swift in Sources */,
 				4DBDB0C826A4D85300B01255 /* FlowUsApp.swift in Sources */,
@@ -626,7 +646,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lucas-goldner.FlowUs-dev";
 				PRODUCT_NAME = "$(TARGET_NAME)-Dev";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Dev;
 		};
@@ -649,7 +669,7 @@
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Production;
 		};
@@ -810,7 +830,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lucas-goldner.FlowUs-staging";
 				PRODUCT_NAME = "$(TARGET_NAME)-Staging";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Staging;
 		};
@@ -864,7 +884,7 @@
 				4DBDB0D226A4D85300B01255 /* Production */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Production;
+			defaultConfigurationName = Dev;
 		};
 		4DBDB0D326A4D85300B01255 /* Build configuration list for PBXNativeTarget "FlowUs" */ = {
 			isa = XCConfigurationList;
@@ -874,7 +894,7 @@
 				4DBDB0D526A4D85300B01255 /* Production */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Production;
+			defaultConfigurationName = Dev;
 		};
 		4DE3147526A7912F007A51FE /* Build configuration list for PBXNativeTarget "FlowUsUnitTests" */ = {
 			isa = XCConfigurationList;
@@ -884,7 +904,7 @@
 				4DE3147726A7912F007A51FE /* Production */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Production;
+			defaultConfigurationName = Dev;
 		};
 		4DE3148726A7935B007A51FE /* Build configuration list for PBXNativeTarget "FlowUsUITests" */ = {
 			isa = XCConfigurationList;
@@ -894,11 +914,19 @@
 				4DE3148926A7935B007A51FE /* Production */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Production;
+			defaultConfigurationName = Dev;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		4D796D7B28039AFA0020FF26 /* XCRemoteSwiftPackageReference "SwiftUIX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftUIX/SwiftUIX";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.2;
+			};
+		};
 		4DE33C1C27F902BB0029E0CF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -910,6 +938,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		4D796D7C28039AFA0020FF26 /* SwiftUIX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D796D7B28039AFA0020FF26 /* XCRemoteSwiftPackageReference "SwiftUIX" */;
+			productName = SwiftUIX;
+		};
 		4DE33C1D27F902BB0029E0CF /* FirebaseAnalyticsSwift-Beta */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 4DE33C1C27F902BB0029E0CF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

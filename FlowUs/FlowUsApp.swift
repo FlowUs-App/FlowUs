@@ -23,7 +23,7 @@ struct FlowUsApp: App {
 
     var body: some Scene {
         WindowGroup {
-            Navigator()
+            GlasmorphicCard()
         }
     }
 }
