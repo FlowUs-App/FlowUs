@@ -8,16 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject private var oo = ContentViewOO()
+    @StateObject private var ooContentView = ContentViewOO()
     
     var body: some View {
         VStack {
-            List(oo.data) { datum in
+            List(ooContentView.data) { datum in
                 Text(datum.name)
             }
         }
         .onAppear {
-            oo.fetch()
+            ooContentView.fetch()
         }
     }
 }
