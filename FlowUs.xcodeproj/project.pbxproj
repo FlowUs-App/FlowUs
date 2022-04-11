@@ -289,7 +289,7 @@
 				4DBDB0C026A4D85300B01255 /* Sources */,
 				4DBDB0C126A4D85300B01255 /* Frameworks */,
 				4DBDB0C226A4D85300B01255 /* Resources */,
-				4DE33C1727F8FFAB0029E0CF /* Run Script */,
+				4DE33C1727F8FFAB0029E0CF /* Firebase */,
 				4D112F5D27F3BAFC002957E8 /* ShellScript */,
 			);
 			buildRules = (
@@ -443,7 +443,7 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
-		4DE33C1727F8FFAB0029E0CF /* Run Script */ = {
+		4DE33C1727F8FFAB0029E0CF /* Firebase */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -452,7 +452,7 @@
 			);
 			inputPaths = (
 			);
-			name = "Run Script";
+			name = Firebase;
 			outputFileListPaths = (
 			);
 			outputPaths = (
