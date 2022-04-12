@@ -22,16 +22,16 @@ struct Navigator: View {
             }
             .padding(24).background(Color.pink).mask(Circle()).shadow(color: Color.pink, radius: 10).zIndex(10)
 
-            SecondaryButton(open: $open, icon: "bubble.left.fill", color: Color.blue, offsetY: -90)
+            MenuSecondaryButton(open: $open, icon: "bubble.left.fill", color: Color.blue, offsetY: -90)
 
-            SecondaryButton(open: $open, icon: "trash", color: Color.red, offsetX: -60, offsetY: -60, delay: 0.2)
+            MenuSecondaryButton(open: $open, icon: "trash", color: Color.red, offsetX: -60, offsetY: -60, delay: 0.2)
 
-            SecondaryButton(open: $open, icon: "pencil", color: Color.purple, offsetX: -90, delay: 0.4)
+            MenuSecondaryButton(open: $open, icon: "pencil", color: Color.purple, offsetX: -90, delay: 0.4)
         }
     }
 }
 
-struct SecondaryButton: View {
+struct MenuSecondaryButton: View {
     @Binding var open: Bool
     var icon = "pencil"
     var color = Color.blue

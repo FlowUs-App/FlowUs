@@ -1,0 +1,234 @@
+//
+//  Buttons.swift
+//  FlowUs
+//
+//  Created by Lucas Goldner on 12.04.22.
+//
+
+import SwiftUI
+
+func placeholderFun() {
+    print("LOL")
+}
+
+//  S for Small
+
+struct PrimaryButton: View {
+    @Environment(\.colorScheme) var colorScheme
+    var body: some View {
+        Button(action: placeholderFun) {
+            CommonText(text: "Sign up", semibold: true)
+                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 20)
+                .padding()
+                .background(LinearGradient(
+                    colors: [.init(hex: "7F5BFF"), .init(hex: "4624C2")],
+                    startPoint: .topLeading,
+                    endPoint: .bottomTrailing
+                ))
+                .cornerRadius(20)
+                .shadow(
+                    color:
+                    colorScheme == .light ? .init(hex: "BDACFB") : .clear,
+                    radius: colorScheme == .light ? 20 : 0, x: 0, y: 20
+                ).overlay(
+                    RoundedRectangle(cornerRadius: 20)
+                        .stroke(.black,
+                                lineWidth: 2)
+                        .shadow(color: .black,
+                                radius: 5, x: 5, y: -3)
+                        .clipShape(
+                            RoundedRectangle(cornerRadius: 20)
+                        )
+                        .shadow(color: .black, radius: 5, x: 5, y: -3)
+                        .clipShape(
+                            RoundedRectangle(cornerRadius: 20)
+                        ).opacity(0.37)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 20)
+                                .stroke(.white,
+                                        lineWidth: 1)
+                                .shadow(color: .white,
+                                        radius: 5, x: 3, y: 1)
+                                .clipShape(
+                                    RoundedRectangle(cornerRadius: 20)
+                                )
+                                .shadow(color: .white, radius: 5, x: 2, y: 4)
+                                .clipShape(
+                                    RoundedRectangle(cornerRadius: 20)
+                                ).opacity(0.5))
+                ).padding(.horizontal)
+        }
+    }
+}
+
+struct PrimaryButtonS: View {
+    @Environment(\.colorScheme) var colorScheme
+    var body: some View {
+        Button(action: placeholderFun) {
+            CommonText(text: "Sign up", semibold: true)
+                .frame(minWidth: 96, minHeight: 20)
+                .padding()
+                .background(LinearGradient(
+                    colors: [.init(hex: "7F5BFF"), .init(hex: "4624C2")],
+                    startPoint: .topLeading,
+                    endPoint: .bottomTrailing
+                ))
+                .cornerRadius(20)
+                .shadow(
+                    color:
+                    colorScheme == .light ? .init(hex: "BDACFB") : .clear,
+                    radius: colorScheme == .light ? 20 : 0, x: 0, y: 20
+                ).overlay(
+                    RoundedRectangle(cornerRadius: 20)
+                        .stroke(.black,
+                                lineWidth: 2)
+                        .shadow(color: .black,
+                                radius: 5, x: 5, y: -3)
+                        .clipShape(
+                            RoundedRectangle(cornerRadius: 20)
+                        )
+                        .shadow(color: .black, radius: 5, x: 5, y: -3)
+                        .clipShape(
+                            RoundedRectangle(cornerRadius: 20)
+                        ).opacity(0.37)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 20)
+                                .stroke(.white,
+                                        lineWidth: 1)
+                                .shadow(color: .white,
+                                        radius: 5, x: 3, y: 1)
+                                .clipShape(
+                                    RoundedRectangle(cornerRadius: 20)
+                                )
+                                .shadow(color: .white, radius: 5, x: 2, y: 4)
+                                .clipShape(
+                                    RoundedRectangle(cornerRadius: 20)
+                                ).opacity(0.5))
+                )
+        }
+    }
+}
+
+struct SecondaryButton: View {
+    @Environment(\.colorScheme) var colorScheme
+    var body: some View {
+        Button(action: placeholderFun) {
+            CommonText(text: "Login", semibold: true, color: .black)
+                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 20)
+                .padding()
+                .background(
+                    LinearGradient(
+                        colors: [.init(hex: "FFFFFF"), .init(hex: "CDDCF6")],
+                        startPoint: .topLeading,
+                        endPoint: .bottomLeading
+                    ))
+                .cornerRadius(20).shadow(
+                    color:
+                    colorScheme == .light ? .init(hex: "CEDBEF") : .clear,
+                    radius: colorScheme == .light ? 20 : 0, x: 0, y: 20
+                ).overlay(
+                    RoundedRectangle(cornerRadius: 20)
+                        .stroke(.black,
+                                lineWidth: 1)
+                        .shadow(color: .black,
+                                radius: 5, x: 5, y: -3)
+                        .clipShape(
+                            RoundedRectangle(cornerRadius: 20)
+                        )
+                        .shadow(color: .black, radius: 5, x: 5, y: -3)
+                        .clipShape(
+                            RoundedRectangle(cornerRadius: 20)
+                        ).opacity(0.37)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 20)
+                                .stroke(.white,
+                                        lineWidth: 2)
+                                .shadow(color: .white,
+                                        radius: 5, x: 3, y: 1)
+                                .clipShape(
+                                    RoundedRectangle(cornerRadius: 20)
+                                )
+                                .shadow(color: .white, radius: 5, x: 2, y: 4)
+                                .clipShape(
+                                    RoundedRectangle(cornerRadius: 20)
+                                ).opacity(0.5))
+                ).padding(.horizontal)
+        }
+    }
+}
+
+struct SecondaryButtonS: View {
+    @Environment(\.colorScheme) var colorScheme
+    var body: some View {
+        Button(action: placeholderFun) {
+            CommonText(text: "Login", semibold: true, color: .black)
+                .frame(minWidth: 96, minHeight: 20)
+                .padding()
+                .background(LinearGradient(
+                    colors: [.init(hex: "FFFFFF"), .init(hex: "CDDCF6")],
+                    startPoint: .topLeading,
+                    endPoint: .bottomTrailing
+                ))
+                .cornerRadius(20).shadow(
+                    color:
+                    colorScheme == .light ? .init(hex: "CEDBEF") : .clear,
+                    radius: colorScheme == .light ? 20 : 0, x: 0, y: 20
+                ).overlay(
+                    RoundedRectangle(cornerRadius: 20)
+                        .stroke(.black,
+                                lineWidth: 1)
+                        .shadow(color: .black,
+                                radius: 5, x: 5, y: -3)
+                        .clipShape(
+                            RoundedRectangle(cornerRadius: 20)
+                        )
+                        .shadow(color: .black, radius: 5, x: 5, y: -3)
+                        .clipShape(
+                            RoundedRectangle(cornerRadius: 20)
+                        ).opacity(0.37)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 20)
+                                .stroke(.white,
+                                        lineWidth: 2)
+                                .shadow(color: .white,
+                                        radius: 5, x: 3, y: 1)
+                                .clipShape(
+                                    RoundedRectangle(cornerRadius: 20)
+                                )
+                                .shadow(color: .white, radius: 5, x: 2, y: 4)
+                                .clipShape(
+                                    RoundedRectangle(cornerRadius: 20)
+                                ).opacity(0.5))
+                )
+        }
+    }
+}
+
+struct Buttons_Previews: PreviewProvider {
+    static var previews: some View {
+        VStack {
+            Spacer()
+            PrimaryButton()
+            Spacer()
+            HStack {
+                PrimaryButtonS()
+                SecondaryButtonS()
+            }
+            Spacer()
+            SecondaryButton()
+            Spacer()
+        }
+        VStack {
+            Spacer()
+            PrimaryButton()
+            Spacer()
+            HStack {
+                PrimaryButtonS()
+                SecondaryButtonS()
+            }
+            Spacer()
+            SecondaryButton()
+            Spacer()
+        }.preferredColorScheme(.dark)
+    }
+}

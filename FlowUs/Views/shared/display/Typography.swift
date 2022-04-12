@@ -63,10 +63,12 @@ struct Caption: View {
 struct CommonText: View {
     var text = ""
     var semibold = false
+    var color = Color.white
     var body: some View {
         Text(text)
             .font(Font.system(size: 16))
             .fontWeight(semibold ? .semibold : .regular)
+            .foregroundColor(color)
     }
 }
 
@@ -88,7 +90,6 @@ struct Typography_Previews: PreviewProvider {
                 endPoint: .trailing
             ))
             HeadingB(text: "Heading 1 (48)")
-            HeadingB(text: "Heading 1 (48)")
             HeadingM(text: "Heading 2 (36)")
             HeadingS(text: "Heading 3 (24)")
             Caption(text: "Caption (18)")
@@ -99,5 +100,23 @@ struct Typography_Previews: PreviewProvider {
             CommonTextS(text: "Small Text Semibold (14)",
                         semibold: true)
         }.frame(maxHeight: .infinity, alignment: .top)
+
+        VStack(alignment: .leading) {
+            HeadingBGradient(text: "Heading 1 (48)", gradient: LinearGradient(
+                colors: [.red, .blue, .green, .yellow],
+                startPoint: .leading,
+                endPoint: .trailing
+            ))
+            HeadingB(text: "Heading 1 (48)")
+            HeadingM(text: "Heading 2 (36)")
+            HeadingS(text: "Heading 3 (24)")
+            Caption(text: "Caption (18)")
+            CommonText(text: "Normal Text (16)")
+            CommonText(text: "Normal Text Semibold (16)",
+                       semibold: true)
+            CommonTextS(text: "Small Text (14)")
+            CommonTextS(text: "Small Text Semibold (14)",
+                        semibold: true)
+        }.frame(maxHeight: .infinity, alignment: .top).preferredColorScheme(.dark)
     }
 }
