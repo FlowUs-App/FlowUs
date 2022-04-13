@@ -36,10 +36,8 @@ extension Color {
             .sRGB,
             red: Double(rVal) / 255,
             green: Double(gVal) / 255,
-            blue:  Double(bVal) / 255,
+            blue: Double(bVal) / 255,
             opacity: Double(aVal) / 255
         )
     }
 }
-
-

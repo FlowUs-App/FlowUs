@@ -5,10 +5,11 @@
 //  Created by Lucas Goldner on 11.04.22.
 //
 
-//  Sizes
+//  Legend
 //  B for Big
 //  M for Mid
 //  S for Small
+//  C for Color
 
 import SwiftUI
 
@@ -61,9 +62,21 @@ struct Caption: View {
 }
 
 struct CommonText: View {
+    @Environment(\.colorScheme) var colorScheme
     var text = ""
     var semibold = false
-    var color = Color.white
+    var body: some View {
+        Text(text)
+            .font(Font.system(size: 16))
+            .fontWeight(semibold ? .semibold : .regular)
+    }
+}
+
+struct CommonTextC: View {
+    @Environment(\.colorScheme) var colorScheme
+    var text = ""
+    var semibold = false
+    var color = Color.black
     var body: some View {
         Text(text)
             .font(Font.system(size: 16))
@@ -94,6 +107,7 @@ struct Typography_Previews: PreviewProvider {
             HeadingS(text: "Heading 3 (24)")
             Caption(text: "Caption (18)")
             CommonText(text: "Normal Text (16)")
+            CommonTextC(text: "Normal Text Colorful (16)", color: .blue)
             CommonText(text: "Normal Text Semibold (16)",
                        semibold: true)
             CommonTextS(text: "Small Text (14)")
@@ -112,6 +126,7 @@ struct Typography_Previews: PreviewProvider {
             HeadingS(text: "Heading 3 (24)")
             Caption(text: "Caption (18)")
             CommonText(text: "Normal Text (16)")
+            CommonTextC(text: "Normal Text Colorful (16)", color: .blue)
             CommonText(text: "Normal Text Semibold (16)",
                        semibold: true)
             CommonTextS(text: "Small Text (14)")

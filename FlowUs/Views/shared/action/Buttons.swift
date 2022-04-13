@@ -7,23 +7,21 @@
 
 import SwiftUI
 
-func placeholderFun() {
-    print("LOL")
-}
-
 //  S for Small
 
 struct PrimaryButton: View {
     @Environment(\.colorScheme) var colorScheme
+    var action: () -> Void
+    var text: String = "Button"
     var body: some View {
-        Button(action: placeholderFun) {
-            CommonText(text: "Sign up", semibold: true)
+        Button(action: action) {
+            CommonTextC(text: text, semibold: true, color: .white)
                 .frame(minWidth: 0, maxWidth: .infinity, minHeight: 20)
                 .padding()
                 .background(LinearGradient(
                     colors: [.init(hex: "7F5BFF"), .init(hex: "4624C2")],
                     startPoint: .topLeading,
-                    endPoint: .bottomTrailing
+                    endPoint: .bottomLeading
                 ))
                 .cornerRadius(20)
                 .shadow(
@@ -63,15 +61,17 @@ struct PrimaryButton: View {
 
 struct PrimaryButtonS: View {
     @Environment(\.colorScheme) var colorScheme
+    var action: () -> Void
+    var text: String = "Button"
     var body: some View {
-        Button(action: placeholderFun) {
-            CommonText(text: "Sign up", semibold: true)
+        Button(action: action) {
+            CommonTextC(text: text, semibold: true, color: .white)
                 .frame(minWidth: 96, minHeight: 20)
                 .padding()
                 .background(LinearGradient(
                     colors: [.init(hex: "7F5BFF"), .init(hex: "4624C2")],
                     startPoint: .topLeading,
-                    endPoint: .bottomTrailing
+                    endPoint: .bottomLeading
                 ))
                 .cornerRadius(20)
                 .shadow(
@@ -111,9 +111,11 @@ struct PrimaryButtonS: View {
 
 struct SecondaryButton: View {
     @Environment(\.colorScheme) var colorScheme
+    var action: () -> Void
+    var text: String = "Button"
     var body: some View {
-        Button(action: placeholderFun) {
-            CommonText(text: "Login", semibold: true, color: .black)
+        Button(action: action) {
+            CommonTextC(text: text, semibold: true, color: .black)
                 .frame(minWidth: 0, maxWidth: .infinity, minHeight: 20)
                 .padding()
                 .background(
@@ -159,9 +161,11 @@ struct SecondaryButton: View {
 
 struct SecondaryButtonS: View {
     @Environment(\.colorScheme) var colorScheme
+    var action: () -> Void
+    var text: String = "Button"
     var body: some View {
-        Button(action: placeholderFun) {
-            CommonText(text: "Login", semibold: true, color: .black)
+        Button(action: action) {
+            CommonTextC(text: text, semibold: true, color: .black)
                 .frame(minWidth: 96, minHeight: 20)
                 .padding()
                 .background(LinearGradient(
@@ -204,30 +208,34 @@ struct SecondaryButtonS: View {
     }
 }
 
+func dummyFunction() {
+    print("test")
+}
+
 struct Buttons_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
             Spacer()
-            PrimaryButton()
+            PrimaryButton(action: dummyFunction, text: "Signup")
             Spacer()
             HStack {
-                PrimaryButtonS()
-                SecondaryButtonS()
+                PrimaryButtonS(action: dummyFunction, text: "Signup")
+                SecondaryButtonS(action: dummyFunction, text: "Login")
             }
             Spacer()
-            SecondaryButton()
+            SecondaryButton(action: dummyFunction, text: "Login")
             Spacer()
         }
         VStack {
             Spacer()
-            PrimaryButton()
+            PrimaryButton(action: dummyFunction, text: "Signup")
             Spacer()
             HStack {
-                PrimaryButtonS()
-                SecondaryButtonS()
+                PrimaryButtonS(action: dummyFunction, text: "Signup")
+                SecondaryButtonS(action: dummyFunction, text: "Login")
             }
             Spacer()
-            SecondaryButton()
+            SecondaryButton(action: dummyFunction, text: "Login")
             Spacer()
         }.preferredColorScheme(.dark)
     }

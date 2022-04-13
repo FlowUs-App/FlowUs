@@ -23,7 +23,10 @@ struct FlowUsApp: App {
 
     var body: some Scene {
         WindowGroup {
-            GlasmorphicCard()
+            GlasmorphicCard {
+                Text("Glas").foregroundColor(.black)
+            }
+            PrimaryButton(action: { debugPrint("Test") })
         }
     }
 }

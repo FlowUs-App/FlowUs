@@ -8,14 +8,15 @@
 import SwiftUI
 import SwiftUIX
 
-struct GlasmorphicCard: View {
+struct GlasmorphicCard<Content: View>: View {
+    @ViewBuilder var content: Content
     @Environment(\.colorScheme) var colorScheme
 
     var body: some View {
         ZStack {
-            VisualEffectBlurView(blurStyle: .systemUltraThinMaterial, vibrancyStyle: .fill, content: {})
+            VisualEffectBlurView(blurStyle: .systemUltraThinMaterial, vibrancyStyle: .fill, content: {content})
         }
-        .frame(width: .infinity, height: 250)
+        .frame(width: UIScreen.screenWidth - 15, height: 250)
         .background(colorScheme == .light ?
             Color.clear : Color(hex: "212C4F")).opacity(0.8)
         .mask(
@@ -37,11 +38,11 @@ struct GlasmorphicVideo_Previews: PreviewProvider {
         Group {
             ZStack {
                 LinearGradientPreview()
-                GlasmorphicCard().previewDevice(PreviewDevice(rawValue: DeviceNames.iPhone13.rawValue))
+                GlasmorphicCard { Text("Glas") }.previewDevice(PreviewDevice(rawValue: DeviceNames.iPhone13.rawValue))
                     .previewDisplayName(DeviceNames.iPhone13.rawValue)
             }
             ZStack {
-                GlasmorphicCard().previewDevice(PreviewDevice(rawValue: DeviceNames.iPhone13.rawValue))
+                GlasmorphicCard { Text("Glas Dark") }.previewDevice(PreviewDevice(rawValue: DeviceNames.iPhone13.rawValue))
                     .previewDisplayName(DeviceNames.iPhone13.rawValue).preferredColorScheme(.dark)
             }
         }
