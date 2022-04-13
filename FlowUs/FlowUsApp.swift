@@ -23,10 +23,16 @@ struct FlowUsApp: App {
 
     var body: some Scene {
         WindowGroup {
-            GlasmorphicCard {
-                Text("Glas").foregroundColor(.black)
+            ZStack {
+                LinearGradientPreview()
+                VStack {
+                    GlasmorphicCard {
+                        Text("Glas").foregroundColor(.black)
+                    }
+                    PrimaryButton(action: { debugPrint("Test") })
+                    TextInputs()
+                }
             }
-            PrimaryButton(action: { debugPrint("Test") })
         }
     }
 }

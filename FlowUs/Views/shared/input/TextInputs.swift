@@ -10,12 +10,19 @@ import SwiftUIX
 
 struct TextInputs: View {
     @Environment(\.colorScheme) var colorScheme
+    @State private var input: String = ""
+    var color: Color = .black
+    var placeholderColor: Color = .white
+    var placeholderText: String = "Placeholder"
 
     var body: some View {
         ZStack {
             VisualEffectBlurView(blurStyle: .systemUltraThinMaterial, vibrancyStyle: .fill, content: {})
+            TextField(placeholderText, text: $input).foregroundColor(color).padding().placeholder(when: input.isEmpty) {
+                Text(placeholderText).foregroundColor(placeholderColor).padding()
+            }
         }
-        .frame(width: .infinity, height: 250)
+        .frame(width: UIScreen.screenWidth - 15, height: 60)
         .background(colorScheme == .light ?
             Color.clear : Color(hex: "212C4F")).opacity(0.8)
         .mask(
@@ -34,6 +41,9 @@ struct TextInputs: View {
 
 struct TextInputs_Previews: PreviewProvider {
     static var previews: some View {
-        TextInputs()
+        ZStack {
+            LinearGradientPreview()
+            TextInputs()
+        }
     }
 }

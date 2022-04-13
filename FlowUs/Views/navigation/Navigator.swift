@@ -18,7 +18,7 @@ struct Navigator: View {
                     .rotationEffect(.degrees(open ? 45 : 90))
                     .foregroundColor(.white)
                     .font(.system(size: 38, weight: .bold))
-                    .animation(.spring(response: 0.2, dampingFraction: 0.4, blendDuration: 0))
+                    .animation(.spring(response: 0.2, dampingFraction: 0.4, blendDuration: 0), value: false)
             }
             .padding(24).background(Color.pink).mask(Circle()).shadow(color: Color.pink, radius: 10).zIndex(10)
 
@@ -47,7 +47,7 @@ struct MenuSecondaryButton: View {
             .mask(Circle())
             .offset(x: open ? CGFloat(offsetX) : 0, y: open ? CGFloat(offsetY) : 0)
             .scaleEffect(open ? 1 : 0)
-            .animation(Animation.spring(response: 0.2, dampingFraction: 0.5, blendDuration: 0).delay(delay))
+            .animation(.spring(response: 0.2, dampingFraction: 0.5, blendDuration: 0).delay(delay), value: false)
     }
 }
 
