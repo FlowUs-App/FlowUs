@@ -20,7 +20,8 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct FlowUsApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-
+    @ObservedObject private var keyboard = KeyboardResponder()
+    
     var body: some Scene {
         WindowGroup {
             ZStack {
@@ -30,7 +31,8 @@ struct FlowUsApp: App {
                         Text("Glas").foregroundColor(.black)
                     }
                     PrimaryButton(action: { debugPrint("Test") })
-                    TextInputs()
+                    TextInput()
+                    TextInputDouble().scrollUpWhenKeyBoardIsShown(keyboard: keyboard)
                 }
             }
         }

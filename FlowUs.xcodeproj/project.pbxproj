@@ -13,6 +13,7 @@
 		4D44F56227EBD55400FE8CCB /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44F56127EBD55400FE8CCB /* Navigator.swift */; };
 		4D5141652804D2A400D37C33 /* Previews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5141642804D2A400D37C33 /* Previews.swift */; };
 		4D5141692804D7EC00D37C33 /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5141682804D7EC00D37C33 /* Typography.swift */; };
+		4D5F6E322808C8220064F259 /* KeyboardResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5F6E312808C8220064F259 /* KeyboardResponder.swift */; };
 		4D796D39280370140020FF26 /* GlasmorphicCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D796D38280370140020FF26 /* GlasmorphicCard.swift */; };
 		4D796D78280394ED0020FF26 /* DeviceNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D796D77280394ED0020FF26 /* DeviceNames.swift */; };
 		4D796D7A2803986E0020FF26 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D796D792803986E0020FF26 /* Extensions.swift */; };
@@ -63,6 +64,7 @@
 		4D44F56127EBD55400FE8CCB /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
 		4D5141642804D2A400D37C33 /* Previews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Previews.swift; sourceTree = "<group>"; };
 		4D5141682804D7EC00D37C33 /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
+		4D5F6E312808C8220064F259 /* KeyboardResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardResponder.swift; sourceTree = "<group>"; };
 		4D796D38280370140020FF26 /* GlasmorphicCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlasmorphicCard.swift; sourceTree = "<group>"; };
 		4D796D77280394ED0020FF26 /* DeviceNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceNames.swift; sourceTree = "<group>"; };
 		4D796D792803986E0020FF26 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				4D796D77280394ED0020FF26 /* DeviceNames.swift */,
 				4D796D792803986E0020FF26 /* Extensions.swift */,
 				4D5141642804D2A400D37C33 /* Previews.swift */,
+				4D5F6E312808C8220064F259 /* KeyboardResponder.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -503,6 +506,7 @@
 				4D44F56227EBD55400FE8CCB /* Navigator.swift in Sources */,
 				4D796D7A2803986E0020FF26 /* Extensions.swift in Sources */,
 				4D5141652804D2A400D37C33 /* Previews.swift in Sources */,
+				4D5F6E322808C8220064F259 /* KeyboardResponder.swift in Sources */,
 				4DBDB0CA26A4D85300B01255 /* ContentView.swift in Sources */,
 				4D796D39280370140020FF26 /* GlasmorphicCard.swift in Sources */,
 				4DBDB0C826A4D85300B01255 /* FlowUsApp.swift in Sources */,

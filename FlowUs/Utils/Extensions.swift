@@ -6,8 +6,8 @@
 //
 
 import Foundation
-import UIKit
 import SwiftUI
+import UIKit
 
 extension UIScreen {
     static let screenWidth = UIScreen.main.bounds.size.width
@@ -46,11 +46,19 @@ extension View {
     func placeholder<Content: View>(
         when shouldShow: Bool,
         alignment: Alignment = .leading,
-        @ViewBuilder placeholder: () -> Content) -> some View {
-
+        @ViewBuilder placeholder: () -> Content
+    ) -> some View {
         ZStack(alignment: alignment) {
             placeholder().opacity(shouldShow ? 1 : 0)
             self
         }
+    }
+}
+
+extension View {
+    func scrollUpWhenKeyBoardIsShown(keyboard: KeyboardResponder) -> some View {
+        self.padding(.bottom, keyboard.currentHeight)
+            .edgesIgnoringSafeArea(.bottom)
+            .animation(.easeOut(duration: 0.16), value: true)
     }
 }
