@@ -53,9 +53,3 @@ struct KeyboardAware: ViewModifier {
             .animation(.easeOut, value: false)
     }
 }
-
-public extension View {
-    func keyboardAware() -> some View {
-        ModifiedContent(content: self, modifier: KeyboardAware())
-    }
-}

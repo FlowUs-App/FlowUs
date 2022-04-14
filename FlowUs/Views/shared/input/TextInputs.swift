@@ -21,9 +21,11 @@ struct TextInput: View {
     var body: some View {
         ZStack {
             VisualEffectBlurView(blurStyle: .systemUltraThinMaterial, vibrancyStyle: .fill, content: {})
-            TextField(placeholderText, text: $input).foregroundColor(color).padding().placeholder(when: input.isEmpty) {
-                Text(placeholderText).foregroundColor(placeholderColor).padding()
-            }
+            TextField(placeholderText, text: $input)
+                .foregroundColor(colorScheme == .light ? color : .white)
+                .padding().placeholder(when: input.isEmpty) {
+                    Text(placeholderText).foregroundColor(placeholderColor).padding()
+                }
         }
         .frame(width: UIScreen.screenWidth - 15, height: 60)
         .background(colorScheme == .light ?
@@ -55,7 +57,7 @@ struct TextInputDouble: View {
             VisualEffectBlurView(blurStyle: .systemUltraThinMaterial, vibrancyStyle: .fill, content: {})
             VStack {
                 TextField(placeholderText, text: $firstInput)
-                    .foregroundColor(color)
+                    .foregroundColor(colorScheme == .light ? color : .white)
                     .padding()
                     .placeholder(when: firstInput.isEmpty) {
                         Text(placeholderText).foregroundColor(placeholderColor)
@@ -63,7 +65,7 @@ struct TextInputDouble: View {
                     }
                 Divider().background(.white)
                 TextField(placeholderText, text: $secondInput)
-                    .foregroundColor(color)
+                    .foregroundColor(colorScheme == .light ? color : .white)
                     .padding().ignoresSafeArea(.keyboard, edges: .bottom)
                     .placeholder(when: secondInput.isEmpty) {
                         Text(placeholderText).foregroundColor(placeholderColor)
@@ -71,7 +73,7 @@ struct TextInputDouble: View {
                     }
             }
         }
-        .frame(width: UIScreen.screenWidth - 15, height: 125)
+        .frame(width: UIScreen.screenWidth - 15, height: 140)
         .background(colorScheme == .light ?
             Color.clear : Color(hex: "212C4F")).opacity(0.8)
         .mask(
@@ -99,7 +101,7 @@ struct TextInputS: View {
         ZStack {
             VisualEffectBlurView(blurStyle: .systemUltraThinMaterial, vibrancyStyle: .fill, content: {})
             TextField(placeholderText, text: $input)
-                .foregroundColor(color)
+                .foregroundColor(colorScheme == .light ? color : .white)
                 .padding()
                 .placeholder(when: input.isEmpty) {
                     Text(placeholderText).foregroundColor(placeholderColor).padding()
@@ -136,5 +138,18 @@ struct TextInputs_Previews: PreviewProvider {
                 Spacer()
             }
         }
+
+        ZStack {
+            LinearGradientPreview()
+            VStack {
+                TextInput()
+                HStack {
+                    TextInputS()
+                    TextInputS()
+                }
+                TextInputDouble()
+                Spacer()
+            }
+        }.preferredColorScheme(.dark)
     }
 }

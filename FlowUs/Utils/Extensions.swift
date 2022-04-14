@@ -55,3 +55,8 @@ extension View {
     }
 }
 
+public extension View {
+    func keyboardAware() -> some View {
+        ModifiedContent(content: self, modifier: KeyboardAware())
+    }
+}
