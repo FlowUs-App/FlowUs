@@ -44,7 +44,6 @@ struct TextInput: View {
 
 struct TextInputDouble: View {
     @Environment(\.colorScheme) var colorScheme
-    @ObservedObject private var keyboard = KeyboardResponder()
     @State private var firstInput: String = ""
     @State private var secondInput: String = ""
     var color: Color = .black

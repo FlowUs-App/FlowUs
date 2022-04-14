@@ -10,6 +10,10 @@ import SwiftUI
 struct LinearGradientPreview: View {
     var body: some View {
         LinearGradient(gradient:
-            Gradient(colors: [.init(hexadecimal: "4624C2"), .init(hexadecimal: "7F5BFF")]), startPoint: .bottomTrailing, endPoint: .topLeading)
+            Gradient(
+                colors: [.init(hexadecimal: "4624C2"), .init(hexadecimal: "7F5BFF")]),
+            startPoint: .bottomTrailing,
+            endPoint: .topLeading)
+            .ignoresSafeArea(.all)
     }
 }

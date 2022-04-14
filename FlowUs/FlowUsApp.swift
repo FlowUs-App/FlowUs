@@ -20,20 +20,21 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct FlowUsApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-    @ObservedObject private var keyboard = KeyboardResponder()
-    
+
     var body: some Scene {
         WindowGroup {
             ZStack {
                 LinearGradientPreview()
-                VStack {
-                    GlasmorphicCard {
-                        Text("Glas").foregroundColor(.black)
+                ScrollView {
+                    VStack {
+                        GlasmorphicCard {
+                            Text("Glas").foregroundColor(.black)
+                        }
+                        PrimaryButton(action: { debugPrint("Test") })
+                        TextInput()
+                        TextInputDouble()
                     }
-                    PrimaryButton(action: { debugPrint("Test") })
-                    TextInput()
-                    TextInputDouble().scrollUpWhenKeyBoardIsShown(keyboard: keyboard)
-                }
+                }.keyboardAware()
             }
         }
     }

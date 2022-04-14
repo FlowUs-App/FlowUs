@@ -55,10 +55,3 @@ extension View {
     }
 }
 
-extension View {
-    func scrollUpWhenKeyBoardIsShown(keyboard: KeyboardResponder) -> some View {
-        self.padding(.bottom, keyboard.currentHeight)
-            .edgesIgnoringSafeArea(.bottom)
-            .animation(.easeOut(duration: 0.16), value: true)
-    }
-}
