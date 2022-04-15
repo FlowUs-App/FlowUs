@@ -17,6 +17,17 @@ struct CountryInput: View {
     var color: Color = .black
     var placeholderColor: Color = .white
     var placeholderText: String = "Placeholder"
+    let configMaker = Config(
+        countryNameTextFont: UIFont.systemFont(ofSize: 16),
+        selectedCountryCodeBackgroundColor: UIColor(red: 0.27, green: 0.14, blue: 0.76, alpha: 1.00),
+        selectedCountryCodeCornerRadius: CGFloat(15),
+        closeButtonTextColor: UIColor.red,
+        closeButtonFont: UIFont.systemFont(ofSize: 16),
+        closeButtonText: "Close",
+        titleText: "Select Country",
+        searchBarPlaceholder: "Search",
+        searchBarFont: UIFont.systemFont(ofSize: 16),
+        searchBarCornerRadius: CGFloat(15))
 
     var body: some View {
         VStack {
@@ -46,6 +57,8 @@ struct CountryInput: View {
             .padding().sheet(isPresented: $showCountryPicker) {
                 CountryPicker(country: $country)
             }
+        }.onAppear {
+            CountryManager.shared.config = configMaker
         }
     }
 }

@@ -5,18 +5,16 @@
 //  Created by Lucas Goldner on 15.04.22.
 //
 
-import SwiftUI
 import CountryPicker
+import SwiftUI
 
 struct CountryPicker: UIViewControllerRepresentable {
+    @Environment(\.colorScheme) var colorScheme
     typealias UIViewControllerType = CountryPickerViewController
-
     let countryPicker = CountryPickerViewController()
-
     @Binding var country: Country?
 
     func makeUIViewController(context: Context) -> CountryPickerViewController {
-        countryPicker.selectedCountry = "TR"
         countryPicker.delegate = context.coordinator
         return countryPicker
     }
@@ -31,9 +29,11 @@ struct CountryPicker: UIViewControllerRepresentable {
 
     class Coordinator: NSObject, CountryPickerDelegate {
         var parent: CountryPicker
+
         init(_ parent: CountryPicker) {
             self.parent = parent
         }
+
         func countryPicker(didSelect country: Country) {
             parent.country = country
         }
