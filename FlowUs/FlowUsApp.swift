@@ -27,10 +27,8 @@ struct FlowUsApp: App {
                 LinearGradientPreview()
                 ScrollView {
                     VStack {
-                        GlasmorphicCard {
-                            Text("Glas").foregroundColor(.black)
-                        }
-                        PrimaryButton(action: { debugPrint("Test") })
+                        
+                        CountryInput()
                         TextInput()
                         TextInputDouble()
                     }

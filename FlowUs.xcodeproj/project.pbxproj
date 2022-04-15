@@ -15,6 +15,9 @@
 		4D5141692804D7EC00D37C33 /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5141682804D7EC00D37C33 /* Typography.swift */; };
 		4D58FFF12809D8FE002337AE /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D58FFF02809D8FE002337AE /* Icon.swift */; };
 		4D58FFF62809F3A2002337AE /* PolyKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4D58FFF52809F3A2002337AE /* PolyKit */; };
+		4D58FFF82809F8B3002337AE /* SelectInputs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D58FFF72809F8B3002337AE /* SelectInputs.swift */; };
+		4D58FFFB2809FCC9002337AE /* CountryPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 4D58FFFA2809FCC9002337AE /* CountryPicker */; };
+		4D58FFFD2809FD17002337AE /* CountryPickerOO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D58FFFC2809FD17002337AE /* CountryPickerOO.swift */; };
 		4D5F6E322808C8220064F259 /* KeyboardAware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5F6E312808C8220064F259 /* KeyboardAware.swift */; };
 		4D5F6E342808D35A0064F259 /* IconButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5F6E332808D35A0064F259 /* IconButtons.swift */; };
 		4D796D39280370140020FF26 /* GlasmorphicCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D796D38280370140020FF26 /* GlasmorphicCard.swift */; };
@@ -68,6 +71,8 @@
 		4D5141642804D2A400D37C33 /* Previews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Previews.swift; sourceTree = "<group>"; };
 		4D5141682804D7EC00D37C33 /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
 		4D58FFF02809D8FE002337AE /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
+		4D58FFF72809F8B3002337AE /* SelectInputs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectInputs.swift; sourceTree = "<group>"; };
+		4D58FFFC2809FD17002337AE /* CountryPickerOO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryPickerOO.swift; sourceTree = "<group>"; };
 		4D5F6E312808C8220064F259 /* KeyboardAware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardAware.swift; sourceTree = "<group>"; };
 		4D5F6E332808D35A0064F259 /* IconButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconButtons.swift; sourceTree = "<group>"; };
 		4D796D38280370140020FF26 /* GlasmorphicCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlasmorphicCard.swift; sourceTree = "<group>"; };
@@ -107,6 +112,7 @@
 				4D58FFF62809F3A2002337AE /* PolyKit in Frameworks */,
 				4DE33C2C27F902BB0029E0CF /* FirebaseFunctionsSwift-Beta in Frameworks */,
 				4DE33C2427F902BB0029E0CF /* FirebaseCrashlytics in Frameworks */,
+				4D58FFFB2809FCC9002337AE /* CountryPicker in Frameworks */,
 				4DE33C2227F902BB0029E0CF /* FirebaseAuth in Frameworks */,
 				4DE33C1E27F902BB0029E0CF /* FirebaseAnalyticsSwift-Beta in Frameworks */,
 				4D796D7D28039AFA0020FF26 /* SwiftUIX in Frameworks */,
@@ -144,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				4D28C7802806360C00F3A2AE /* TextInputs.swift */,
+				4D58FFF72809F8B3002337AE /* SelectInputs.swift */,
 			);
 			path = input;
 			sourceTree = "<group>";
@@ -254,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				4DE3146026A78F6A007A51FE /* ContentOO.swift */,
+				4D58FFFC2809FD17002337AE /* CountryPickerOO.swift */,
 			);
 			path = ObservableObjects;
 			sourceTree = "<group>";
@@ -351,6 +359,7 @@
 				4DE33C3327F902BB0029E0CF /* FirebaseStorageSwift-Beta */,
 				4D796D7C28039AFA0020FF26 /* SwiftUIX */,
 				4D58FFF52809F3A2002337AE /* PolyKit */,
+				4D58FFFA2809FCC9002337AE /* CountryPicker */,
 			);
 			productName = FlowUs;
 			productReference = 4DBDB0C426A4D85300B01255 /* FlowUs-Dev.app */;
@@ -427,6 +436,7 @@
 				4DE33C1C27F902BB0029E0CF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				4D796D7B28039AFA0020FF26 /* XCRemoteSwiftPackageReference "SwiftUIX" */,
 				4D58FFF42809F3A1002337AE /* XCRemoteSwiftPackageReference "PolyKit" */,
+				4D58FFF92809FCC9002337AE /* XCRemoteSwiftPackageReference "CountryPicker" */,
 			);
 			productRefGroup = 4DBDB0C526A4D85300B01255 /* Products */;
 			projectDirPath = "";
@@ -509,6 +519,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D58FFF82809F8B3002337AE /* SelectInputs.swift in Sources */,
 				4D5141692804D7EC00D37C33 /* Typography.swift in Sources */,
 				4D796D78280394ED0020FF26 /* DeviceNames.swift in Sources */,
 				4D5F6E342808D35A0064F259 /* IconButtons.swift in Sources */,
@@ -524,6 +535,7 @@
 				4DBDB0C826A4D85300B01255 /* FlowUsApp.swift in Sources */,
 				4DE3146126A78F6A007A51FE /* ContentOO.swift in Sources */,
 				4D28C7812806360C00F3A2AE /* TextInputs.swift in Sources */,
+				4D58FFFD2809FD17002337AE /* CountryPickerOO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -980,6 +992,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		4D58FFF92809FCC9002337AE /* XCRemoteSwiftPackageReference "CountryPicker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mobven/CountryPicker.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		4D796D7B28039AFA0020FF26 /* XCRemoteSwiftPackageReference "SwiftUIX" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftUIX/SwiftUIX";
@@ -1003,6 +1023,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4D58FFF42809F3A1002337AE /* XCRemoteSwiftPackageReference "PolyKit" */;
 			productName = PolyKit;
+		};
+		4D58FFFA2809FCC9002337AE /* CountryPicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D58FFF92809FCC9002337AE /* XCRemoteSwiftPackageReference "CountryPicker" */;
+			productName = CountryPicker;
 		};
 		4D796D7C28039AFA0020FF26 /* SwiftUIX */ = {
 			isa = XCSwiftPackageProductDependency;
