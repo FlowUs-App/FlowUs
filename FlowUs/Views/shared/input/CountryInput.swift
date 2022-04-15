@@ -1,5 +1,5 @@
 //
-//  SelectInputs.swift
+//  CountryInput.swift
 //  FlowUs
 //
 //  Created by Lucas Goldner on 15.04.22.
@@ -65,18 +65,6 @@ struct CountryInput: View {
 
 struct SelectInputs_Previews: PreviewProvider {
     static var previews: some View {
-        ZStack {
-            LinearGradientPreview()
-            VStack {
-                CountryInput()
-            }
-        }
-
-        ZStack {
-            LinearGradientPreview()
-            VStack {
-                CountryInput()
-            }
-        }.preferredColorScheme(.dark)
+        DefaultPreview(content: CountryInput(), gradient: true)
     }
 }

@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct Icon: View {
-    var resize: Bool = false
-    var path: String = "Icons/Frog"
+    var resize: Bool = true
+    let path: String
     var body: some View {
         Image(uiImage: UIImage(named: path)!)
             .if(resize) { view in
@@ -21,8 +21,8 @@ struct Icon: View {
 struct Icon_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
-            Icon(resize: false)
-            Icon(resize: true)
+            Icon(resize: false, path: "Icons/Frog")
+            Icon(resize: true, path: "Icons/Frog")
         }
     }
 }

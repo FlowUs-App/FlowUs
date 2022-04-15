@@ -14,7 +14,7 @@ struct GlasmorphicCard<Content: View>: View {
 
     var body: some View {
         ZStack {
-            VisualEffectBlurView(blurStyle: .systemUltraThinMaterial, vibrancyStyle: .fill, content: {content})
+            VisualEffectBlurView(blurStyle: .systemUltraThinMaterial, vibrancyStyle: .fill, content: { content })
         }
         .frame(width: UIScreen.screenWidth - 15, height: 250)
         .background(colorScheme == .light ?
@@ -35,16 +35,6 @@ struct GlasmorphicCard<Content: View>: View {
 
 struct GlasmorphicVideo_Previews: PreviewProvider {
     static var previews: some View {
-        Group {
-            ZStack {
-                LinearGradientPreview()
-                GlasmorphicCard { Text("Glas") }.previewDevice(PreviewDevice(rawValue: DeviceNames.iPhone13.rawValue))
-                    .previewDisplayName(DeviceNames.iPhone13.rawValue)
-            }
-            ZStack {
-                GlasmorphicCard { Text("Glas Dark") }.previewDevice(PreviewDevice(rawValue: DeviceNames.iPhone13.rawValue))
-                    .previewDisplayName(DeviceNames.iPhone13.rawValue).preferredColorScheme(.dark)
-            }
-        }
+        DefaultPreview(content: GlasmorphicCard { Text("Glas") }, gradient: true)
     }
 }

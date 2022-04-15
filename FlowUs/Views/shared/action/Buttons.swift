@@ -214,7 +214,7 @@ func dummyFunction() {
 
 struct Buttons_Previews: PreviewProvider {
     static var previews: some View {
-        VStack {
+        DefaultPreview(content: VStack {
             Spacer()
             PrimaryButton(action: dummyFunction, text: "Signup")
             Spacer()
@@ -225,18 +225,6 @@ struct Buttons_Previews: PreviewProvider {
             Spacer()
             SecondaryButton(action: dummyFunction, text: "Login")
             Spacer()
-        }
-        VStack {
-            Spacer()
-            PrimaryButton(action: dummyFunction, text: "Signup")
-            Spacer()
-            HStack {
-                PrimaryButtonS(action: dummyFunction, text: "Signup")
-                SecondaryButtonS(action: dummyFunction, text: "Login")
-            }
-            Spacer()
-            SecondaryButton(action: dummyFunction, text: "Login")
-            Spacer()
-        }.preferredColorScheme(.dark)
+        })
     }
 }

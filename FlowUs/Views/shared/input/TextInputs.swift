@@ -126,30 +126,13 @@ struct TextInputS: View {
 
 struct TextInputs_Previews: PreviewProvider {
     static var previews: some View {
-        ZStack {
-            LinearGradientPreview()
-            VStack {
-                TextInput()
-                HStack {
-                    TextInputS()
-                    TextInputS()
-                }
-                TextInputDouble()
-                Spacer()
+        DefaultPreview(content: VStack {
+            TextInput()
+            HStack {
+                TextInputS()
+                TextInputS()
             }
-        }
-
-        ZStack {
-            LinearGradientPreview()
-            VStack {
-                TextInput()
-                HStack {
-                    TextInputS()
-                    TextInputS()
-                }
-                TextInputDouble()
-                Spacer()
-            }
-        }.preferredColorScheme(.dark)
+            TextInputDouble()
+        }, gradient: true)
     }
 }

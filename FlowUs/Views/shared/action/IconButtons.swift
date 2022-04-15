@@ -64,29 +64,14 @@ struct HexagonIconButton<Content: View>: View {
 
 struct IconButtons_Previews: PreviewProvider {
     static var previews: some View {
-        Group {
-            ZStack {
-                LinearGradientPreview()
-                HStack {
-                    CircleIconButton(content: {
-                        Icon(resize: true, path: "Icons/Frog")
-                    }, shadowColor: .green)
-                    HexagonIconButton(content: {
-                        Icon(resize: true, path: "Icons/Frog")
-                    }, shadowColor: .green)
-                }
-            }
-            ZStack {
-                LinearGradientPreview()
-                HStack {
-                    CircleIconButton(content: {
-                        Icon(resize: true, path: "Icons/Frog")
-                    }, shadowColor: .green)
-                    HexagonIconButton(content: {
-                        Icon(resize: true, path: "Icons/Frog")
-                    }, shadowColor: .green)
-                }.preferredColorScheme(.dark)
-            }
-        }
+        DefaultPreview(content: HStack {
+            CircleIconButton(content: {
+                Icon(path: "Icons/Frog")
+            }, shadowColor: .green)
+            HexagonIconButton(content: {
+                Icon(path: "Icons/Frog")
+            }, shadowColor: .green)
+        })
+        
     }
 }

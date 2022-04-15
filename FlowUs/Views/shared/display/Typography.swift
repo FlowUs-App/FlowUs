@@ -96,7 +96,7 @@ struct CommonTextS: View {
 
 struct Typography_Previews: PreviewProvider {
     static var previews: some View {
-        VStack(alignment: .leading) {
+        DefaultPreview(content: VStack(alignment: .leading) {
             HeadingBGradient(text: "Heading 1 (48)", gradient: LinearGradient(
                 colors: [.red, .blue, .green, .yellow],
                 startPoint: .leading,
@@ -113,25 +113,6 @@ struct Typography_Previews: PreviewProvider {
             CommonTextS(text: "Small Text (14)")
             CommonTextS(text: "Small Text Semibold (14)",
                         semibold: true)
-        }.frame(maxHeight: .infinity, alignment: .top)
-
-        VStack(alignment: .leading) {
-            HeadingBGradient(text: "Heading 1 (48)", gradient: LinearGradient(
-                colors: [.red, .blue, .green, .yellow],
-                startPoint: .leading,
-                endPoint: .trailing
-            ))
-            HeadingB(text: "Heading 1 (48)")
-            HeadingM(text: "Heading 2 (36)")
-            HeadingS(text: "Heading 3 (24)")
-            Caption(text: "Caption (18)")
-            CommonText(text: "Normal Text (16)")
-            CommonTextC(text: "Normal Text Colorful (16)", color: .blue)
-            CommonText(text: "Normal Text Semibold (16)",
-                       semibold: true)
-            CommonTextS(text: "Small Text (14)")
-            CommonTextS(text: "Small Text Semibold (14)",
-                        semibold: true)
-        }.frame(maxHeight: .infinity, alignment: .top).preferredColorScheme(.dark)
+        }.frame(maxHeight: .infinity, alignment: .top))
     }
 }
