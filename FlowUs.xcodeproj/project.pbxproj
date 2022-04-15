@@ -14,6 +14,7 @@
 		4D5141652804D2A400D37C33 /* Previews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5141642804D2A400D37C33 /* Previews.swift */; };
 		4D5141692804D7EC00D37C33 /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5141682804D7EC00D37C33 /* Typography.swift */; };
 		4D58FFF12809D8FE002337AE /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D58FFF02809D8FE002337AE /* Icon.swift */; };
+		4D58FFF62809F3A2002337AE /* PolyKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4D58FFF52809F3A2002337AE /* PolyKit */; };
 		4D5F6E322808C8220064F259 /* KeyboardAware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5F6E312808C8220064F259 /* KeyboardAware.swift */; };
 		4D5F6E342808D35A0064F259 /* IconButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5F6E332808D35A0064F259 /* IconButtons.swift */; };
 		4D796D39280370140020FF26 /* GlasmorphicCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D796D38280370140020FF26 /* GlasmorphicCard.swift */; };
@@ -103,6 +104,7 @@
 				4DE33C2027F902BB0029E0CF /* FirebaseAppCheck in Frameworks */,
 				4DE33C3427F902BB0029E0CF /* FirebaseStorageSwift-Beta in Frameworks */,
 				4DE33C2A27F902BB0029E0CF /* FirebaseFirestoreSwift-Beta in Frameworks */,
+				4D58FFF62809F3A2002337AE /* PolyKit in Frameworks */,
 				4DE33C2C27F902BB0029E0CF /* FirebaseFunctionsSwift-Beta in Frameworks */,
 				4DE33C2427F902BB0029E0CF /* FirebaseCrashlytics in Frameworks */,
 				4DE33C2227F902BB0029E0CF /* FirebaseAuth in Frameworks */,
@@ -348,6 +350,7 @@
 				4DE33C3127F902BB0029E0CF /* FirebaseRemoteConfigSwift-Beta */,
 				4DE33C3327F902BB0029E0CF /* FirebaseStorageSwift-Beta */,
 				4D796D7C28039AFA0020FF26 /* SwiftUIX */,
+				4D58FFF52809F3A2002337AE /* PolyKit */,
 			);
 			productName = FlowUs;
 			productReference = 4DBDB0C426A4D85300B01255 /* FlowUs-Dev.app */;
@@ -423,6 +426,7 @@
 			packageReferences = (
 				4DE33C1C27F902BB0029E0CF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				4D796D7B28039AFA0020FF26 /* XCRemoteSwiftPackageReference "SwiftUIX" */,
+				4D58FFF42809F3A1002337AE /* XCRemoteSwiftPackageReference "PolyKit" */,
 			);
 			productRefGroup = 4DBDB0C526A4D85300B01255 /* Products */;
 			projectDirPath = "";
@@ -968,6 +972,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		4D58FFF42809F3A1002337AE /* XCRemoteSwiftPackageReference "PolyKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/heestand-xyz/PolyKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		4D796D7B28039AFA0020FF26 /* XCRemoteSwiftPackageReference "SwiftUIX" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftUIX/SwiftUIX";
@@ -987,6 +999,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		4D58FFF52809F3A2002337AE /* PolyKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D58FFF42809F3A1002337AE /* XCRemoteSwiftPackageReference "PolyKit" */;
+			productName = PolyKit;
+		};
 		4D796D7C28039AFA0020FF26 /* SwiftUIX */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 4D796D7B28039AFA0020FF26 /* XCRemoteSwiftPackageReference "SwiftUIX" */;
