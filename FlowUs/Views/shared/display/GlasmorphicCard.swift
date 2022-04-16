@@ -14,7 +14,7 @@ struct GlasmorphicCard<Content: View>: View {
 
     var body: some View {
         ZStack {
-            VisualEffectBlurView(blurStyle: .systemUltraThinMaterial, vibrancyStyle: .fill, content: { content })
+            VisualEffectBlurView(blurStyle: .systemUltraThinMaterial, content: { content })
         }
         .frame(width: UIScreen.screenWidth - 15, height: 250)
         .background(colorScheme == .light ?

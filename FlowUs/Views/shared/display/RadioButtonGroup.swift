@@ -39,7 +39,7 @@ struct RadioButton: View {
         Button(action: {
             self.radioButton.callback(self.radioButton.id)
         }) {
-            HStack(alignment: .center, spacing: 10) {
+            HStack(alignment: .center, spacing: 12) {
                 ZStack {
                     VisualEffectBlurView(blurStyle: .systemUltraThinMaterial, vibrancyStyle: .fill, content: {})
                     if self.radioButton.selectedID == self.radioButton.id {
@@ -61,7 +61,7 @@ struct RadioButton: View {
                     .shadow(color: .black.opacity(0.2), x: 0, y: 20, blur: 20)
                 CommonText(text: self.radioButton.id,
                            semibold: self.radioButton.selectedID == self.radioButton.id)
-                    .font(.system(size: self.radioButton.textSize))
+                    .font(.system(size: self.radioButton.textSize)).fixedSize(horizontal: false, vertical: true).multilineTextAlignment(.leading)
                 Spacer()
             }.foregroundColor(self.radioButton.color)
         }
@@ -78,7 +78,7 @@ struct RadioButtonGroup: View {
     var body: some View {
         VStack {
             ForEach(0 ..< items.count, id: \.self) { index in
-                RadioButton(self.items[index], callback: self.radioGroupCallback, selectedID: self.selectedId).padding(.leading, 10)
+                RadioButton(self.items[index], callback: self.radioGroupCallback, selectedID: self.selectedId).padding(.leading, 12)
                 if dividersOn && (items.count - 1 != index) {
                     Divider().background(.white)
                 }

@@ -54,7 +54,7 @@ struct TextInputDouble: View {
 
     var body: some View {
         ZStack {
-            VisualEffectBlurView(blurStyle: .systemUltraThinMaterial, vibrancyStyle: .fill, content: {})
+            VisualEffectBlurView(blurStyle: .systemUltraThinMaterial, content: {})
             VStack {
                 TextField(placeholderText, text: $firstInput)
                     .foregroundColor(colorScheme == .light ? color : .white)
@@ -99,7 +99,7 @@ struct TextInputS: View {
 
     var body: some View {
         ZStack {
-            VisualEffectBlurView(blurStyle: .systemUltraThinMaterial, vibrancyStyle: .fill, content: {})
+            VisualEffectBlurView(blurStyle: .systemUltraThinMaterial, content: {})
             TextField(placeholderText, text: $input)
                 .foregroundColor(colorScheme == .light ? color : .white)
                 .padding()
