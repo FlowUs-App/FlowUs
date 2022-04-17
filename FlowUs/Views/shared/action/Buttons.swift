@@ -21,7 +21,7 @@ struct PrimaryButton: View {
                 .background(LinearGradient(
                     colors: [.init(hex: "7F5BFF"), .init(hex: "4624C2")],
                     startPoint: .topLeading,
-                    endPoint: .bottomLeading
+                    endPoint: .bottomTrailing
                 ))
                 .cornerRadius(20)
                 .shadow(
@@ -55,7 +55,7 @@ struct PrimaryButton: View {
                                     RoundedRectangle(cornerRadius: 20)
                                 ).opacity(0.5))
                 ).padding(.horizontal)
-        }
+        }.buttonStyle(ScaleButtonStyle())
     }
 }
 
@@ -105,7 +105,7 @@ struct PrimaryButtonS: View {
                                     RoundedRectangle(cornerRadius: 20)
                                 ).opacity(0.5))
                 )
-        }
+        }.buttonStyle(ScaleButtonStyle())
     }
 }
 
@@ -155,7 +155,7 @@ struct SecondaryButton: View {
                                     RoundedRectangle(cornerRadius: 20)
                                 ).opacity(0.5))
                 ).padding(.horizontal)
-        }
+        }.buttonStyle(ScaleButtonStyle())
     }
 }
 
@@ -204,12 +204,8 @@ struct SecondaryButtonS: View {
                                     RoundedRectangle(cornerRadius: 20)
                                 ).opacity(0.5))
                 )
-        }
+        }.buttonStyle(ScaleButtonStyle())
     }
-}
-
-func dummyFunction() {
-    print("test")
 }
 
 struct Buttons_Previews: PreviewProvider {
