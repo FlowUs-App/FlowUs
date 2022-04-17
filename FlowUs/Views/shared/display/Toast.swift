@@ -18,51 +18,33 @@ struct Toast: View {
     @Environment(\.colorScheme) var colorScheme
     @State var showToast: Bool = false
     let type: ToastTypes
+    let title: String
+    let information: String
 
     var body: some View {
-        switch type {
-        case .error:
-            GlasmorphicCard {
-                HStack {
+        GlasmorphicCard {
+            HStack {
+                switch type {
+                case .error:
                     Icon(resize: true, path: "Icons/Error")
                         .frame(width: 40, height: 40)
                         .padding(.trailing, 12)
-                    VStack(alignment: .leading) {
-                        CommonText(text: "An error occured", semibold: true)
-                        CommonText(text: "Please try it again")
-                            .fixedSize(horizontal: false, vertical: true)
-                    }
-                    Spacer()
-                }.frame(width: UIScreen.screenWidth - 64, height: 64)
-            }
-        case .info:
-            GlasmorphicCard {
-                HStack {
+                case .info:
                     Icon(resize: true, path: "Icons/Info")
                         .frame(width: 40, height: 40)
                         .padding(.trailing, 12)
-                    VStack(alignment: .leading) {
-                        CommonText(text: "Take this hint", semibold: true)
-                        CommonText(text: "You should try to do this by doing something else")
-                            .fixedSize(horizontal: false, vertical: true)
-                    }
-                    Spacer()
-                }.frame(width: UIScreen.screenWidth - 64, height: 64)
-            }
-        case .success:
-            GlasmorphicCard {
-                HStack {
+                case .success:
                     Icon(resize: true, path: "Icons/Success")
                         .frame(width: 40, height: 40)
                         .padding(.trailing, 12)
-                    VStack(alignment: .leading) {
-                        CommonText(text: "Good job", semibold: true)
-                        CommonText(text: "You did an awesome job")
-                            .fixedSize(horizontal: false, vertical: true)
-                    }
-                    Spacer()
-                }.frame(width: UIScreen.screenWidth - 64, height: 64)
-            }
+                }
+                VStack(alignment: .leading) {
+                    CommonText(text: title, semibold: true)
+                    CommonText(text: information)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+                Spacer()
+            }.frame(maxWidth: UIScreen.screenWidth - 64, minHeight: 64)
         }
     }
 }
@@ -84,9 +66,9 @@ struct ToastPreview: View {
             }.foregroundColor(.white)
         }
         .simpleToast(isPresented: $showToast, options: toastOptions) {
-            Toast(type: .error)
-            Toast(type: .info)
-            Toast(type: .success)
+            Toast(type: .error, title: "An error occured", information: "Please fill out all missing fields")
+            Toast(type: .info, title: "Take this hint", information: "Try adding a picture to make your post look more interesting. Maybe your text could also be a bit longer")
+            Toast(type: .success, title: "Good job!", information: "Your post looks great")
         }
     }
 }
