@@ -7,9 +7,6 @@
 
 import SwiftUI
 
-// S for Small
-// D for Double
-
 struct TextInput: View {
     @Environment(\.colorScheme) var colorScheme
     @State var input: String = ""
@@ -73,6 +70,57 @@ struct TextInputDouble: View {
     }
 }
 
+struct TextInputTriple: View {
+    @Environment(\.colorScheme) var colorScheme
+    @State var inputFirst: String = ""
+    @State var inputSecond: String = ""
+    @State var inputThird: String = ""
+    @State var invalidFirst: Bool = false
+    @State var invalidSecond: Bool = false
+    @State var invalidThird: Bool = false
+    var color: Color = .black
+    var placeholderColor: Color = .white
+    var placeholderText: String = "Placeholder"
+
+    var body: some View {
+        GlasmorphicCard(content: {
+            VStack(spacing: 0) {
+                TextField(placeholderText, text: $inputFirst)
+                    .foregroundColor(colorScheme == .light
+                        ? invalidFirst ? .red
+                        : color : invalidFirst ? .red : .white)
+                    .padding()
+                    .placeholder(when: inputFirst.isEmpty) {
+                        Text(placeholderText).foregroundColor(colorScheme == .light ? placeholderColor : placeholderColor.opacity(0.5))
+                            .padding()
+                    }
+                Divider().background(invalidFirst || invalidSecond || invalidThird ? .red : .white)
+                TextField(placeholderText, text: $inputSecond)
+                    .foregroundColor(colorScheme == .light
+                        ? invalidSecond ? .red
+                        : color : invalidSecond ? .red : .white)
+                    .padding().ignoresSafeArea(.keyboard, edges: .bottom)
+                    .placeholder(when: inputSecond.isEmpty) {
+                        Text(placeholderText).foregroundColor(colorScheme == .light ? placeholderColor : placeholderColor.opacity(0.5))
+                            .padding()
+                    }
+                Divider()
+                    .background(invalidFirst || invalidSecond || invalidThird ? .red : .white)
+                TextField(placeholderText, text: $inputThird)
+                    .foregroundColor(colorScheme == .light
+                        ? invalidThird ? .red
+                        : color : invalidThird ? .red : .white)
+                    .padding().ignoresSafeArea(.keyboard, edges: .bottom)
+                    .placeholder(when: inputThird.isEmpty) {
+                        Text(placeholderText).foregroundColor(colorScheme == .light ? placeholderColor : placeholderColor.opacity(0.5))
+                            .padding()
+                    }
+            }
+        }, addPadding: false, strokeColor: invalidFirst || invalidSecond || invalidThird ? .red : .white)
+            .frame(width: UIScreen.screenWidth - 15)
+    }
+}
+
 struct TextInputs_Previews: PreviewProvider {
     static var previews: some View {
         DefaultPreview(content: VStack {
@@ -83,9 +131,9 @@ struct TextInputs_Previews: PreviewProvider {
                 TextInput(small: true)
                 TextInput(input: "Example", invalid: true, small: true)
             }
-            TextInputDouble(inputFirst: "Example", invalidFirst: true)
-            TextInputDouble(inputFirst: "Example", inputSecond: "Example", invalidSecond: true)
             TextInputDouble()
+            TextInputDouble(inputFirst: "Example", inputSecond: "Example", invalidSecond: true)
+            TextInputTriple(inputFirst: "Example", inputSecond: "Example", invalidSecond: true)
             Spacer()
         }, gradient: true)
     }
