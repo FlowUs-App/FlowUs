@@ -18,6 +18,12 @@ struct LinearGradientPreview: View {
     }
 }
 
+struct ImageSamplePreview: View {
+    var body: some View {
+        Image("SampleBG").scaleEffect(5)
+    }
+}
+
 struct DefaultPreview<Content: View>: View {
     let content: Content
     var gradient: Bool = false
@@ -67,6 +73,60 @@ struct DefaultPreview<Content: View>: View {
                 } else {
                     Color.white
                 }
+                VStack {
+                    content
+                }
+            }.previewDevice(PreviewDevice(rawValue: DeviceNames.iPhone_13_Pro_Max.rawValue))
+                .previewDisplayName(DeviceNames.iPhone_13_Pro_Max.rawValue)
+            ZStack {
+                Color.black
+                VStack {
+                    content
+                }
+            }.previewDevice(PreviewDevice(rawValue: DeviceNames.iPhone_13_Pro_Max.rawValue))
+                .previewDisplayName(DeviceNames.iPhone_13_Pro_Max.rawValue + " (Dark)")
+                .preferredColorScheme(.dark)
+        }
+    }
+}
+
+struct ImagePreview<Content: View>: View {
+    let content: Content
+    var gradient: Bool = false
+    var body: some View {
+        Group {
+            ZStack {
+                ImageSamplePreview()
+                VStack {
+                    content
+                }
+            }.previewDevice(PreviewDevice(rawValue: DeviceNames.iPhone_13.rawValue))
+                .previewDisplayName(DeviceNames.iPhone_13.rawValue)
+            ZStack {
+                Color.black
+                VStack {
+                    content
+                }
+            }.previewDevice(PreviewDevice(rawValue: DeviceNames.iPhone_13.rawValue))
+                .previewDisplayName(DeviceNames.iPhone_13.rawValue + " (Dark)")
+                .preferredColorScheme(.dark)
+            ZStack {
+                ImageSamplePreview()
+                VStack {
+                    content
+                }
+            }.previewDevice(PreviewDevice(rawValue: DeviceNames.iPhone_SE_3rd_generation.rawValue))
+                .previewDisplayName(DeviceNames.iPhone_SE_3rd_generation.rawValue)
+            ZStack {
+                Color.black
+                VStack {
+                    content
+                }
+            }.previewDevice(PreviewDevice(rawValue: DeviceNames.iPhone_SE_3rd_generation.rawValue))
+                .previewDisplayName(DeviceNames.iPhone_SE_3rd_generation.rawValue + " (Dark)")
+                .preferredColorScheme(.dark)
+            ZStack {
+                ImageSamplePreview()
                 VStack {
                     content
                 }

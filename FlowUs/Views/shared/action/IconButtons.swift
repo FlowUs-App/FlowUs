@@ -7,31 +7,32 @@
 
 import PolyKit
 import SwiftUI
-import SwiftUIX
 
 struct CircleIconButton<Content: View>: View {
     @Environment(\.colorScheme) var colorScheme
     @ViewBuilder var content: Content
     var shadowColor: Color = .black
+    var width: Double = 64
+    var height: Double = 64
+    var iconWidth: Double = 48
+    var iconHeight: Double = 48
 
     var body: some View {
         ZStack {
-            VisualEffectBlurView(blurStyle: .systemUltraThinMaterial, vibrancyStyle: .fill, content: {})
-            content.frame(width: 50, height: 50)
-        }.frame(width: 65, height: 65)
-            .frame(width: 65, height: 65)
-            .background(colorScheme == .light ?
-                Color.clear : Color(hex: "212C4F")).opacity(0.8)
-            .mask(
-                Circle())
+            Circle().background(.ultraThinMaterial).opacity(0.8).frame(width: width, height: height)
+            content.frame(width: iconWidth, height: iconHeight)
+        }.mask(
+            Circle().frame(width: width, height: height))
             .overlay(
                 Circle()
                     .stroke(lineWidth: 0.5)
                     .fill(.white)
                     .opacity(
                         colorScheme == .light ?
-                            0.5 : 0.35))
-            .shadow(color: shadowColor.opacity(0.2), x: 0, y: 20, blur: 20)
+                            0.5 : 0.35)
+                    .frame(width: width, height: height))
+            .shadow(color:
+                shadowColor.opacity(0.2), x: 0, y: 20, blur: 20)
     }
 }
 
@@ -39,16 +40,17 @@ struct HexagonIconButton<Content: View>: View {
     @Environment(\.colorScheme) var colorScheme
     @ViewBuilder var content: Content
     var shadowColor: Color = .black
+    var width: Double = 76
+    var height: Double = 76
+    var iconWidth: Double = 48
+    var iconHeight: Double = 48
 
     var body: some View {
         ZStack {
-            VisualEffectBlurView(blurStyle: .systemUltraThinMaterial, vibrancyStyle: .fill, content: {})
-            content.frame(width: 50, height: 50)
-        }.frame(width: 76, height: 76)
-            .background(colorScheme == .light ?
-                Color.clear : Color(hex: "212C4F")).opacity(0.8)
-            .mask(
-                Poly(count: 6, cornerRadius: 15).frame(width: 76, height: 76))
+            Poly(count: 6, cornerRadius: 15).background(.ultraThinMaterial).opacity(0.8).frame(width: width, height: height)
+            content.frame(width: iconWidth, height: iconHeight)
+        }.mask(
+            Poly(count: 6, cornerRadius: 15).frame(width: width, height: height))
             .overlay(
                 Poly(count: 6, cornerRadius: 15)
                     .stroke(lineWidth: 0.5)
@@ -56,15 +58,15 @@ struct HexagonIconButton<Content: View>: View {
                     .opacity(
                         colorScheme == .light ?
                             0.5 : 0.35)
-                    .frame(width: 76, height: 76)
-            )
-            .shadow(color: shadowColor.opacity(0.2), x: 0, y: 20, blur: 20)
+                    .frame(width: width, height: height))
+            .shadow(color:
+                shadowColor.opacity(0.2), x: 0, y: 20, blur: 20)
     }
 }
 
 struct IconButtons_Previews: PreviewProvider {
     static var previews: some View {
-        DefaultPreview(content: HStack {
+        ImagePreview(content: HStack {
             CircleIconButton(content: {
                 Icon(path: "Icons/Frog")
             }, shadowColor: .green)
@@ -72,6 +74,5 @@ struct IconButtons_Previews: PreviewProvider {
                 Icon(path: "Icons/Frog")
             }, shadowColor: .green)
         })
-        
     }
 }
