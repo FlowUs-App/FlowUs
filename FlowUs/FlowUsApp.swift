@@ -6,6 +6,7 @@
 //
 
 import Firebase
+import L10n_swift
 import SwiftUI
 
 class AppDelegate: NSObject, UIApplicationDelegate {
@@ -28,8 +29,8 @@ struct FlowUsApp: App {
                 LinearGradientPreview()
                 ScrollView {
                     VStack {
-                        
                         CountryInput()
+                        CommonText(text: "hello.world".l10n())
                         TextInput()
                         TextInputDouble()
                     }
