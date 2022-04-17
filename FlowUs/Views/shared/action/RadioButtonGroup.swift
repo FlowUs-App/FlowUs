@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import SwiftUIX
 
 struct ColorInvert: ViewModifier {
     @Environment(\.colorScheme) var colorScheme
@@ -41,24 +40,24 @@ struct RadioButton: View {
         }) {
             HStack(alignment: .center, spacing: 12) {
                 ZStack {
-                    VisualEffectBlurView(blurStyle: .systemUltraThinMaterial, vibrancyStyle: .fill, content: {})
+                    Circle().opacity(0).frame(width: 16, height: 16)
+                        .padding(.all, 4)
+                        .background(.ultraThinMaterial, in: Circle())
+                        .opacity(0.8)
+                        .mask(
+                            Circle())
+                        .overlay(
+                            Circle()
+                                .stroke(lineWidth: 0.5)
+                                .fill(.white)
+                                .opacity(
+                                    colorScheme == .light ?
+                                        0.5 : 0.35))
+                        .shadow(color: .black.opacity(0.2), radius: 20, x: 0, y: 20)
                     if self.radioButton.selectedID == self.radioButton.id {
-                        Circle().fill(self.radioButton.color).frame(width: 12, height: 12)
+                        Circle().fill(self.radioButton.color).frame(width: 12, height: 12).shadow(color: .black.opacity(0.2), radius: 20, x: 0, y: 20)
                     }
-                }.frame(width: 24, height: 24)
-                    .frame(width: 24, height: 24)
-                    .background(colorScheme == .light ?
-                        Color.clear : Color(hex: "212C4F")).opacity(0.8)
-                    .mask(
-                        Circle())
-                    .overlay(
-                        Circle()
-                            .stroke(lineWidth: 0.5)
-                            .fill(.white)
-                            .opacity(
-                                colorScheme == .light ?
-                                    0.5 : 0.35))
-                    .shadow(color: .black.opacity(0.2), x: 0, y: 20, blur: 20)
+                }
                 CommonText(text: self.radioButton.id,
                            semibold: self.radioButton.selectedID == self.radioButton.id)
                     .font(.system(size: self.radioButton.textSize)).fixedSize(horizontal: false, vertical: true).multilineTextAlignment(.leading)

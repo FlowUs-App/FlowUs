@@ -23,7 +23,6 @@
 		4D796D39280370140020FF26 /* GlasmorphicCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D796D38280370140020FF26 /* GlasmorphicCard.swift */; };
 		4D796D78280394ED0020FF26 /* DeviceNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D796D77280394ED0020FF26 /* DeviceNames.swift */; };
 		4D796D7A2803986E0020FF26 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D796D792803986E0020FF26 /* Extensions.swift */; };
-		4D796D7D28039AFA0020FF26 /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = 4D796D7C28039AFA0020FF26 /* SwiftUIX */; };
 		4D8AB48A280B7C54006A3B2F /* SimpleToast in Frameworks */ = {isa = PBXBuildFile; productRef = 4D8AB489280B7C54006A3B2F /* SimpleToast */; };
 		4D8AB48C280B7C72006A3B2F /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8AB48B280B7C72006A3B2F /* Toast.swift */; };
 		4D8AB48F280B8EA0006A3B2F /* Colorful in Frameworks */ = {isa = PBXBuildFile; productRef = 4D8AB48E280B8EA0006A3B2F /* Colorful */; };
@@ -129,7 +128,6 @@
 				4D8AB48F280B8EA0006A3B2F /* Colorful in Frameworks */,
 				4DE33C2227F902BB0029E0CF /* FirebaseAuth in Frameworks */,
 				4DE33C1E27F902BB0029E0CF /* FirebaseAnalyticsSwift-Beta in Frameworks */,
-				4D796D7D28039AFA0020FF26 /* SwiftUIX in Frameworks */,
 				4DE33C2827F902BB0029E0CF /* FirebaseDynamicLinks in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,7 +374,6 @@
 				4DE33C2F27F902BB0029E0CF /* FirebasePerformance */,
 				4DE33C3127F902BB0029E0CF /* FirebaseRemoteConfigSwift-Beta */,
 				4DE33C3327F902BB0029E0CF /* FirebaseStorageSwift-Beta */,
-				4D796D7C28039AFA0020FF26 /* SwiftUIX */,
 				4D58FFF52809F3A2002337AE /* PolyKit */,
 				4D58FFFA2809FCC9002337AE /* CountryPicker */,
 				4D8AB489280B7C54006A3B2F /* SimpleToast */,
@@ -455,7 +452,6 @@
 			mainGroup = 4DBDB0BB26A4D85300B01255;
 			packageReferences = (
 				4DE33C1C27F902BB0029E0CF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				4D796D7B28039AFA0020FF26 /* XCRemoteSwiftPackageReference "SwiftUIX" */,
 				4D58FFF42809F3A1002337AE /* XCRemoteSwiftPackageReference "PolyKit" */,
 				4D58FFF92809FCC9002337AE /* XCRemoteSwiftPackageReference "CountryPicker" */,
 				4D8AB488280B7C54006A3B2F /* XCRemoteSwiftPackageReference "SimpleToast" */,
@@ -1028,14 +1024,6 @@
 				minimumVersion = 1.0.0;
 			};
 		};
-		4D796D7B28039AFA0020FF26 /* XCRemoteSwiftPackageReference "SwiftUIX" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SwiftUIX/SwiftUIX";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.1.2;
-			};
-		};
 		4D8AB488280B7C54006A3B2F /* XCRemoteSwiftPackageReference "SimpleToast" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/sanzaru/SimpleToast.git";
@@ -1072,11 +1060,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4D58FFF92809FCC9002337AE /* XCRemoteSwiftPackageReference "CountryPicker" */;
 			productName = CountryPicker;
-		};
-		4D796D7C28039AFA0020FF26 /* SwiftUIX */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 4D796D7B28039AFA0020FF26 /* XCRemoteSwiftPackageReference "SwiftUIX" */;
-			productName = SwiftUIX;
 		};
 		4D8AB489280B7C54006A3B2F /* SimpleToast */ = {
 			isa = XCSwiftPackageProductDependency;

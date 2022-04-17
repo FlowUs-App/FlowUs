@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import SwiftUIX
 
 // S for Small
 // D for Double
@@ -19,28 +18,13 @@ struct TextInput: View {
     var placeholderText: String = "Placeholder"
 
     var body: some View {
-        ZStack {
-            VisualEffectBlurView(blurStyle: .systemUltraThinMaterial, vibrancyStyle: .fill, content: {})
+        GlasmorphicCard(content: {
             TextField(placeholderText, text: $input)
                 .foregroundColor(colorScheme == .light ? color : .white)
                 .padding().placeholder(when: input.isEmpty) {
                     Text(placeholderText).foregroundColor(placeholderColor).padding()
                 }
-        }
-        .frame(width: UIScreen.screenWidth - 15, height: 60)
-        .background(colorScheme == .light ?
-            Color.clear : Color(hex: "212C4F")).opacity(0.8)
-        .mask(
-            RoundedRectangle(cornerRadius: 15, style: .continuous))
-        .overlay(
-            RoundedRectangle(cornerRadius: 15, style: .continuous)
-                .stroke(lineWidth: 0.5)
-                .fill(.white)
-                .opacity(
-                    colorScheme == .light ?
-                        0.5 : 0.35))
-        .shadow(color: .black.opacity(0.2), x: 0, y: 20, blur: 20)
-        .padding()
+        }, addPadding: false).frame(width: UIScreen.screenWidth - 15)
     }
 }
 
@@ -53,9 +37,8 @@ struct TextInputDouble: View {
     var placeholderText: String = "Placeholder"
 
     var body: some View {
-        ZStack {
-            VisualEffectBlurView(blurStyle: .systemUltraThinMaterial, content: {})
-            VStack {
+        GlasmorphicCard(content: {
+            VStack(spacing: 0) {
                 TextField(placeholderText, text: $firstInput)
                     .foregroundColor(colorScheme == .light ? color : .white)
                     .padding()
@@ -72,21 +55,7 @@ struct TextInputDouble: View {
                             .padding()
                     }
             }
-        }
-        .frame(width: UIScreen.screenWidth - 15, height: 140)
-        .background(colorScheme == .light ?
-            Color.clear : Color(hex: "212C4F")).opacity(0.8)
-        .mask(
-            RoundedRectangle(cornerRadius: 15, style: .continuous))
-        .overlay(
-            RoundedRectangle(cornerRadius: 15, style: .continuous)
-                .stroke(lineWidth: 0.5)
-                .fill(.white)
-                .opacity(
-                    colorScheme == .light ?
-                        0.5 : 0.35))
-        .shadow(color: .black.opacity(0.2), x: 0, y: 20, blur: 20)
-        .padding()
+        }, addPadding: false).frame(width: UIScreen.screenWidth - 15)
     }
 }
 
@@ -98,29 +67,13 @@ struct TextInputS: View {
     var placeholderText: String = "Placeholder"
 
     var body: some View {
-        ZStack {
-            VisualEffectBlurView(blurStyle: .systemUltraThinMaterial, content: {})
+        GlasmorphicCard(content: {
             TextField(placeholderText, text: $input)
                 .foregroundColor(colorScheme == .light ? color : .white)
-                .padding()
-                .placeholder(when: input.isEmpty) {
+                .padding().placeholder(when: input.isEmpty) {
                     Text(placeholderText).foregroundColor(placeholderColor).padding()
                 }
-        }
-        .frame(width: UIScreen.screenWidth / 2.5, height: 60)
-        .background(colorScheme == .light ?
-            Color.clear : Color(hex: "212C4F")).opacity(0.8)
-        .mask(
-            RoundedRectangle(cornerRadius: 15, style: .continuous))
-        .overlay(
-            RoundedRectangle(cornerRadius: 15, style: .continuous)
-                .stroke(lineWidth: 0.5)
-                .fill(.white)
-                .opacity(
-                    colorScheme == .light ?
-                        0.5 : 0.35))
-        .shadow(color: .black.opacity(0.2), x: 0, y: 20, blur: 20)
-        .padding()
+        }, addPadding: false).frame(width: UIScreen.screenWidth / 2.5)
     }
 }
 

@@ -22,7 +22,7 @@ struct Toast: View {
     var body: some View {
         switch type {
         case .error:
-            GlasmorphicCard(content: {
+            GlasmorphicCard {
                 HStack {
                     Icon(resize: true, path: "Icons/Error")
                         .frame(width: 40, height: 40)
@@ -34,9 +34,9 @@ struct Toast: View {
                     }
                     Spacer()
                 }.frame(width: UIScreen.screenWidth - 64, height: 64)
-            }, alignment: .leading)
+            }
         case .info:
-            GlasmorphicCard(content: {
+            GlasmorphicCard {
                 HStack {
                     Icon(resize: true, path: "Icons/Info")
                         .frame(width: 40, height: 40)
@@ -48,7 +48,7 @@ struct Toast: View {
                     }
                     Spacer()
                 }.frame(width: UIScreen.screenWidth - 64, height: 64)
-            }, alignment: .leading)
+            }
         case .success:
             GlasmorphicCard {
                 HStack {

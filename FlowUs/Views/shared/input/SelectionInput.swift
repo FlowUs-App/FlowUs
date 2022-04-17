@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import SwiftUIX
 
 struct SelectionInput: View {
     @Environment(\.colorScheme) var colorScheme
@@ -15,7 +14,7 @@ struct SelectionInput: View {
 
     var body: some View {
         ZStack {
-            VisualEffectBlurView(blurStyle: .systemUltraThinMaterial, content: {
+            GlasmorphicCard(content: {
                 VStack(alignment: .leading) {
                     CommonText(text: text, semibold: true)
                         .fixedSize(horizontal: false, vertical: true)
@@ -29,9 +28,9 @@ struct SelectionInput: View {
                                          print("Selected is: \(selected)")
                                      },
                                      dividersOn: true)
-                    Spacer()
-                }
-            })
+
+                }.padding(.bottom, 12)
+            }, addPadding: false)
         }
         .background(colorScheme == .light ?
             Color.clear : Color(hex: "212C4F")).opacity(0.8)
@@ -44,7 +43,7 @@ struct SelectionInput: View {
                 .opacity(
                     colorScheme == .light ?
                         0.5 : 0.35))
-        .shadow(color: .black.opacity(0.2), x: 0, y: 20, blur: 20)
+        .shadow(color: .black.opacity(0.2), radius: 20, x: 0, y: 20)
         .padding()
     }
 }
@@ -53,12 +52,9 @@ struct SelectionInput_Previews: PreviewProvider {
     static var previews: some View {
         DefaultPreview(content: VStack { HStack {
             SelectionInput(items: ["1. Option", "2. Option", "3. Option Long"], text: "Choose 1, 2 or 3")
-                .frame(height: 220)
             SelectionInput(items: ["1. Option", "2. Option", "3. Option", "4. Option"], text: "Choose 1, 2, 3 or 4")
-                .frame(height: 256)
         }
         SelectionInput(items: ["1. Option", "2. Option", "3. Option", "4. Option", "5. Option"], text: "Choose 1, 2, 3, 4 or 5")
-                .frame(width: UIScreen.screenWidth / 2, height: 312)
         }, gradient: true)
     }
 }

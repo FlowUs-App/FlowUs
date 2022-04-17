@@ -11,7 +11,7 @@ struct LinearGradientPreview: View {
     var body: some View {
         LinearGradient(gradient:
             Gradient(
-                colors: [.init(hexadecimal: "4624C2"), .init(hexadecimal: "7F5BFF")]),
+                colors: [.init(hex: "4624C2"), .init(hex: "7F5BFF")]),
             startPoint: .bottomTrailing,
             endPoint: .topLeading)
             .ignoresSafeArea(.all)
