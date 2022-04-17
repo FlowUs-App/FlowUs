@@ -49,6 +49,12 @@ struct Toast: View {
     }
 }
 
+var LongText = """
+This goes
+over multiple
+lines
+"""
+
 struct ToastPreview: View {
     @State var showToast: Bool = false
 
@@ -67,7 +73,11 @@ struct ToastPreview: View {
         }
         .simpleToast(isPresented: $showToast, options: toastOptions) {
             Toast(type: .error, title: "An error occured", information: "Please fill out all missing fields")
-            Toast(type: .info, title: "Take this hint", information: "Try adding a picture to make your post look more interesting. Maybe your text could also be a bit longer")
+            Toast(type: .info, title: "Take this hint",
+                  information: """
+                                    Try adding a picture to make your post look more interesting.
+                                    Maybe your text could also be a bit longer
+                  """)
             Toast(type: .success, title: "Good job!", information: "Your post looks great")
         }
     }

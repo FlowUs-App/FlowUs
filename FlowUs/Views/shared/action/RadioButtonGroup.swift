@@ -28,7 +28,7 @@ struct RadioButton: View {
          callback: @escaping (String) -> Void,
          selectedID: String,
          size: CGFloat = 20,
-         color: Color = Color.primary,
+         color: Color = Color.black,
          textSize: CGFloat = 14)
     {
         self.radioButton = .init(id: id, callback: callback, selectedID: selectedID, color: color, textSize: textSize)
@@ -55,14 +55,18 @@ struct RadioButton: View {
                                         0.5 : 0.35))
                         .shadow(color: .black.opacity(0.2), radius: 20, x: 0, y: 20)
                     if self.radioButton.selectedID == self.radioButton.id {
-                        Circle().fill(self.radioButton.color).frame(width: 12, height: 12).shadow(color: .black.opacity(0.2), radius: 20, x: 0, y: 20)
+                        Circle()
+                            .fill(colorScheme == .light ? self.radioButton.color : .white)
+                            .frame(width: 12, height: 12)
+                            .shadow(color: .black.opacity(0.2), radius: 20, x: 0, y: 20)
                     }
                 }
                 CommonText(text: self.radioButton.id,
                            semibold: self.radioButton.selectedID == self.radioButton.id)
-                    .font(.system(size: self.radioButton.textSize)).fixedSize(horizontal: false, vertical: true).multilineTextAlignment(.leading)
+                    .font(.system(size: self.radioButton.textSize)).fixedSize(horizontal: false, vertical: true)
+                    .multilineTextAlignment(.leading)
                 Spacer()
-            }.foregroundColor(self.radioButton.color)
+            }.foregroundColor(colorScheme == .light ? self.radioButton.color : .white)
         }
         .foregroundColor(self.radioButton.color)
     }

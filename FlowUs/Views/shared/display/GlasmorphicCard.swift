@@ -12,6 +12,7 @@ struct GlasmorphicCard<Content: View>: View {
     @Environment(\.colorScheme) var colorScheme
     @ViewBuilder var content: Content
     var addPadding: Bool = true
+    var strokeColor: Color = .white
 
     var body: some View {
         content.if(addPadding, transform: { view in
@@ -24,7 +25,7 @@ struct GlasmorphicCard<Content: View>: View {
         .overlay(
             RoundedRectangle(cornerRadius: 15, style: .continuous)
                 .stroke(lineWidth: 0.5)
-                .fill(.white)
+                .fill(strokeColor)
                 .opacity(
                     colorScheme == .light ?
                         0.5 : 0.35))
