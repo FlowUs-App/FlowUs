@@ -68,7 +68,7 @@ struct RadioButton: View {
                 Spacer()
             }.foregroundColor(colorScheme == .light ? self.radioButton.color : .white)
         }
-        .foregroundColor(self.radioButton.color)
+        .foregroundColor(self.radioButton.color).buttonStyle(ScaleButtonStyle())
     }
 }
 
