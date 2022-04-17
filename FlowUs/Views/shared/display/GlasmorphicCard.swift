@@ -5,31 +5,30 @@
 //  Created by Lucas Goldner on 10.04.22.
 //
 
+import Colorful
 import SwiftUI
-import SwiftUIX
 
 struct GlasmorphicCard<Content: View>: View {
-    @ViewBuilder var content: Content
     @Environment(\.colorScheme) var colorScheme
+    @ViewBuilder var content: Content
+    var alignment: HorizontalAlignment = .center
 
     var body: some View {
-        ZStack {
-            VisualEffectBlurView(blurStyle: .systemUltraThinMaterial, content: { content })
-        }
-        .frame(width: UIScreen.screenWidth - 15, height: 250)
-        .background(colorScheme == .light ?
-            Color.clear : Color(hex: "212C4F")).opacity(0.8)
-        .mask(
-            RoundedRectangle(cornerRadius: 15, style: .continuous))
-        .overlay(
-            RoundedRectangle(cornerRadius: 15, style: .continuous)
-                .stroke(lineWidth: 0.5)
-                .fill(.white)
-                .opacity(
-                    colorScheme == .light ?
-                        0.5 : 0.35))
-        .shadow(color: .black.opacity(0.2), x: 0, y: 20, blur: 20)
-        .padding()
+        VStack(alignment: alignment) {
+            content
+        }.padding()
+            .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 15, style: .continuous))
+            .opacity(0.8)
+            .mask(
+                RoundedRectangle(cornerRadius: 15, style: .continuous))
+            .overlay(
+                RoundedRectangle(cornerRadius: 15, style: .continuous)
+                    .stroke(lineWidth: 0.5)
+                    .fill(.white)
+                    .opacity(
+                        colorScheme == .light ?
+                            0.5 : 0.35))
+            .shadow(color: .black.opacity(0.2), x: 0, y: 20, blur: 20)
     }
 }
 

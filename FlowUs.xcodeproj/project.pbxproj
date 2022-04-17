@@ -24,6 +24,9 @@
 		4D796D78280394ED0020FF26 /* DeviceNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D796D77280394ED0020FF26 /* DeviceNames.swift */; };
 		4D796D7A2803986E0020FF26 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D796D792803986E0020FF26 /* Extensions.swift */; };
 		4D796D7D28039AFA0020FF26 /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = 4D796D7C28039AFA0020FF26 /* SwiftUIX */; };
+		4D8AB48A280B7C54006A3B2F /* SimpleToast in Frameworks */ = {isa = PBXBuildFile; productRef = 4D8AB489280B7C54006A3B2F /* SimpleToast */; };
+		4D8AB48C280B7C72006A3B2F /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8AB48B280B7C72006A3B2F /* Toast.swift */; };
+		4D8AB48F280B8EA0006A3B2F /* Colorful in Frameworks */ = {isa = PBXBuildFile; productRef = 4D8AB48E280B8EA0006A3B2F /* Colorful */; };
 		4DB61A53280A253E00D900C0 /* SelectionInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB61A52280A253E00D900C0 /* SelectionInput.swift */; };
 		4DB61A55280A369100D900C0 /* RadioButtonGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB61A54280A369100D900C0 /* RadioButtonGroup.swift */; };
 		4DB61A57280A38C800D900C0 /* RadioButtonDO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB61A56280A38C800D900C0 /* RadioButtonDO.swift */; };
@@ -82,6 +85,7 @@
 		4D796D38280370140020FF26 /* GlasmorphicCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlasmorphicCard.swift; sourceTree = "<group>"; };
 		4D796D77280394ED0020FF26 /* DeviceNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceNames.swift; sourceTree = "<group>"; };
 		4D796D792803986E0020FF26 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		4D8AB48B280B7C72006A3B2F /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		4DB61A52280A253E00D900C0 /* SelectionInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionInput.swift; sourceTree = "<group>"; };
 		4DB61A54280A369100D900C0 /* RadioButtonGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonGroup.swift; sourceTree = "<group>"; };
 		4DB61A56280A38C800D900C0 /* RadioButtonDO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonDO.swift; sourceTree = "<group>"; };
@@ -110,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D8AB48A280B7C54006A3B2F /* SimpleToast in Frameworks */,
 				4DE33C2E27F902BB0029E0CF /* FirebaseMessaging in Frameworks */,
 				4DE33C2627F902BB0029E0CF /* FirebaseDatabaseSwift-Beta in Frameworks */,
 				4DE33C3227F902BB0029E0CF /* FirebaseRemoteConfigSwift-Beta in Frameworks */,
@@ -121,6 +126,7 @@
 				4DE33C2C27F902BB0029E0CF /* FirebaseFunctionsSwift-Beta in Frameworks */,
 				4DE33C2427F902BB0029E0CF /* FirebaseCrashlytics in Frameworks */,
 				4D58FFFB2809FCC9002337AE /* CountryPicker in Frameworks */,
+				4D8AB48F280B8EA0006A3B2F /* Colorful in Frameworks */,
 				4DE33C2227F902BB0029E0CF /* FirebaseAuth in Frameworks */,
 				4DE33C1E27F902BB0029E0CF /* FirebaseAnalyticsSwift-Beta in Frameworks */,
 				4D796D7D28039AFA0020FF26 /* SwiftUIX in Frameworks */,
@@ -148,6 +154,7 @@
 		4D28C77C2806130E00F3A2AE /* action */ = {
 			isa = PBXGroup;
 			children = (
+				4DB61A54280A369100D900C0 /* RadioButtonGroup.swift */,
 				4D28C77E280613B900F3A2AE /* Buttons.swift */,
 				4D5F6E332808D35A0064F259 /* IconButtons.swift */,
 			);
@@ -196,7 +203,7 @@
 				4D796D38280370140020FF26 /* GlasmorphicCard.swift */,
 				4D5141682804D7EC00D37C33 /* Typography.swift */,
 				4D58FFF02809D8FE002337AE /* Icon.swift */,
-				4DB61A54280A369100D900C0 /* RadioButtonGroup.swift */,
+				4D8AB48B280B7C72006A3B2F /* Toast.swift */,
 			);
 			path = display;
 			sourceTree = "<group>";
@@ -372,6 +379,8 @@
 				4D796D7C28039AFA0020FF26 /* SwiftUIX */,
 				4D58FFF52809F3A2002337AE /* PolyKit */,
 				4D58FFFA2809FCC9002337AE /* CountryPicker */,
+				4D8AB489280B7C54006A3B2F /* SimpleToast */,
+				4D8AB48E280B8EA0006A3B2F /* Colorful */,
 			);
 			productName = FlowUs;
 			productReference = 4DBDB0C426A4D85300B01255 /* FlowUs-Dev.app */;
@@ -449,6 +458,8 @@
 				4D796D7B28039AFA0020FF26 /* XCRemoteSwiftPackageReference "SwiftUIX" */,
 				4D58FFF42809F3A1002337AE /* XCRemoteSwiftPackageReference "PolyKit" */,
 				4D58FFF92809FCC9002337AE /* XCRemoteSwiftPackageReference "CountryPicker" */,
+				4D8AB488280B7C54006A3B2F /* XCRemoteSwiftPackageReference "SimpleToast" */,
+				4D8AB48D280B8EA0006A3B2F /* XCRemoteSwiftPackageReference "Colorful" */,
 			);
 			productRefGroup = 4DBDB0C526A4D85300B01255 /* Products */;
 			projectDirPath = "";
@@ -550,6 +561,7 @@
 				4D796D39280370140020FF26 /* GlasmorphicCard.swift in Sources */,
 				4DBDB0C826A4D85300B01255 /* FlowUsApp.swift in Sources */,
 				4DE3146126A78F6A007A51FE /* ContentOO.swift in Sources */,
+				4D8AB48C280B7C72006A3B2F /* Toast.swift in Sources */,
 				4D28C7812806360C00F3A2AE /* TextInputs.swift in Sources */,
 				4D58FFFD2809FD17002337AE /* CountryPickerOO.swift in Sources */,
 			);
@@ -1024,6 +1036,22 @@
 				minimumVersion = 0.1.2;
 			};
 		};
+		4D8AB488280B7C54006A3B2F /* XCRemoteSwiftPackageReference "SimpleToast" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sanzaru/SimpleToast.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.6.2;
+			};
+		};
+		4D8AB48D280B8EA0006A3B2F /* XCRemoteSwiftPackageReference "Colorful" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Lakr233/Colorful.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		4DE33C1C27F902BB0029E0CF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -1049,6 +1077,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4D796D7B28039AFA0020FF26 /* XCRemoteSwiftPackageReference "SwiftUIX" */;
 			productName = SwiftUIX;
+		};
+		4D8AB489280B7C54006A3B2F /* SimpleToast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D8AB488280B7C54006A3B2F /* XCRemoteSwiftPackageReference "SimpleToast" */;
+			productName = SimpleToast;
+		};
+		4D8AB48E280B8EA0006A3B2F /* Colorful */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D8AB48D280B8EA0006A3B2F /* XCRemoteSwiftPackageReference "Colorful" */;
+			productName = Colorful;
 		};
 		4DE33C1D27F902BB0029E0CF /* FirebaseAnalyticsSwift-Beta */ = {
 			isa = XCSwiftPackageProductDependency;
