@@ -13,6 +13,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool
     {
         FirebaseApp.configure()
+        Configuration.shared.setupConfig()
         return true
     }
 }
@@ -23,7 +24,17 @@ struct FlowUsApp: App {
 
     var body: some Scene {
         WindowGroup {
-            Navigator()
+            ZStack {
+                LinearGradientPreview()
+                ScrollView {
+                    VStack {
+                        
+                        CountryInput()
+                        TextInput()
+                        TextInputDouble()
+                    }
+                }.keyboardAware()
+            }
         }
     }
 }

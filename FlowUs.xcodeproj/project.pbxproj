@@ -8,7 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		4D112F5F27F3BBB2002957E8 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 4D112F5E27F3BBB2002957E8 /* .swiftlint.yml */; };
+		4D28C77F280613B900F3A2AE /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D28C77E280613B900F3A2AE /* Buttons.swift */; };
+		4D28C7812806360C00F3A2AE /* TextInputs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D28C7802806360C00F3A2AE /* TextInputs.swift */; };
 		4D44F56227EBD55400FE8CCB /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44F56127EBD55400FE8CCB /* Navigator.swift */; };
+		4D510105280C6EE200BE3988 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D510104280C6EE200BE3988 /* Constants.swift */; };
+		4D510113280C753500BE3988 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D510112280C753500BE3988 /* Configuration.swift */; };
+		4D5141652804D2A400D37C33 /* Previews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5141642804D2A400D37C33 /* Previews.swift */; };
+		4D5141692804D7EC00D37C33 /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5141682804D7EC00D37C33 /* Typography.swift */; };
+		4D58FFF12809D8FE002337AE /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D58FFF02809D8FE002337AE /* Icon.swift */; };
+		4D58FFF62809F3A2002337AE /* PolyKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4D58FFF52809F3A2002337AE /* PolyKit */; };
+		4D58FFF82809F8B3002337AE /* CountryInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D58FFF72809F8B3002337AE /* CountryInput.swift */; };
+		4D58FFFB2809FCC9002337AE /* CountryPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 4D58FFFA2809FCC9002337AE /* CountryPicker */; };
+		4D58FFFD2809FD17002337AE /* CountryPickerOO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D58FFFC2809FD17002337AE /* CountryPickerOO.swift */; };
+		4D5F6E322808C8220064F259 /* KeyboardAware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5F6E312808C8220064F259 /* KeyboardAware.swift */; };
+		4D5F6E342808D35A0064F259 /* IconButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5F6E332808D35A0064F259 /* IconButtons.swift */; };
+		4D796D39280370140020FF26 /* GlasmorphicCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D796D38280370140020FF26 /* GlasmorphicCard.swift */; };
+		4D796D78280394ED0020FF26 /* DeviceNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D796D77280394ED0020FF26 /* DeviceNames.swift */; };
+		4D796D7A2803986E0020FF26 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D796D792803986E0020FF26 /* Extensions.swift */; };
+		4D8AB48A280B7C54006A3B2F /* SimpleToast in Frameworks */ = {isa = PBXBuildFile; productRef = 4D8AB489280B7C54006A3B2F /* SimpleToast */; };
+		4D8AB48C280B7C72006A3B2F /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8AB48B280B7C72006A3B2F /* Toast.swift */; };
+		4D8AB48F280B8EA0006A3B2F /* Colorful in Frameworks */ = {isa = PBXBuildFile; productRef = 4D8AB48E280B8EA0006A3B2F /* Colorful */; };
+		4DB61A53280A253E00D900C0 /* SelectionInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB61A52280A253E00D900C0 /* SelectionInput.swift */; };
+		4DB61A55280A369100D900C0 /* RadioButtonGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB61A54280A369100D900C0 /* RadioButtonGroup.swift */; };
+		4DB61A57280A38C800D900C0 /* RadioButtonDO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB61A56280A38C800D900C0 /* RadioButtonDO.swift */; };
+		4DB61A59280A392D00D900C0 /* RadioButtonOO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB61A58280A392D00D900C0 /* RadioButtonOO.swift */; };
 		4DBDB0C826A4D85300B01255 /* FlowUsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDB0C726A4D85300B01255 /* FlowUsApp.swift */; };
 		4DBDB0CA26A4D85300B01255 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDB0C926A4D85300B01255 /* ContentView.swift */; };
 		4DBDB0CC26A4D85300B01255 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DBDB0CB26A4D85300B01255 /* Assets.xcassets */; };
@@ -50,7 +73,26 @@
 
 /* Begin PBXFileReference section */
 		4D112F5E27F3BBB2002957E8 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		4D28C77E280613B900F3A2AE /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
+		4D28C7802806360C00F3A2AE /* TextInputs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputs.swift; sourceTree = "<group>"; };
 		4D44F56127EBD55400FE8CCB /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
+		4D510104280C6EE200BE3988 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4D510112280C753500BE3988 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		4D5141642804D2A400D37C33 /* Previews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Previews.swift; sourceTree = "<group>"; };
+		4D5141682804D7EC00D37C33 /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
+		4D58FFF02809D8FE002337AE /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
+		4D58FFF72809F8B3002337AE /* CountryInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryInput.swift; sourceTree = "<group>"; };
+		4D58FFFC2809FD17002337AE /* CountryPickerOO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryPickerOO.swift; sourceTree = "<group>"; };
+		4D5F6E312808C8220064F259 /* KeyboardAware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardAware.swift; sourceTree = "<group>"; };
+		4D5F6E332808D35A0064F259 /* IconButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconButtons.swift; sourceTree = "<group>"; };
+		4D796D38280370140020FF26 /* GlasmorphicCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlasmorphicCard.swift; sourceTree = "<group>"; };
+		4D796D77280394ED0020FF26 /* DeviceNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceNames.swift; sourceTree = "<group>"; };
+		4D796D792803986E0020FF26 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		4D8AB48B280B7C72006A3B2F /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		4DB61A52280A253E00D900C0 /* SelectionInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionInput.swift; sourceTree = "<group>"; };
+		4DB61A54280A369100D900C0 /* RadioButtonGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonGroup.swift; sourceTree = "<group>"; };
+		4DB61A56280A38C800D900C0 /* RadioButtonDO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonDO.swift; sourceTree = "<group>"; };
+		4DB61A58280A392D00D900C0 /* RadioButtonOO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonOO.swift; sourceTree = "<group>"; };
 		4DBDB0C426A4D85300B01255 /* FlowUs-Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FlowUs-Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DBDB0C726A4D85300B01255 /* FlowUsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowUsApp.swift; sourceTree = "<group>"; };
 		4DBDB0C926A4D85300B01255 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -75,6 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D8AB48A280B7C54006A3B2F /* SimpleToast in Frameworks */,
 				4DE33C2E27F902BB0029E0CF /* FirebaseMessaging in Frameworks */,
 				4DE33C2627F902BB0029E0CF /* FirebaseDatabaseSwift-Beta in Frameworks */,
 				4DE33C3227F902BB0029E0CF /* FirebaseRemoteConfigSwift-Beta in Frameworks */,
@@ -82,8 +125,11 @@
 				4DE33C2027F902BB0029E0CF /* FirebaseAppCheck in Frameworks */,
 				4DE33C3427F902BB0029E0CF /* FirebaseStorageSwift-Beta in Frameworks */,
 				4DE33C2A27F902BB0029E0CF /* FirebaseFirestoreSwift-Beta in Frameworks */,
+				4D58FFF62809F3A2002337AE /* PolyKit in Frameworks */,
 				4DE33C2C27F902BB0029E0CF /* FirebaseFunctionsSwift-Beta in Frameworks */,
 				4DE33C2427F902BB0029E0CF /* FirebaseCrashlytics in Frameworks */,
+				4D58FFFB2809FCC9002337AE /* CountryPicker in Frameworks */,
+				4D8AB48F280B8EA0006A3B2F /* Colorful in Frameworks */,
 				4DE33C2227F902BB0029E0CF /* FirebaseAuth in Frameworks */,
 				4DE33C1E27F902BB0029E0CF /* FirebaseAnalyticsSwift-Beta in Frameworks */,
 				4DE33C2827F902BB0029E0CF /* FirebaseDynamicLinks in Frameworks */,
@@ -107,9 +153,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D28C77C2806130E00F3A2AE /* action */ = {
+			isa = PBXGroup;
+			children = (
+				4DB61A54280A369100D900C0 /* RadioButtonGroup.swift */,
+				4D28C77E280613B900F3A2AE /* Buttons.swift */,
+				4D5F6E332808D35A0064F259 /* IconButtons.swift */,
+			);
+			path = action;
+			sourceTree = "<group>";
+		};
+		4D28C77D2806131C00F3A2AE /* input */ = {
+			isa = PBXGroup;
+			children = (
+				4D28C7802806360C00F3A2AE /* TextInputs.swift */,
+				4D58FFF72809F8B3002337AE /* CountryInput.swift */,
+				4DB61A52280A253E00D900C0 /* SelectionInput.swift */,
+			);
+			path = input;
+			sourceTree = "<group>";
+		};
 		4D44F55E27EBD4FF00FE8CCB /* shared */ = {
 			isa = PBXGroup;
 			children = (
+				4D28C77D2806131C00F3A2AE /* input */,
+				4D28C77C2806130E00F3A2AE /* action */,
+				4D796D3728036FF20020FF26 /* display */,
 			);
 			path = shared;
 			sourceTree = "<group>";
@@ -128,6 +197,30 @@
 				4DBDB0C926A4D85300B01255 /* ContentView.swift */,
 			);
 			path = screen;
+			sourceTree = "<group>";
+		};
+		4D796D3728036FF20020FF26 /* display */ = {
+			isa = PBXGroup;
+			children = (
+				4D796D38280370140020FF26 /* GlasmorphicCard.swift */,
+				4D5141682804D7EC00D37C33 /* Typography.swift */,
+				4D58FFF02809D8FE002337AE /* Icon.swift */,
+				4D8AB48B280B7C72006A3B2F /* Toast.swift */,
+			);
+			path = display;
+			sourceTree = "<group>";
+		};
+		4D796D76280394E20020FF26 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4D796D77280394ED0020FF26 /* DeviceNames.swift */,
+				4D796D792803986E0020FF26 /* Extensions.swift */,
+				4D5141642804D2A400D37C33 /* Previews.swift */,
+				4D5F6E312808C8220064F259 /* KeyboardAware.swift */,
+				4D510104280C6EE200BE3988 /* Constants.swift */,
+				4D510112280C753500BE3988 /* Configuration.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		4DBDB0BB26A4D85300B01255 = {
@@ -153,6 +246,7 @@
 		4DBDB0C626A4D85300B01255 /* FlowUs */ = {
 			isa = PBXGroup;
 			children = (
+				4D796D76280394E20020FF26 /* Utils */,
 				4DE33C0D27F8FE470029E0CF /* Firebase */,
 				4DE3145F26A78F2F007A51FE /* DataObjects */,
 				4DE3145E26A78F1F007A51FE /* ObservableObjects */,
@@ -188,6 +282,8 @@
 			isa = PBXGroup;
 			children = (
 				4DE3146026A78F6A007A51FE /* ContentOO.swift */,
+				4D58FFFC2809FD17002337AE /* CountryPickerOO.swift */,
+				4DB61A58280A392D00D900C0 /* RadioButtonOO.swift */,
 			);
 			path = ObservableObjects;
 			sourceTree = "<group>";
@@ -196,6 +292,7 @@
 			isa = PBXGroup;
 			children = (
 				4DE3146426A78FDE007A51FE /* ContentDO.swift */,
+				4DB61A56280A38C800D900C0 /* RadioButtonDO.swift */,
 			);
 			path = DataObjects;
 			sourceTree = "<group>";
@@ -262,7 +359,7 @@
 				4DBDB0C026A4D85300B01255 /* Sources */,
 				4DBDB0C126A4D85300B01255 /* Frameworks */,
 				4DBDB0C226A4D85300B01255 /* Resources */,
-				4DE33C1727F8FFAB0029E0CF /* Run Script */,
+				4DE33C1727F8FFAB0029E0CF /* Firebase */,
 				4D112F5D27F3BAFC002957E8 /* ShellScript */,
 			);
 			buildRules = (
@@ -283,6 +380,10 @@
 				4DE33C2F27F902BB0029E0CF /* FirebasePerformance */,
 				4DE33C3127F902BB0029E0CF /* FirebaseRemoteConfigSwift-Beta */,
 				4DE33C3327F902BB0029E0CF /* FirebaseStorageSwift-Beta */,
+				4D58FFF52809F3A2002337AE /* PolyKit */,
+				4D58FFFA2809FCC9002337AE /* CountryPicker */,
+				4D8AB489280B7C54006A3B2F /* SimpleToast */,
+				4D8AB48E280B8EA0006A3B2F /* Colorful */,
 			);
 			productName = FlowUs;
 			productReference = 4DBDB0C426A4D85300B01255 /* FlowUs-Dev.app */;
@@ -357,6 +458,10 @@
 			mainGroup = 4DBDB0BB26A4D85300B01255;
 			packageReferences = (
 				4DE33C1C27F902BB0029E0CF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				4D58FFF42809F3A1002337AE /* XCRemoteSwiftPackageReference "PolyKit" */,
+				4D58FFF92809FCC9002337AE /* XCRemoteSwiftPackageReference "CountryPicker" */,
+				4D8AB488280B7C54006A3B2F /* XCRemoteSwiftPackageReference "SimpleToast" */,
+				4D8AB48D280B8EA0006A3B2F /* XCRemoteSwiftPackageReference "Colorful" */,
 			);
 			productRefGroup = 4DBDB0C526A4D85300B01255 /* Products */;
 			projectDirPath = "";
@@ -414,7 +519,7 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
-		4DE33C1727F8FFAB0029E0CF /* Run Script */ = {
+		4DE33C1727F8FFAB0029E0CF /* Firebase */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -423,14 +528,14 @@
 			);
 			inputPaths = (
 			);
-			name = "Run Script";
+			name = Firebase;
 			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "## Name of the resource we're selectively copying\nGOOGLESERVICE_INFO_PLIST=GoogleService-Info.plist\n\n# Get references to dev and prod versions of the GoogleService-Info.plist\n# NOTE: These should only live on the file system and should NOT be part of the target (since we'll be adding them to the target manually)\nGOOGLESERVICE_INFO_DEV=${PROJECT_DIR}/${TARGET_NAME}/Firebase/Dev/${GOOGLESERVICE_INFO_PLIST}\nGOOGLESERVICE_INFO_STAGING=${PROJECT_DIR}/${TARGET_NAME}/Firebase/Staging/${GOOGLESERVICE_INFO_PLIST}\nGOOGLESERVICE_INFO_PROD=${PROJECT_DIR}/${TARGET_NAME}/Firebase/Production/${GOOGLESERVICE_INFO_PLIST}\n\n# Make sure the dev version of GoogleService-Info.plist exists\necho \"Looking for ${GOOGLESERVICE_INFO_PLIST} in ${GOOGLESERVICE_INFO_DEV}\"\nif [ ! -f $GOOGLESERVICE_INFO_DEV ]\nthen\n    echo \"No Development GoogleService-Info.plist found. Please ensure it's in the proper directory.\"\n    exit 1\nfi\n\n# Make sure the staging version of GoogleService-Info.plist exists\necho \"Looking for ${GOOGLESERVICE_INFO_PLIST} in ${GOOGLESERVICE_INFO_STAGING}\"\nif [ ! -f $GOOGLESERVICE_INFO_STAGING ]\nthen\n    echo \"No Staging GoogleService-Info.plist found. Please ensure it's in the proper directory.\"\n    exit 1\nfi\n\n# Make sure the prod version of GoogleService-Info.plist exists\necho \"Looking for ${GOOGLESERVICE_INFO_PLIST} in ${GOOGLESERVICE_INFO_PROD}\"\nif [ ! -f $GOOGLESERVICE_INFO_PROD ]\nthen\n    echo \"No Production GoogleService-Info.plist found. Please ensure it's in the proper directory.\"\n    exit 1\nfi\n\n# Get a reference to the destination location for the GoogleService-Info.plist\nPLIST_DESTINATION=${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app\necho \"Will copy ${GOOGLESERVICE_INFO_PLIST} to final destination: ${PLIST_DESTINATION}\"\n\n# Copy over the prod GoogleService-Info.plist for Release builds\nif [ \"${CONFIGURATION}\" == \"Production\" ]\nthen\n    echo \"Using ${GOOGLESERVICE_INFO_PROD}\"\n    cp \"${GOOGLESERVICE_INFO_PROD}\" \"${PLIST_DESTINATION}\"\nelif [ \"${CONFIGURATION}\" == \"Staging\" ]\nthen\n    echo \"Using ${GOOGLESERVICE_INFO_STAGING}\"\n    cp \"${GOOGLESERVICE_INFO_STAGING}\" \"${PLIST_DESTINATION}\"\nelse\n    echo \"Using ${GOOGLESERVICE_INFO_DEV}\"\n    cp \"${GOOGLESERVICE_INFO_DEV}\" \"${PLIST_DESTINATION}\"\nfi\n";
+			shellScript = "## Name of the resource we're selectively copying\nGOOGLESERVICE_INFO_PLIST=GoogleService-Info.plist\n\n# Get references to dev and prod versions of the GoogleService-Info.plist\n# NOTE: These should only live on the file system and should NOT be part of the target (since we'll be adding them to the target manually)\nGOOGLESERVICE_INFO_DEV=${PROJECT_DIR}/${TARGET_NAME}/Firebase/Dev/${GOOGLESERVICE_INFO_PLIST}\nGOOGLESERVICE_INFO_STAGING=${PROJECT_DIR}/${TARGET_NAME}/Firebase/Staging/${GOOGLESERVICE_INFO_PLIST}\nGOOGLESERVICE_INFO_PROD=${PROJECT_DIR}/${TARGET_NAME}/Firebase/Production/${GOOGLESERVICE_INFO_PLIST}\n\n# Make sure the dev version of GoogleService-Info.plist exists\necho \"Looking for ${GOOGLESERVICE_INFO_PLIST} in ${GOOGLESERVICE_INFO_DEV}\"\nif [ ! -f $GOOGLESERVICE_INFO_DEV ]\nthen\n    echo \"No Development GoogleService-Info.plist found. Please ensure it's in the proper directory.\"\n    exit 1\nfi\n\n# Make sure the staging version of GoogleService-Info.plist exists\necho \"Looking for ${GOOGLESERVICE_INFO_PLIST} in ${GOOGLESERVICE_INFO_STAGING}\"\nif [ ! -f $GOOGLESERVICE_INFO_STAGING ]\nthen\n    echo \"No Staging GoogleService-Info.plist found. Please ensure it's in the proper directory.\"\n    exit 1\nfi\n\n# Make sure the prod version of GoogleService-Info.plist exists\necho \"Looking for ${GOOGLESERVICE_INFO_PLIST} in ${GOOGLESERVICE_INFO_PROD}\"\nif [ ! -f $GOOGLESERVICE_INFO_PROD ]\nthen\n    echo \"No Production GoogleService-Info.plist found. Please ensure it's in the proper directory.\"\n    exit 1\nfi\n\n# Get a reference to the destination location for the GoogleService-Info.plist\nPLIST_DESTINATION=${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app\necho \"Will copy ${GOOGLESERVICE_INFO_PLIST} to final destination: ${PLIST_DESTINATION}\"\n\n# Copy over the prod GoogleService-Info.plist for Release builds\nif [ \"${CONFIGURATION}\" == \"Production\" ] || [ \"${CONFIGURATION}\" == \"Production Debug\" ]\nthen\n    echo \"Using ${GOOGLESERVICE_INFO_PROD}\"\n    cp \"${GOOGLESERVICE_INFO_PROD}\" \"${PLIST_DESTINATION}\"\nelif [ \"${CONFIGURATION}\" == \"Staging\" ] || [ \"${CONFIGURATION}\" == \"Staging Debug\" ]\nthen\n    echo \"Using ${GOOGLESERVICE_INFO_STAGING}\"\n    cp \"${GOOGLESERVICE_INFO_STAGING}\" \"${PLIST_DESTINATION}\"\nelse\n    echo \"Using ${GOOGLESERVICE_INFO_DEV}\"\n    cp \"${GOOGLESERVICE_INFO_DEV}\" \"${PLIST_DESTINATION}\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -439,11 +544,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D58FFF82809F8B3002337AE /* CountryInput.swift in Sources */,
+				4D5141692804D7EC00D37C33 /* Typography.swift in Sources */,
+				4D796D78280394ED0020FF26 /* DeviceNames.swift in Sources */,
+				4DB61A53280A253E00D900C0 /* SelectionInput.swift in Sources */,
+				4D5F6E342808D35A0064F259 /* IconButtons.swift in Sources */,
+				4D58FFF12809D8FE002337AE /* Icon.swift in Sources */,
+				4D510113280C753500BE3988 /* Configuration.swift in Sources */,
+				4D510105280C6EE200BE3988 /* Constants.swift in Sources */,
 				4DE3146526A78FDE007A51FE /* ContentDO.swift in Sources */,
+				4D28C77F280613B900F3A2AE /* Buttons.swift in Sources */,
+				4DB61A57280A38C800D900C0 /* RadioButtonDO.swift in Sources */,
 				4D44F56227EBD55400FE8CCB /* Navigator.swift in Sources */,
+				4D796D7A2803986E0020FF26 /* Extensions.swift in Sources */,
+				4D5141652804D2A400D37C33 /* Previews.swift in Sources */,
+				4D5F6E322808C8220064F259 /* KeyboardAware.swift in Sources */,
 				4DBDB0CA26A4D85300B01255 /* ContentView.swift in Sources */,
+				4DB61A59280A392D00D900C0 /* RadioButtonOO.swift in Sources */,
+				4DB61A55280A369100D900C0 /* RadioButtonGroup.swift in Sources */,
+				4D796D39280370140020FF26 /* GlasmorphicCard.swift in Sources */,
 				4DBDB0C826A4D85300B01255 /* FlowUsApp.swift in Sources */,
 				4DE3146126A78F6A007A51FE /* ContentOO.swift in Sources */,
+				4D8AB48C280B7C72006A3B2F /* Toast.swift in Sources */,
+				4D28C7812806360C00F3A2AE /* TextInputs.swift in Sources */,
+				4D58FFFD2809FD17002337AE /* CountryPickerOO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,7 +603,132 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		4DBDB0D126A4D85300B01255 /* Dev */ = {
+		4D510106280C71E200BE3988 /* Dev Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_NS_ASSERTIONS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG DEV";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = "Dev Debug";
+		};
+		4D510107280C71E200BE3988 /* Dev Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Dev";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"FlowUs/Preview Content\"";
+				DEVELOPMENT_TEAM = MGA58Y526H;
+				ENABLE_PREVIEWS = YES;
+				EXCLUDED_ARCHS = "";
+				INFOPLIST_FILE = FlowUs/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MODULE_NAME = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lucas-goldner.FlowUs-dev-DEBUG";
+				PRODUCT_NAME = "$(TARGET_NAME)-Dev";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = "Dev Debug";
+		};
+		4D510108280C71E200BE3988 /* Dev Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MGA58Y526H;
+				INFOPLIST_FILE = FlowUsUnitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.LucasGoldner.FlowUsUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlowUs-Dev.app/FlowUs-Dev";
+			};
+			name = "Dev Debug";
+		};
+		4D510109280C71E200BE3988 /* Dev Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MGA58Y526H;
+				INFOPLIST_FILE = FlowUsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.LucasGoldner.FlowUsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FlowUs;
+			};
+			name = "Dev Debug";
+		};
+		4D51010A280C71FA00BE3988 /* Staging Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -530,13 +779,260 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG STAGING";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = "Staging Debug";
+		};
+		4D51010B280C71FA00BE3988 /* Staging Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Staging";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"FlowUs/Preview Content\"";
+				DEVELOPMENT_TEAM = MGA58Y526H;
+				ENABLE_PREVIEWS = YES;
+				EXCLUDED_ARCHS = "";
+				INFOPLIST_FILE = FlowUs/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lucas-goldner.FlowUs-staging-DEBUG";
+				PRODUCT_NAME = "$(TARGET_NAME)-Staging";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = "Staging Debug";
+		};
+		4D51010C280C71FA00BE3988 /* Staging Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MGA58Y526H;
+				INFOPLIST_FILE = FlowUsUnitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.LucasGoldner.FlowUsUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlowUs-Dev.app/FlowUs-Dev";
+			};
+			name = "Staging Debug";
+		};
+		4D51010D280C71FA00BE3988 /* Staging Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MGA58Y526H;
+				INFOPLIST_FILE = FlowUsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.LucasGoldner.FlowUsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FlowUs;
+			};
+			name = "Staging Debug";
+		};
+		4D51010E280C720300BE3988 /* Production Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_NS_ASSERTIONS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG PROD";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VALIDATE_PRODUCT = NO;
+			};
+			name = "Production Debug";
+		};
+		4D51010F280C720300BE3988 /* Production Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"FlowUs/Preview Content\"";
+				DEVELOPMENT_TEAM = MGA58Y526H;
+				ENABLE_PREVIEWS = YES;
+				EXCLUDED_ARCHS = "";
+				INFOPLIST_FILE = FlowUs/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lucas-goldner.FlowUs-DEBUG";
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = "Production Debug";
+		};
+		4D510110280C720300BE3988 /* Production Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MGA58Y526H;
+				INFOPLIST_FILE = FlowUsUnitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.LucasGoldner.FlowUsUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlowUs-Dev.app/FlowUs-Dev";
+			};
+			name = "Production Debug";
+		};
+		4D510111280C720300BE3988 /* Production Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MGA58Y526H;
+				INFOPLIST_FILE = FlowUsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.LucasGoldner.FlowUsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FlowUs;
+			};
+			name = "Production Debug";
+		};
+		4DBDB0D126A4D85300B01255 /* Dev */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEV;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Dev;
 		};
@@ -585,10 +1081,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = PROD;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
@@ -604,16 +1101,18 @@
 				DEVELOPMENT_ASSET_PATHS = "\"FlowUs/Preview Content\"";
 				DEVELOPMENT_TEAM = MGA58Y526H;
 				ENABLE_PREVIEWS = YES;
+				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = FlowUs/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MODULE_NAME = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lucas-goldner.FlowUs-dev";
 				PRODUCT_NAME = "$(TARGET_NAME)-Dev";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Dev;
 		};
@@ -626,16 +1125,20 @@
 				DEVELOPMENT_ASSET_PATHS = "\"FlowUs/Preview Content\"";
 				DEVELOPMENT_TEAM = MGA58Y526H;
 				ENABLE_PREVIEWS = YES;
+				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = FlowUs/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lucas-goldner.FlowUs";
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Production;
 		};
@@ -751,30 +1254,29 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
+				ENABLE_TESTABILITY = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = STAGING;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Staging;
 		};
@@ -787,8 +1289,9 @@
 				DEVELOPMENT_ASSET_PATHS = "\"FlowUs/Preview Content\"";
 				DEVELOPMENT_TEAM = MGA58Y526H;
 				ENABLE_PREVIEWS = YES;
+				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = FlowUs/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -796,7 +1299,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lucas-goldner.FlowUs-staging";
 				PRODUCT_NAME = "$(TARGET_NAME)-Staging";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Staging;
 		};
@@ -846,45 +1349,89 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4DBDB0D126A4D85300B01255 /* Dev */,
+				4D510106280C71E200BE3988 /* Dev Debug */,
 				4DE33C1827F900550029E0CF /* Staging */,
+				4D51010A280C71FA00BE3988 /* Staging Debug */,
 				4DBDB0D226A4D85300B01255 /* Production */,
+				4D51010E280C720300BE3988 /* Production Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Production;
+			defaultConfigurationName = Dev;
 		};
 		4DBDB0D326A4D85300B01255 /* Build configuration list for PBXNativeTarget "FlowUs" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4DBDB0D426A4D85300B01255 /* Dev */,
+				4D510107280C71E200BE3988 /* Dev Debug */,
 				4DE33C1927F900550029E0CF /* Staging */,
+				4D51010B280C71FA00BE3988 /* Staging Debug */,
 				4DBDB0D526A4D85300B01255 /* Production */,
+				4D51010F280C720300BE3988 /* Production Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Production;
+			defaultConfigurationName = Dev;
 		};
 		4DE3147526A7912F007A51FE /* Build configuration list for PBXNativeTarget "FlowUsUnitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4DE3147626A7912F007A51FE /* Dev */,
+				4D510108280C71E200BE3988 /* Dev Debug */,
 				4DE33C1A27F900550029E0CF /* Staging */,
+				4D51010C280C71FA00BE3988 /* Staging Debug */,
 				4DE3147726A7912F007A51FE /* Production */,
+				4D510110280C720300BE3988 /* Production Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Production;
+			defaultConfigurationName = Dev;
 		};
 		4DE3148726A7935B007A51FE /* Build configuration list for PBXNativeTarget "FlowUsUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4DE3148826A7935B007A51FE /* Dev */,
+				4D510109280C71E200BE3988 /* Dev Debug */,
 				4DE33C1B27F900550029E0CF /* Staging */,
+				4D51010D280C71FA00BE3988 /* Staging Debug */,
 				4DE3148926A7935B007A51FE /* Production */,
+				4D510111280C720300BE3988 /* Production Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Production;
+			defaultConfigurationName = Dev;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		4D58FFF42809F3A1002337AE /* XCRemoteSwiftPackageReference "PolyKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/heestand-xyz/PolyKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		4D58FFF92809FCC9002337AE /* XCRemoteSwiftPackageReference "CountryPicker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mobven/CountryPicker.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		4D8AB488280B7C54006A3B2F /* XCRemoteSwiftPackageReference "SimpleToast" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sanzaru/SimpleToast.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.6.2;
+			};
+		};
+		4D8AB48D280B8EA0006A3B2F /* XCRemoteSwiftPackageReference "Colorful" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Lakr233/Colorful.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		4DE33C1C27F902BB0029E0CF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -896,6 +1443,26 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		4D58FFF52809F3A2002337AE /* PolyKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D58FFF42809F3A1002337AE /* XCRemoteSwiftPackageReference "PolyKit" */;
+			productName = PolyKit;
+		};
+		4D58FFFA2809FCC9002337AE /* CountryPicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D58FFF92809FCC9002337AE /* XCRemoteSwiftPackageReference "CountryPicker" */;
+			productName = CountryPicker;
+		};
+		4D8AB489280B7C54006A3B2F /* SimpleToast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D8AB488280B7C54006A3B2F /* XCRemoteSwiftPackageReference "SimpleToast" */;
+			productName = SimpleToast;
+		};
+		4D8AB48E280B8EA0006A3B2F /* Colorful */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D8AB48D280B8EA0006A3B2F /* XCRemoteSwiftPackageReference "Colorful" */;
+			productName = Colorful;
+		};
 		4DE33C1D27F902BB0029E0CF /* FirebaseAnalyticsSwift-Beta */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 4DE33C1C27F902BB0029E0CF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

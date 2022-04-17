@@ -18,20 +18,20 @@ struct Navigator: View {
                     .rotationEffect(.degrees(open ? 45 : 90))
                     .foregroundColor(.white)
                     .font(.system(size: 38, weight: .bold))
-                    .animation(.spring(response: 0.2, dampingFraction: 0.4, blendDuration: 0))
+                    .animation(.spring(response: 0.2, dampingFraction: 0.4, blendDuration: 0), value: false)
             }
             .padding(24).background(Color.pink).mask(Circle()).shadow(color: Color.pink, radius: 10).zIndex(10)
 
-            SecondaryButton(open: $open, icon: "bubble.left.fill", color: Color.blue, offsetY: -90)
+            MenuSecondaryButton(open: $open, icon: "bubble.left.fill", color: Color.blue, offsetY: -90)
 
-            SecondaryButton(open: $open, icon: "trash", color: Color.red, offsetX: -60, offsetY: -60, delay: 0.2)
+            MenuSecondaryButton(open: $open, icon: "trash", color: Color.red, offsetX: -60, offsetY: -60, delay: 0.2)
 
-            SecondaryButton(open: $open, icon: "pencil", color: Color.purple, offsetX: -90, delay: 0.4)
+            MenuSecondaryButton(open: $open, icon: "pencil", color: Color.purple, offsetX: -90, delay: 0.4)
         }
     }
 }
 
-struct SecondaryButton: View {
+struct MenuSecondaryButton: View {
     @Binding var open: Bool
     var icon = "pencil"
     var color = Color.blue
@@ -47,7 +47,7 @@ struct SecondaryButton: View {
             .mask(Circle())
             .offset(x: open ? CGFloat(offsetX) : 0, y: open ? CGFloat(offsetY) : 0)
             .scaleEffect(open ? 1 : 0)
-            .animation(Animation.spring(response: 0.2, dampingFraction: 0.5, blendDuration: 0).delay(delay))
+            .animation(.spring(response: 0.2, dampingFraction: 0.5, blendDuration: 0).delay(delay), value: false)
     }
 }
 
