@@ -17,6 +17,7 @@ struct TextInput: View {
     var color: Color = .black
     var placeholderColor: Color = .white
     var placeholderText: String = "Placeholder"
+    var small: Bool = false
 
     var body: some View {
         GlasmorphicCard(content: {
@@ -29,7 +30,8 @@ struct TextInput: View {
                         .foregroundColor(colorScheme == .light ? placeholderColor : placeholderColor.opacity(0.5)).padding()
                 }
         }, addPadding: false, strokeColor: invalid ? .red : .white)
-            .frame(width: UIScreen.screenWidth - 15)
+            .frame(width:
+                small ? UIScreen.screenWidth / 2.5 : UIScreen.screenWidth - 15)
     }
 }
 
@@ -71,29 +73,6 @@ struct TextInputDouble: View {
     }
 }
 
-struct TextInputS: View {
-    @Environment(\.colorScheme) var colorScheme
-    @State var input: String = ""
-    @State var invalid: Bool = false
-    var color: Color = .black
-    var placeholderColor: Color = .white
-    var placeholderText: String = "Placeholder"
-
-    var body: some View {
-        GlasmorphicCard(content: {
-            TextField(placeholderText, text: $input)
-                .foregroundColor(colorScheme == .light
-                    ? invalid ? .red
-                    : color : invalid ? .red : .white)
-                .padding().placeholder(when: input.isEmpty) {
-                    Text(placeholderText)
-                        .foregroundColor(colorScheme == .light ? placeholderColor : placeholderColor.opacity(0.5)).padding()
-                }
-        }, addPadding: false, strokeColor: invalid ? .red : .white)
-            .frame(width: UIScreen.screenWidth / 2.5)
-    }
-}
-
 struct TextInputs_Previews: PreviewProvider {
     static var previews: some View {
         DefaultPreview(content: VStack {
@@ -101,8 +80,8 @@ struct TextInputs_Previews: PreviewProvider {
             TextInput(input: "Example")
             TextInput(input: "Example", invalid: true)
             HStack {
-                TextInputS()
-                TextInputS(input: "Example", invalid: true)
+                TextInput(small: true)
+                TextInput(input: "Example", invalid: true, small: true)
             }
             TextInputDouble(inputFirst: "Example", invalidFirst: true)
             TextInputDouble(inputFirst: "Example", inputSecond: "Example", invalidSecond: true)
