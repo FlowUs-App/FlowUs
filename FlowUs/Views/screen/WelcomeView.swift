@@ -5,6 +5,7 @@
 //  Created by Lucas Goldner on 18.04.22.
 //
 
+import L10n_swift
 import SwiftUI
 
 struct WelcomeView: View {
@@ -24,9 +25,9 @@ struct WelcomeView: View {
                 }
                 WelcomeText()
                 HStack(spacing: 40) {
-                    SecondaryButtonS(action: dummyFunction, text: "Sign In")
-                    PrimaryButtonS(action: dummyFunction, text: "Join now")
-                }.padding(.top, 12)
+                    SecondaryButtonS(action: dummyFunction, text: "welcome.login".l10n())
+                    PrimaryButtonS(action: dummyFunction, text: "welcome.register".l10n())
+                }.padding(.vertical, 12)
             }.ignoresSafeArea()
         }
     }
@@ -79,9 +80,10 @@ struct ThirdLayer: View {
 }
 
 struct WelcomeText: View {
+    let welcome = "welcome.to.flowus.welcome".l10n() + "\n" + "welcome.to.flowus".l10n()
     var body: some View {
         HStack {
-            HeadingBGradient(text: "Welcome to\nFlowUs",
+            HeadingBGradient(text: welcome,
                              gradient: LinearGradient(
                                  colors: [.init(hex: "E100FF"), .init(hex: "5F3DDD")],
                                  startPoint: .top,
@@ -92,19 +94,19 @@ struct WelcomeText: View {
             .padding(.bottom, 12)
         HStack(spacing: 0) {
             VStack(alignment: .leading, spacing: 0) {
-                CommonText(text: "Hey,")
+                CommonText(text: "welcome.hey".l10n())
                 VStack(alignment: .leading, spacing: 0) {
-                    CommonText(text: "my name is **Lucas Goldner** welcome to **FlowUs.**")
+                    CommonText(text: "welcome.my.name.is.lucas".l10n())
                     HStack {
-                        CommonText(text: "Thank you for downloading the app")
+                        CommonText(text: "welcome.thx.for.download".l10n())
                         Icon(path: "Icons/Fun").frame(width: 24, height: 24).padding(.bottom, 4)
                     }
-                    CommonText(text: "I kind of look like the guy on the top")
-                    CommonText(text: "with the computer. My goal is to establish")
-                    CommonText(text: "a community full of supportive individuals")
-                    CommonText(text: "that share the goal of sel-improvement.")
-                    CommonText(text: "If you want to be part of it make sure")
-                    CommonText(text: "to register an account.")
+                    CommonText(text: "welcome.look.like.guy".l10n())
+                    CommonText(text: "welcome.computer.my.mission".l10n())
+                    CommonText(text: "welcome.community.supportive".l10n())
+                    CommonText(text: "welcome.share.goal".l10n())
+                    CommonText(text: "welcome.part.of.community".l10n())
+                    CommonText(text: "welcome.register.account".l10n())
                 }
             }
             Spacer()

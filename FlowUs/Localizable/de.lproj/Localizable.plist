@@ -2,7 +2,33 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>hello.world</key>
-	<string>Hallo Welt</string>
+	<key>welcome.to.flowus</key>
+	<string>bei FlowUs</string>
+	<key>welcome.to.flowus.welcome</key>
+	<string>Willkommen</string>
+	<key>welcome.login</key>
+	<string>Einloggen</string>
+	<key>welcome.register</key>
+	<string>Registrieren</string>
+	<key>welcome.register.account</key>
+	<string>dann registriere jetzt einen Account</string>
+	<key>welcome.part.of.community</key>
+	<string>Wenn du Teil davon sein möchtest</string>
+	<key>welcome.share.goal</key>
+	<string>die das Ziel der Selbsentwicklung teilen</string>
+	<key>welcome.community.supportive</key>
+	<string>Platform zu bauen mit Usern,</string>
+	<key>welcome.computer.my.mission</key>
+	<string>mit dem Computer. Meine Mission ist es, eine</string>
+	<key>welcome.look.like.guy</key>
+	<string>Ich sehe irgendwie aus wie der Typ oben</string>
+	<key>welcome.thx.for.download</key>
+	<string>Vielen Dank für das Herunterladen der App</string>
+	<key>welcome.my.name.is.lucas</key>
+	<string>ich bin **Lucas Goldner** und das ist **FlowUs.**</string>
+	<key>welcome.hey</key>
+	<string>Servus,</string>
+	<key>FlowUs</key>
+	<string>FlowUs</string>
 </dict>
 </plist>
