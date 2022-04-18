@@ -35,6 +35,7 @@ struct GlasmorphicCard<Content: View>: View {
 
 struct GlasmorphicVideo_Previews: PreviewProvider {
     static var previews: some View {
-        DefaultPreview(content: GlasmorphicCard { Text("Glas") }, gradient: true)
+        DefaultPreview(content: GlasmorphicCard { Text("Glas") },
+                       gradient: true)
     }
 }
