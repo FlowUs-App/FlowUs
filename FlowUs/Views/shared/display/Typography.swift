@@ -65,10 +65,12 @@ struct CommonText: View {
     @Environment(\.colorScheme) var colorScheme
     var text = ""
     var semibold = false
+    var gutterBottom = false
     var body: some View {
-        Text(text)
+        Text(.init(text))
             .font(Font.system(size: 16))
             .fontWeight(semibold ? .semibold : .regular)
+            .padding(.bottom, 4)
     }
 }
 

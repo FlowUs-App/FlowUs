@@ -10,7 +10,7 @@ import SwiftUI
 struct YellowRectangle: View {
     var body: some View {
         Rectangle().fill(Color(hex: "FFCE70"))
-            .frame(width: 320, height: 288)
+            .frame(width: 320, height: 288).opacity(0.5)
     }
 }
 

@@ -25,17 +25,7 @@ struct FlowUsApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ZStack {
-                LinearGradientPreview()
-                ScrollView {
-                    VStack {
-                        CountryInput()
-                        CommonText(text: "hello.world".l10n())
-                        TextInput()
-                        TextInputDouble()
-                    }
-                }.keyboardAware()
-            }
+            WelcomeView()
         }
     }
 }
