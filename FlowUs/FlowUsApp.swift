@@ -32,9 +32,9 @@ struct FlowUsApp: App {
                 case .Welcome:
                     return AnyView(WelcomeView().navigationBarHidden(true))
                 case .Login:
-                    return AnyView(LoginView().navigationBarBackButtonHidden(true))
+                    return AnyView(LoginView().navigationBarHidden(true).navigationBarBackButtonHidden(true))
                 case .Register:
-                    return AnyView(RegisterView().navigationBarBackButtonHidden(true))
+                    return AnyView(RegisterView().navigationBarHidden(true).navigationBarBackButtonHidden(true))
                 }
             }
         }

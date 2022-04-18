@@ -2,6 +2,20 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>login.not.a.member</key>
+	<string>Not a member yet? **Register now**</string>
+	<key>login.login</key>
+	<string>Sign in</string>
+	<key>login.forgot.password</key>
+	<string>Forgot Password?</string>
+	<key>login.password</key>
+	<string>Password</string>
+	<key>login.email</key>
+	<string>Email adress</string>
+	<key>login.welcome.back</key>
+	<string>Welcome back **you** have been missed!</string>
+	<key>login.welcome.again</key>
+	<string>Hello again</string>
 	<key>welcome.to.flowus</key>
 	<string>FlowUs</string>
 	<key>welcome.to.flowus.welcome</key>

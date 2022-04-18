@@ -87,3 +87,15 @@ struct ParallaxMotionModifier: ViewModifier {
             .offset(x: CGFloat(manager.roll * magnitude), y: CGFloat(manager.pitch * magnitude))
     }
 }
+
+extension UIDevice {
+    var hasNotch: Bool {
+        let bottom = UIApplication
+            .shared
+            .connectedScenes
+            .compactMap { $0 as? UIWindowScene }
+            .flatMap { $0.windows }
+            .first { $0.isKeyWindow }?.safeAreaInsets.bottom ?? 0
+        return bottom > 0
+    }
+}

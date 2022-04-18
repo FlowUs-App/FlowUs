@@ -12,11 +12,11 @@ import UIPilot
 struct WelcomeView: View {
     @Environment(\.colorScheme) var colorScheme
     @EnvironmentObject var pilot: UIPilot<AppRoute>
-    
+
     private func navigateToLogin() {
         pilot.push(.Login)
     }
-    
+
     private func navigateToRegister() {
         pilot.push(.Register)
     }
@@ -26,13 +26,13 @@ struct WelcomeView: View {
             CommonBackground()
             ScrollView {
                 ZStack {
-                    FirstLayer()
-                    FirstLayer().mask(Rectangle()
+                    WelcomeFirstLayer()
+                    WelcomeFirstLayer().mask(Rectangle()
                         .frame(width: 344, height: 272)
                         .padding(.top, 24)
                     ).blur(radius: 40)
-                    SecondLayer()
-                    ThirdLayer()
+                    WelcomeSecondLayer()
+                    WelcomeThirdLayer()
                 }
                 WelcomeText()
                 HStack(spacing: 40) {
@@ -44,7 +44,7 @@ struct WelcomeView: View {
     }
 }
 
-struct FirstLayer: View {
+struct WelcomeFirstLayer: View {
     var body: some View {
         ZStack {
             HStack {
@@ -63,7 +63,7 @@ struct FirstLayer: View {
     }
 }
 
-struct SecondLayer: View {
+struct WelcomeSecondLayer: View {
     @ObservedObject var manager = MotionManager()
     var body: some View {
         GlasmorphicCard(content: {
@@ -75,7 +75,7 @@ struct SecondLayer: View {
     }
 }
 
-struct ThirdLayer: View {
+struct WelcomeThirdLayer: View {
     @ObservedObject var manager = MotionManager()
     var body: some View {
         Icon(path: "ScreenAssets/Welcome/GreenBall")

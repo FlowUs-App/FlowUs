@@ -31,7 +31,7 @@ struct CircleIconButton<Content: View>: View {
                     .opacity(
                         colorScheme == .light ?
                             0.5 : 0.35))
-            .shadow(color: shadowColor.opacity(0.2), radius: 20, x: 0, y: 20)
+            .shadow(color: shadowColor.opacity(0.3), radius: 20, x: 0, y: 20)
         }.buttonStyle(ScaleButtonStyle())
     }
 }
@@ -60,7 +60,7 @@ struct HexagonIconButton<Content: View>: View {
                         .opacity(
                             colorScheme == .light ?
                                 0.5 : 0.35))
-                .shadow(color: shadowColor.opacity(0.2), radius: 20, x: 0, y: 20)
+                .shadow(color: shadowColor.opacity(0.3), radius: 20, x: 0, y: 20)
         }.buttonStyle(ScaleButtonStyle())
     }
 }
