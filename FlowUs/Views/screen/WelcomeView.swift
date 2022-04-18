@@ -7,9 +7,20 @@
 
 import L10n_swift
 import SwiftUI
+import UIPilot
 
 struct WelcomeView: View {
     @Environment(\.colorScheme) var colorScheme
+    @EnvironmentObject var pilot: UIPilot<AppRoute>
+    
+    private func navigateToLogin() {
+        pilot.push(.Login)
+    }
+    
+    private func navigateToRegister() {
+        pilot.push(.Register)
+    }
+
     var body: some View {
         ZStack {
             CommonBackground()
@@ -25,8 +36,8 @@ struct WelcomeView: View {
                 }
                 WelcomeText()
                 HStack(spacing: 40) {
-                    SecondaryButtonS(action: dummyFunction, text: "welcome.login".l10n())
-                    PrimaryButtonS(action: dummyFunction, text: "welcome.register".l10n())
+                    SecondaryButtonS(action: navigateToLogin, text: "welcome.login".l10n())
+                    PrimaryButtonS(action: navigateToRegister, text: "welcome.register".l10n())
                 }.padding(.vertical, 12)
             }.ignoresSafeArea()
         }

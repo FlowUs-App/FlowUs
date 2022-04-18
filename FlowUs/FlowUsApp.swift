@@ -8,6 +8,7 @@
 import Firebase
 import L10n_swift
 import SwiftUI
+import UIPilot
 
 class AppDelegate: NSObject, UIApplicationDelegate {
     func application(_ application: UIApplication,
@@ -22,10 +23,20 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct FlowUsApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    @StateObject var pilot = UIPilot(initial: AppRoute.Welcome)
 
     var body: some Scene {
         WindowGroup {
-            WelcomeView()
+            UIPilotHost(pilot) { route in
+                switch route {
+                case .Welcome:
+                    return AnyView(WelcomeView().navigationBarHidden(true))
+                case .Login:
+                    return AnyView(LoginView().navigationBarBackButtonHidden(true))
+                case .Register:
+                    return AnyView(RegisterView().navigationBarBackButtonHidden(true))
+                }
+            }
         }
     }
 }

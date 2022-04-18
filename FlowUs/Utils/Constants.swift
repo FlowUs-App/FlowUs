@@ -7,6 +7,12 @@
 
 import SwiftUI
 
+enum AppRoute: Equatable {
+    case Welcome
+    case Login
+    case Register
+}
+
 func dummyFunction() {
     print("test")
 }
