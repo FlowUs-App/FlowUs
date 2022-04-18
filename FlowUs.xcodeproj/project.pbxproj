@@ -43,6 +43,7 @@
 		4DBDB0CA26A4D85300B01255 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBDB0C926A4D85300B01255 /* ContentView.swift */; };
 		4DBDB0CC26A4D85300B01255 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DBDB0CB26A4D85300B01255 /* Assets.xcassets */; };
 		4DBDB0CF26A4D85300B01255 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DBDB0CE26A4D85300B01255 /* Preview Assets.xcassets */; };
+		4DDF4ADC280DD6D0001A6D51 /* ParallaxMotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDF4ADB280DD6CF001A6D51 /* ParallaxMotion.swift */; };
 		4DE3146126A78F6A007A51FE /* ContentOO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE3146026A78F6A007A51FE /* ContentOO.swift */; };
 		4DE3146526A78FDE007A51FE /* ContentDO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE3146426A78FDE007A51FE /* ContentDO.swift */; };
 		4DE3147126A7912E007A51FE /* FlowUsUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE3147026A7912E007A51FE /* FlowUsUnitTests.swift */; };
@@ -112,6 +113,7 @@
 		4DBDB0CB26A4D85300B01255 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DBDB0CE26A4D85300B01255 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4DBDB0D026A4D85300B01255 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DDF4ADB280DD6CF001A6D51 /* ParallaxMotion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxMotion.swift; sourceTree = "<group>"; };
 		4DE3146026A78F6A007A51FE /* ContentOO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentOO.swift; sourceTree = "<group>"; };
 		4DE3146426A78FDE007A51FE /* ContentDO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentDO.swift; sourceTree = "<group>"; };
 		4DE3146E26A7912E007A51FE /* FlowUsUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlowUsUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -270,6 +272,7 @@
 				4D5F6E312808C8220064F259 /* KeyboardAware.swift */,
 				4D510104280C6EE200BE3988 /* Constants.swift */,
 				4D510112280C753500BE3988 /* Configuration.swift */,
+				4DDF4ADB280DD6CF001A6D51 /* ParallaxMotion.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -614,6 +617,7 @@
 				4D28C77F280613B900F3A2AE /* Buttons.swift in Sources */,
 				4DB61A57280A38C800D900C0 /* RadioButtonDO.swift in Sources */,
 				4D44F56227EBD55400FE8CCB /* Navigator.swift in Sources */,
+				4DDF4ADC280DD6D0001A6D51 /* ParallaxMotion.swift in Sources */,
 				4D796D7A2803986E0020FF26 /* Extensions.swift in Sources */,
 				4D5141652804D2A400D37C33 /* Previews.swift in Sources */,
 				4D5F6E322808C8220064F259 /* KeyboardAware.swift in Sources */,

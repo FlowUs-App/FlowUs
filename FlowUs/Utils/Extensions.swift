@@ -77,3 +77,13 @@ struct ScaleButtonStyle: ButtonStyle {
             .scaleEffect(configuration.isPressed ? 1.05 : 1)
     }
 }
+
+struct ParallaxMotionModifier: ViewModifier {
+    @ObservedObject var manager: MotionManager = .init()
+    var magnitude: Double
+
+    func body(content: Content) -> some View {
+        content
+            .offset(x: CGFloat(manager.roll * magnitude), y: CGFloat(manager.pitch * magnitude))
+    }
+}
