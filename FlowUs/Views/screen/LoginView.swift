@@ -11,12 +11,17 @@ import UIPilot
 
 struct LoginView: View {
     @EnvironmentObject var pilot: UIPilot<AppRoute>
+    @State var firstInput: String = ""
+    @State var secondInput: String = ""
 
     var body: some View {
         ScrollView {
-            BackBar()
-            LoginOpening()
-        }
+            BackBar().frame(width: UIScreen.screenWidth)
+            LoginOpening().padding(.bottom, 24)
+//            LoginMidSection(
+//                firstInput: firstInput, secondInput: secondInput)
+        }.frame(width: UIScreen.screenWidth)
+            .keyboardAware()
     }
 }
 
@@ -32,6 +37,47 @@ struct LoginOpening: View {
             height: 32)
         }
         CommonText(text: "login.welcome.back".l10n())
+    }
+}
+
+struct LoginMidSection: View {
+    var firstInput: String
+    var secondInput: String
+    var body: some View {
+        ZStack {
+            GreenBlob()
+            Icon(path: "ScreenAssets/Login/Biker")
+                .frame(width: 780, height: 780)
+                .padding(.top, -320)
+                .padding(.leading, 280)
+            ZStack {
+                Icon(path: "ScreenAssets/Login/Biker")
+                    .frame(width: 780, height: 780)
+                    .padding(.top, -320)
+                    .padding(.leading, 280).mask(Rectangle()
+                        .frame(width: UIScreen.screenWidth - 40, height: 100)
+                    ).blur(radius: 25)
+                TextInputDouble(inputFirst: firstInput,
+                                inputSecond: secondInput,
+                                placeholderTextFirst: "login.email".l10n(),
+                                placeholderTextSecond: "login.password".l10n())
+                HStack {
+                    Spacer()
+                    CircleIconButton(content: {
+                        Icon(path: "Icons/Eye")
+                    }, action: dummyFunction,
+                    shadowColor: .yellow,
+                    width: 32,
+                    height: 32)
+                        .padding(.trailing, 12)
+                        .padding(.top, 56)
+                }
+                Icon(path: "ScreenAssets/Login/YellowBall")
+                    .frame(width: 84, height: 84)
+                    .padding(.top, 180)
+                    .padding(.trailing, 280)
+            }
+        }
     }
 }
 

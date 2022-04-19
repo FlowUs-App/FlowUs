@@ -40,28 +40,31 @@ struct TextInputDouble: View {
     @State var invalidSecond: Bool = false
     var color: Color = .black
     var placeholderColor: Color = .white
-    var placeholderText: String = "Placeholder"
+    var placeholderTextFirst: String = "Placeholder"
+    var placeholderTextSecond: String = "Placeholder"
 
     var body: some View {
         GlasmorphicCard(content: {
             VStack(spacing: 0) {
-                TextField(placeholderText, text: $inputFirst)
+                TextField(placeholderTextFirst, text: $inputFirst)
                     .foregroundColor(colorScheme == .light
                         ? invalidFirst ? .red
                         : color : invalidFirst ? .red : .white)
                     .padding()
                     .placeholder(when: inputFirst.isEmpty) {
-                        Text(placeholderText).foregroundColor(colorScheme == .light ? placeholderColor : placeholderColor.opacity(0.5))
+                        Text(placeholderTextFirst)
+                            .foregroundColor(colorScheme == .light ? placeholderColor : placeholderColor
+                                .opacity(0.5))
                             .padding()
                     }
                 Divider().background(invalidFirst || invalidSecond ? .red : .white)
-                TextField(placeholderText, text: $inputSecond)
+                TextField(placeholderTextSecond, text: $inputSecond)
                     .foregroundColor(colorScheme == .light
                         ? invalidSecond ? .red
                         : color : invalidSecond ? .red : .white)
                     .padding().ignoresSafeArea(.keyboard, edges: .bottom)
                     .placeholder(when: inputSecond.isEmpty) {
-                        Text(placeholderText).foregroundColor(colorScheme == .light ? placeholderColor : placeholderColor.opacity(0.5))
+                        Text(placeholderTextSecond).foregroundColor(colorScheme == .light ? placeholderColor : placeholderColor.opacity(0.5))
                             .padding()
                     }
             }
@@ -80,39 +83,47 @@ struct TextInputTriple: View {
     @State var invalidThird: Bool = false
     var color: Color = .black
     var placeholderColor: Color = .white
-    var placeholderText: String = "Placeholder"
+    var placeholderTextFirst: String = "Placeholder"
+    var placeholderTextSecond: String = "Placeholder"
+    var placeholderTextThird: String = "Placeholder"
 
     var body: some View {
         GlasmorphicCard(content: {
             VStack(spacing: 0) {
-                TextField(placeholderText, text: $inputFirst)
+                TextField(placeholderTextFirst, text: $inputFirst)
                     .foregroundColor(colorScheme == .light
                         ? invalidFirst ? .red
                         : color : invalidFirst ? .red : .white)
                     .padding()
                     .placeholder(when: inputFirst.isEmpty) {
-                        Text(placeholderText).foregroundColor(colorScheme == .light ? placeholderColor : placeholderColor.opacity(0.5))
+                        Text(placeholderTextFirst)
+                            .foregroundColor(colorScheme == .light ? placeholderColor : placeholderColor
+                                .opacity(0.5))
                             .padding()
                     }
                 Divider().background(invalidFirst || invalidSecond || invalidThird ? .red : .white)
-                TextField(placeholderText, text: $inputSecond)
+                TextField(placeholderTextSecond, text: $inputSecond)
                     .foregroundColor(colorScheme == .light
                         ? invalidSecond ? .red
                         : color : invalidSecond ? .red : .white)
                     .padding().ignoresSafeArea(.keyboard, edges: .bottom)
                     .placeholder(when: inputSecond.isEmpty) {
-                        Text(placeholderText).foregroundColor(colorScheme == .light ? placeholderColor : placeholderColor.opacity(0.5))
+                        Text(placeholderTextSecond)
+                            .foregroundColor(colorScheme == .light ? placeholderColor : placeholderColor
+                                .opacity(0.5))
                             .padding()
                     }
                 Divider()
                     .background(invalidFirst || invalidSecond || invalidThird ? .red : .white)
-                TextField(placeholderText, text: $inputThird)
+                TextField(placeholderTextThird, text: $inputThird)
                     .foregroundColor(colorScheme == .light
                         ? invalidThird ? .red
                         : color : invalidThird ? .red : .white)
                     .padding().ignoresSafeArea(.keyboard, edges: .bottom)
                     .placeholder(when: inputThird.isEmpty) {
-                        Text(placeholderText).foregroundColor(colorScheme == .light ? placeholderColor : placeholderColor.opacity(0.5))
+                        Text(placeholderTextThird)
+                            .foregroundColor(colorScheme == .light ? placeholderColor : placeholderColor
+                                .opacity(0.5))
                             .padding()
                     }
             }
