@@ -18,8 +18,8 @@ struct LoginView: View {
         ScrollView {
             BackBar().frame(width: UIScreen.screenWidth)
             LoginOpening().padding(.bottom, 24)
-//            LoginMidSection(
-//                firstInput: firstInput, secondInput: secondInput)
+            LoginMidSection(
+                firstInput: firstInput, secondInput: secondInput)
         }.frame(width: UIScreen.screenWidth)
             .keyboardAware()
     }
@@ -47,7 +47,7 @@ struct LoginMidSection: View {
         ZStack {
             GreenBlob()
             Icon(path: "ScreenAssets/Login/Biker")
-                .frame(width: 780, height: 780)
+                .frame(width: 780)
                 .padding(.top, -320)
                 .padding(.leading, 280)
             ZStack {
@@ -71,13 +71,13 @@ struct LoginMidSection: View {
                     height: 32)
                         .padding(.trailing, 12)
                         .padding(.top, 56)
-                }
+                }.frame(width: UIScreen.screenWidth)
                 Icon(path: "ScreenAssets/Login/YellowBall")
                     .frame(width: 84, height: 84)
                     .padding(.top, 180)
                     .padding(.trailing, 280)
-            }
-        }
+            }.frame(width: UIScreen.screenWidth)
+        }.zIndex(-10)
     }
 }
 
