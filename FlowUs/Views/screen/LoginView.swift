@@ -11,17 +11,30 @@ import UIPilot
 
 struct LoginView: View {
     @EnvironmentObject var pilot: UIPilot<AppRoute>
+    @Environment(\.colorScheme) var colorScheme
     @State var firstInput: String = ""
     @State var secondInput: String = ""
 
     var body: some View {
-        ScrollView {
-            BackBar().frame(width: UIScreen.screenWidth)
-            LoginOpening().padding(.bottom, 24)
-            LoginMidSection(
-                firstInput: firstInput, secondInput: secondInput)
-        }.frame(width: UIScreen.screenWidth)
-            .keyboardAware()
+        ZStack {
+            CommonBackground()
+            ScrollView {
+                BackBar()
+                    .frame(width: UIScreen.screenWidth)
+                LoginOpening()
+                LoginMidSection(
+                    firstInput: firstInput, secondInput: secondInput)
+                    .padding(.top, 24)
+                PrimaryButton(action: dummyFunction,
+                              text: "login.login".l10n())
+                    .frame(width: UIScreen.screenWidth)
+                Button(action: dummyFunction, label: {
+                    CommonText(text: "Not a member yet? **Register now**".l10n())
+                        .foregroundColor(colorScheme == .light ? .black : .white)
+                }).padding(.vertical, 16)
+            }.frame(width: UIScreen.screenWidth)
+                .keyboardAware()
+        }
     }
 }
 
@@ -59,6 +72,8 @@ struct LoginMidSection: View {
                     ).blur(radius: 25)
                 TextInputDouble(inputFirst: firstInput,
                                 inputSecond: secondInput,
+                                placeholderColor:
+                                .white,
                                 placeholderTextFirst: "login.email".l10n(),
                                 placeholderTextSecond: "login.password".l10n())
                 HStack {

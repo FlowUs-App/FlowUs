@@ -54,6 +54,7 @@ struct GreenBlobShape: Shape {
 struct GreenBlob: View {
     var body: some View {
         GreenBlobShape()
+            .padding(.leading, 52)
             .frame(width: 500, height: 492)
             .foregroundColor(.init(hex: "#007B33"))
     }

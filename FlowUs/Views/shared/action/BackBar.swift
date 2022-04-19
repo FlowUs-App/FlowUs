@@ -18,7 +18,8 @@ struct BackBar: View {
             shadowColor: .pink, width: 32, height: 32)
                 .padding(.leading, 8)
             Spacer()
-        }.padding(.top, UIDevice.current.hasNotch ? -8 : 0)
+        }
+        .padding(.top, UIDevice.current.hasNotch ? -8 : 0)
     }
 }
 
