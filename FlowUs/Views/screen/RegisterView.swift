@@ -16,14 +16,8 @@ struct RegisterView: View {
         ScrollView(showsIndicators: false) {
             VStack {
                 BackBar()
-                RegisterHeading()
-                RegisterHeading()
-                RegisterHeading()
-                RegisterHeading()
-                RegisterHeading()
-                RegisterHeading()
-                RegisterHeading()
-                RegisterHeading()
+                RegisterHeading().frame(width: UIScreen.screenWidth, height: 60)
+                    .padding(.top, 20)
             }.padding(.top, 28)
                 .background(LinearGradient(gradient:
                     Gradient(
@@ -41,9 +35,13 @@ struct RegisterView: View {
 
 struct RegisterHeading: View {
     var body: some View {
-        HeadingB(text: "register.creat.account".l10n())
-        HeadingB(text: "register.creat.account".l10n())
-        HeadingB(text: "register.creat.account".l10n())
+        ZStack {
+            Icon(resize: true, path: "ScreenAssets/Register/Spring-1")
+                .frame(width: 180, height: 180)
+                .padding(.leading, 320)
+            HeadingB(text: "register.creat.account".l10n())
+                .foregroundStyle(.white)
+        }
     }
 }
 
