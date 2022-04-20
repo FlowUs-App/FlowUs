@@ -24,7 +24,7 @@ struct WelcomeView: View {
     var body: some View {
         ZStack {
             CommonBackground()
-            ScrollView {
+            ScrollView(showsIndicators: false) {
                 ZStack {
                     WelcomeFirstLayer()
                     WelcomeFirstLayer().mask(Rectangle()

@@ -18,7 +18,7 @@ struct LoginView: View {
     var body: some View {
         ZStack {
             CommonBackground()
-            ScrollView {
+            ScrollView(showsIndicators: false) {
                 BackBar()
                     .frame(width: UIScreen.screenWidth)
                 LoginOpening()
