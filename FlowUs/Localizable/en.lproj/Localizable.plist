@@ -2,6 +2,26 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>register.step.two</key>
+	<string>Register 2/2</string>
+	<key>register.step.one</key>
+	<string>Register 1/2</string>
+	<key>register.password.repeat</key>
+	<string>Repeat password</string>
+	<key>register.password</key>
+	<string>Password</string>
+	<key>register.sex</key>
+	<string>Choose sex</string>
+	<key>register.birthday</key>
+	<string>Birthday</string>
+	<key>register.user.mail</key>
+	<string>Email adress</string>
+	<key>register.user.name</key>
+	<string>Username</string>
+	<key>register.real.name</key>
+	<string>Name and surname</string>
+	<key>register.creat.account</key>
+	<string>Create Account</string>
 	<key>login.not.a.member</key>
 	<string>Not a member yet? **Register now**</string>
 	<key>login.login</key>

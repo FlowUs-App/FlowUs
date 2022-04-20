@@ -11,15 +11,30 @@ import UIPilot
 struct RegisterView: View {
     @EnvironmentObject var pilot: UIPilot<AppRoute>
     var body: some View {
-        Text("Register")
-        Button("Go back", action: {
-            pilot.pop()
-        })
+        ZStack {
+            LinearGradient(gradient:
+                Gradient(
+                    colors: [.init(hex: "0D6FCA"),
+                             .init(hex: "26006F"),
+                             .init(hex: "4B0384")]),
+                startPoint: .top,
+                endPoint: .bottom).ignoresSafeArea(.all)
+            ScrollView {
+                BackBar()
+                RegisterHeading()
+            }
+        }
+    }
+}
+
+struct RegisterHeading: View {
+    var body: some View {
+        Text("LOL")
     }
 }
 
 struct RegisterView_Previews: PreviewProvider {
     static var previews: some View {
-        RegisterView()
+        DefaultPreview(content: RegisterView())
     }
 }
