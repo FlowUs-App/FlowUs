@@ -24,7 +24,7 @@ struct LoginView: View {
                 LoginOpening()
                 LoginMidSection(
                     firstInput: firstInput, secondInput: secondInput)
-                    .padding(.top, 24)
+                    .padding(.top, 16)
                 PrimaryButton(action: dummyFunction,
                               text: "login.login".l10n())
                     .frame(width: UIScreen.screenWidth)
@@ -64,18 +64,21 @@ struct LoginMidSection: View {
                 .padding(.top, -320)
                 .padding(.leading, 280)
             ZStack {
-                Icon(path: "ScreenAssets/Login/Biker")
-                    .frame(width: 780, height: 780)
-                    .padding(.top, -320)
-                    .padding(.leading, 280).mask(Rectangle()
-                        .frame(width: UIScreen.screenWidth - 40, height: 100)
-                    ).blur(radius: 25)
-                TextInputDouble(inputFirst: firstInput,
-                                inputSecond: secondInput,
-                                placeholderColor:
-                                .white,
-                                placeholderTextFirst: "login.email".l10n(),
-                                placeholderTextSecond: "login.password".l10n())
+                LoginMidSectionBlurredItems()
+                VStack {
+                    TextInputDouble(inputFirst: firstInput,
+                                    inputSecond: secondInput,
+                                    color: .white,
+                                    placeholderColor:
+                                    .white,
+                                    placeholderTextFirst: "login.email".l10n(),
+                                    placeholderTextSecond: "login.password".l10n())
+
+                    Button(action: dummyFunction, label: {
+                        CommonText(text: "login.forgot.password".l10n(), semibold: true)
+                            .foregroundColor(.white)
+                    }).padding(.leading, 220)
+                }.padding(.top, 40)
                 HStack {
                     Spacer()
                     CircleIconButton(content: {
@@ -84,8 +87,8 @@ struct LoginMidSection: View {
                     shadowColor: .yellow,
                     width: 32,
                     height: 32)
-                        .padding(.trailing, 12)
-                        .padding(.top, 56)
+                        .padding(.trailing, 16)
+                        .padding(.top, 64)
                 }.frame(width: UIScreen.screenWidth)
                 Icon(path: "ScreenAssets/Login/YellowBall")
                     .frame(width: 84, height: 84)
@@ -93,6 +96,22 @@ struct LoginMidSection: View {
                     .padding(.trailing, 280)
             }.frame(width: UIScreen.screenWidth)
         }.zIndex(-10)
+    }
+}
+
+struct LoginMidSectionBlurredItems: View {
+    var body: some View {
+        GreenBlob().mask(Rectangle().frame(width: UIScreen.screenWidth - 20, height: 112))
+            .blur(radius: 20)
+        Icon(path: "ScreenAssets/Login/Biker")
+            .frame(width: 780, height: 780)
+            .padding(.top, -396)
+            .padding(.leading, 280)
+            .mask(Rectangle()
+                .frame(
+                    width: UIScreen.screenWidth - 40, height: 100)
+            ).blur(radius: 20)
+            .frame(width: UIScreen.screenWidth)
     }
 }
 
