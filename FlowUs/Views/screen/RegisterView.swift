@@ -13,11 +13,22 @@ struct RegisterView: View {
     @EnvironmentObject var pilot: UIPilot<AppRoute>
 
     var body: some View {
+        RegisterViewScrollView(content: {
+            BackBar()
+            RegisterHeading().frame(width: UIScreen.screenWidth, height: 60)
+                .padding(.top, 20)
+            RegisterFirstSection()
+       
+        })
+    }
+}
+
+struct RegisterViewScrollView<Content: View>: View {
+    @ViewBuilder var content: Content
+    var body: some View {
         ScrollView(showsIndicators: false) {
             VStack {
-                BackBar()
-                RegisterHeading().frame(width: UIScreen.screenWidth, height: 60)
-                    .padding(.top, 20)
+                content
             }.padding(.top, 28)
                 .background(LinearGradient(gradient:
                     Gradient(
@@ -25,7 +36,8 @@ struct RegisterView: View {
                                  .init(hex: "26006F"),
                                  .init(hex: "4B0384")]),
                     startPoint: .top,
-                    endPoint: .bottom).frame(height: 1700))
+                    endPoint: .bottom)
+                    .frame(height: 1000))
         }.background(VStack(spacing: 0) {
             Color(hex: "0D6FCA")
             Color(hex: "4B0384")
@@ -42,6 +54,15 @@ struct RegisterHeading: View {
             HeadingB(text: "register.creat.account".l10n())
                 .foregroundStyle(.white)
         }
+    }
+}
+
+struct RegisterFirstSection: View {
+    var body: some View {
+        ZStack {
+            Icon(resize: false, path: "ScreenAssets/Register/Explore")
+
+        }.frame(width: UIScreen.screenWidth, height: 200)
     }
 }
 
