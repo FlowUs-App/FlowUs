@@ -24,16 +24,17 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 struct FlowUsApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     @StateObject var pilot = UIPilot(initial: AppRoute.Welcome)
+    @Environment(\.colorScheme) var colorScheme
 
     var body: some Scene {
         WindowGroup {
             UIPilotHost(pilot) { route in
                 switch route {
                 case .Welcome:
-                    return AnyView(WelcomeView().navigationBarHidden(true))
+                    return AnyView(WelcomeView()
+                        .navigationBarHidden(true))
                 case .Login:
                     return AnyView(LoginView()
-                        .transition(.asymmetric(insertion: .slide, removal: .opacity))
                         .navigationBarHidden(true)
                         .navigationBarBackButtonHidden(true))
                 case .Register:

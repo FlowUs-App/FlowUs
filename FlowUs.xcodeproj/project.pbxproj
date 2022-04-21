@@ -64,6 +64,7 @@
 		4DE33C3027F902BB0029E0CF /* FirebasePerformance in Frameworks */ = {isa = PBXBuildFile; productRef = 4DE33C2F27F902BB0029E0CF /* FirebasePerformance */; };
 		4DE33C3227F902BB0029E0CF /* FirebaseRemoteConfigSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 4DE33C3127F902BB0029E0CF /* FirebaseRemoteConfigSwift-Beta */; };
 		4DE33C3427F902BB0029E0CF /* FirebaseStorageSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 4DE33C3327F902BB0029E0CF /* FirebaseStorageSwift-Beta */; };
+		4DFC3F072812176200CAE539 /* StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFC3F062812176200CAE539 /* StatusBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +133,7 @@
 		4DE33C1127F8FE9B0029E0CF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4DE33C1327F8FEB70029E0CF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4DE33C1527F8FF250029E0CF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4DFC3F062812176200CAE539 /* StatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -284,6 +286,7 @@
 				4D510104280C6EE200BE3988 /* Constants.swift */,
 				4D510112280C753500BE3988 /* Configuration.swift */,
 				4DDF4ADB280DD6CF001A6D51 /* ParallaxMotion.swift */,
+				4DFC3F062812176200CAE539 /* StatusBar.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -646,6 +649,7 @@
 				4DB61A59280A392D00D900C0 /* RadioButtonOO.swift in Sources */,
 				4DB61A55280A369100D900C0 /* RadioButtonGroup.swift in Sources */,
 				4D796D39280370140020FF26 /* GlasmorphicCard.swift in Sources */,
+				4DFC3F072812176200CAE539 /* StatusBar.swift in Sources */,
 				4D5F85B7280CD6A1003BE722 /* Backgrounds.swift in Sources */,
 				4DDF4AED280DFF32001A6D51 /* LoginView.swift in Sources */,
 				4DBDB0C826A4D85300B01255 /* FlowUsApp.swift in Sources */,

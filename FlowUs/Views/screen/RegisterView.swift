@@ -11,15 +11,19 @@ import UIPilot
 
 struct RegisterView: View {
     @EnvironmentObject var pilot: UIPilot<AppRoute>
+    @State var firstInput: String = ""
+    @State var secondInput: String = ""
+    @State var thirdInput: String = ""
 
     var body: some View {
         RegisterViewScrollView(content: {
             BackBar()
             RegisterHeading().frame(width: UIScreen.screenWidth, height: 60)
-                .padding(.top, 20)
-            RegisterFirstSection()
-       
-        })
+                .padding(.top, 12)
+            RegisterFirstSection(firstInput: firstInput,
+                                 secondInput: secondInput,
+                                 thirdInput: thirdInput)
+        }).enableLightStatusBar()
     }
 }
 
@@ -29,7 +33,7 @@ struct RegisterViewScrollView<Content: View>: View {
         ScrollView(showsIndicators: false) {
             VStack {
                 content
-            }.padding(.top, 28)
+            }.padding(.top, UIDevice.current.hasNotch ? 48 : 24)
                 .background(LinearGradient(gradient:
                     Gradient(
                         colors: [.init(hex: "0D6FCA"),
@@ -58,11 +62,33 @@ struct RegisterHeading: View {
 }
 
 struct RegisterFirstSection: View {
+    var firstInput: String = ""
+    var secondInput: String = ""
+    var thirdInput: String = ""
     var body: some View {
         ZStack {
             Icon(resize: false, path: "ScreenAssets/Register/Explore")
-
-        }.frame(width: UIScreen.screenWidth, height: 200)
+                .padding(.leading, 10)
+            TextInputTriple(inputFirst: firstInput,
+                            inputSecond: secondInput,
+                            inputThird: thirdInput,
+                            color: .white,
+                            placeholderTextFirst: "register.real.name".l10n(),
+                            placeholderTextSecond: "register.user.name".l10n(),
+                            placeholderTextThird: "register.user.mail".l10n())
+                .padding(.top, 328)
+            Icon(resize: true, path: "ScreenAssets/Register/Spring-2")
+                .frame(width: 160, height: 160)
+                .padding(.trailing, 360)
+                .padding(.top, 152)
+                .frame(height: 150)
+            CountryInput(width: 60, height: 28,
+                         placeholderText: "register.country".l10n())
+                .padding(.top, 328)
+                .padding(.leading, 292)
+                .frame(width: 60, height: 28)
+        }.frame(width: UIScreen.screenWidth - 15)
+            .padding(.top, -152)
     }
 }
 
