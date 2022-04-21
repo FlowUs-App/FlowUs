@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>register.mail.verify</key>
+	<string>Ein Code zur Authentifizierung wird an die Email Adresse gesendet </string>
 	<key>register.country</key>
 	<string>Land</string>
 	<key>register.step.two</key>

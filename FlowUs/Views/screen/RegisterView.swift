@@ -18,11 +18,24 @@ struct RegisterView: View {
     var body: some View {
         RegisterViewScrollView(content: {
             BackBar()
-            RegisterHeading().frame(width: UIScreen.screenWidth, height: 60)
+            RegisterHeading()
+                .frame(width: UIScreen.screenWidth, height: 60)
                 .padding(.top, 12)
             RegisterFirstSection(firstInput: firstInput,
                                  secondInput: secondInput,
                                  thirdInput: thirdInput)
+            HStack {
+                CommonText(text: "register.mail.verify".l10n(),
+                           semibold: true)
+                    .foregroundColor(.white)
+                Spacer()
+            }.frame(width: UIScreen.screenWidth - 15)
+                .padding(.top, 8)
+            HStack {
+                SelectionInput(
+                    items: ["Male", "Female", "Other"],
+                    text: "Choose sex")
+            }
         }).enableLightStatusBar()
     }
 }
@@ -82,6 +95,11 @@ struct RegisterFirstSection: View {
                 .padding(.trailing, 360)
                 .padding(.top, 152)
                 .frame(height: 150)
+            CountryInput(width: 60, height: 28,
+                         placeholderText: "register.country".l10n())
+                .padding(.top, 328)
+                .padding(.leading, 292)
+                .frame(width: 60, height: 28).blur(radius: 10)
             CountryInput(width: 60, height: 28,
                          placeholderText: "register.country".l10n())
                 .padding(.top, 328)
