@@ -14,6 +14,7 @@ struct RegisterView: View {
     @State var firstInput: String = ""
     @State var secondInput: String = ""
     @State var thirdInput: String = ""
+    @State var date: Date = .init()
 
     var body: some View {
         RegisterViewScrollView(content: {
@@ -33,11 +34,20 @@ struct RegisterView: View {
             }.frame(width: UIScreen.screenWidth - 15)
                 .padding(.top, 8)
             HStack {
+                VStack {
+                    DateInput(date: date,
+                              width: UIScreen.screenWidth / 3,
+                              height: 40)
+                        .padding(.top, 52)
+                    Icon(resize: true, path: "ScreenAssets/Register/CurvyLine")
+                        .frame(width: 180, height: 140)
+                }
                 SelectionInput(
                     items: ["Male", "Female", "Other"],
                     text: "Choose sex",
                     color: .white)
-            }
+                    .padding()
+            }.padding(.top, -16)
         }).enableLightStatusBar()
     }
 }

@@ -46,7 +46,6 @@ struct SelectionInput: View {
                     colorScheme == .light ?
                         0.5 : 0.35))
         .shadow(color: .black.opacity(0.2), radius: 20, x: 0, y: 20)
-        .padding()
     }
 }
 
