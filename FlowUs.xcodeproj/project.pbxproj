@@ -31,6 +31,7 @@
 		4D5F85B9280CDDD5003BE722 /* YellowRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5F85B8280CDDD5003BE722 /* YellowRectangle.swift */; };
 		4D796D39280370140020FF26 /* GlasmorphicCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D796D38280370140020FF26 /* GlasmorphicCard.swift */; };
 		4D796D7A2803986E0020FF26 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D796D792803986E0020FF26 /* Extensions.swift */; };
+		4D7F0427281449F5001A3BC4 /* DateInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7F0426281449F5001A3BC4 /* DateInput.swift */; };
 		4D8AB48A280B7C54006A3B2F /* SimpleToast in Frameworks */ = {isa = PBXBuildFile; productRef = 4D8AB489280B7C54006A3B2F /* SimpleToast */; };
 		4D8AB48C280B7C72006A3B2F /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8AB48B280B7C72006A3B2F /* Toast.swift */; };
 		4D8AB48F280B8EA0006A3B2F /* Colorful in Frameworks */ = {isa = PBXBuildFile; productRef = 4D8AB48E280B8EA0006A3B2F /* Colorful */; };
@@ -106,6 +107,7 @@
 		4D5F85B8280CDDD5003BE722 /* YellowRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowRectangle.swift; sourceTree = "<group>"; };
 		4D796D38280370140020FF26 /* GlasmorphicCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlasmorphicCard.swift; sourceTree = "<group>"; };
 		4D796D792803986E0020FF26 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		4D7F0426281449F5001A3BC4 /* DateInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateInput.swift; sourceTree = "<group>"; };
 		4D8AB48B280B7C72006A3B2F /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		4DB61A52280A253E00D900C0 /* SelectionInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionInput.swift; sourceTree = "<group>"; };
 		4DB61A54280A369100D900C0 /* RadioButtonGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonGroup.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 				4D28C7802806360C00F3A2AE /* TextInputs.swift */,
 				4D58FFF72809F8B3002337AE /* CountryInput.swift */,
 				4DB61A52280A253E00D900C0 /* SelectionInput.swift */,
+				4D7F0426281449F5001A3BC4 /* DateInput.swift */,
 			);
 			path = input;
 			sourceTree = "<group>";
@@ -636,6 +639,7 @@
 				4D58FFF12809D8FE002337AE /* Icon.swift in Sources */,
 				4D510113280C753500BE3988 /* Configuration.swift in Sources */,
 				4D510105280C6EE200BE3988 /* Constants.swift in Sources */,
+				4D7F0427281449F5001A3BC4 /* DateInput.swift in Sources */,
 				4DE3146526A78FDE007A51FE /* ContentDO.swift in Sources */,
 				4D28C77F280613B900F3A2AE /* Buttons.swift in Sources */,
 				4DB61A57280A38C800D900C0 /* RadioButtonDO.swift in Sources */,
