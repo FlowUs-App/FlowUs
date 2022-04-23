@@ -25,8 +25,9 @@ struct RegisterView: View {
                                  secondInput: secondInput,
                                  thirdInput: thirdInput)
             HStack {
-                CommonText(text: "register.mail.verify".l10n(),
-                           semibold: true)
+                CommonText(
+                    text: "register.mail.verify".l10n(),
+                    semibold: true)
                     .foregroundColor(.white)
                 Spacer()
             }.frame(width: UIScreen.screenWidth - 15)
@@ -34,7 +35,8 @@ struct RegisterView: View {
             HStack {
                 SelectionInput(
                     items: ["Male", "Female", "Other"],
-                    text: "Choose sex")
+                    text: "Choose sex",
+                    color: .white)
             }
         }).enableLightStatusBar()
     }

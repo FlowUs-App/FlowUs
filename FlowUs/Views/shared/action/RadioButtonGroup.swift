@@ -7,20 +7,6 @@
 
 import SwiftUI
 
-struct ColorInvert: ViewModifier {
-    @Environment(\.colorScheme) var colorScheme
-
-    func body(content: Content) -> some View {
-        Group {
-            if colorScheme == .dark {
-                content.colorInvert()
-            } else {
-                content
-            }
-        }
-    }
-}
-
 struct RadioButton: View {
     @Environment(\.colorScheme) var colorScheme
     var radioButton: RadioButtonDO
@@ -77,11 +63,16 @@ struct RadioButtonGroup: View {
     @State var selectedId: String = ""
     let callback: (String) -> Void
     var dividersOn: Bool = false
+    var color: Color = .black
 
     var body: some View {
         VStack {
             ForEach(0 ..< items.count, id: \.self) { index in
-                RadioButton(self.items[index], callback: self.radioGroupCallback, selectedID: self.selectedId).padding(.leading, 12)
+                RadioButton(self.items[index],
+                            callback: self.radioGroupCallback,
+                            selectedID: self.selectedId,
+                            color: color)
+                    .padding(.leading, 12)
                 if dividersOn && (items.count - 1 != index) {
                     Divider().background(.white)
                 }
@@ -97,8 +88,14 @@ struct RadioButtonGroup: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        DefaultPreview(content: RadioButtonGroup(items: ["Rome", "London", "Paris", "Berlin", "New York"], selectedId: "London") { selected in
-            print("Selected is: \(selected)")
+        DefaultPreview(content: VStack {
+            RadioButtonGroup(items: ["Rome", "London", "Paris", "Berlin", "New York"], selectedId: "London", callback: { selected in
+                print("Selected is: \(selected)")
+            }, color: .white)
+            Divider()
+            RadioButtonGroup(items: ["Rome", "London", "Paris", "Berlin", "New York"], selectedId: "London") { selected in
+                print("Selected is: \(selected)")
+            }
         }, gradient: true)
     }
 }

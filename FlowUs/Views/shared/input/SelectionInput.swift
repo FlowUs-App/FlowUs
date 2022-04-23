@@ -11,12 +11,14 @@ struct SelectionInput: View {
     @Environment(\.colorScheme) var colorScheme
     let items: [String]
     let text: String
+    var color: Color = .black
 
     var body: some View {
         ZStack {
             GlasmorphicCard(content: {
                 VStack(alignment: .leading) {
                     CommonText(text: text, semibold: true)
+                        .foregroundColor(color)
                         .fixedSize(horizontal: false, vertical: true)
                         .padding(.top, 12)
                         .padding(.leading, 12)
@@ -27,8 +29,8 @@ struct SelectionInput: View {
                                      callback: { selected in
                                          print("Selected is: \(selected)")
                                      },
-                                     dividersOn: true)
-
+                                     dividersOn: true,
+                                     color: color)
                 }.padding(.bottom, 12)
             }, addPadding: false)
         }
