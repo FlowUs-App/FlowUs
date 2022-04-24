@@ -29,6 +29,8 @@
 		4D5F85B5280CCF99003BE722 /* PurpleBlob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5F85B4280CCF99003BE722 /* PurpleBlob.swift */; };
 		4D5F85B7280CD6A1003BE722 /* Backgrounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5F85B6280CD6A1003BE722 /* Backgrounds.swift */; };
 		4D5F85B9280CDDD5003BE722 /* YellowRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5F85B8280CDDD5003BE722 /* YellowRectangle.swift */; };
+		4D7720FA2815FA0700C5812F /* VerifyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7720F92815FA0700C5812F /* VerifyView.swift */; };
+		4D7720FD2815FBAA00C5812F /* DarkBlueBlob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7720FC2815FBAA00C5812F /* DarkBlueBlob.swift */; };
 		4D796D39280370140020FF26 /* GlasmorphicCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D796D38280370140020FF26 /* GlasmorphicCard.swift */; };
 		4D796D7A2803986E0020FF26 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D796D792803986E0020FF26 /* Extensions.swift */; };
 		4D7F0427281449F5001A3BC4 /* DateInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7F0426281449F5001A3BC4 /* DateInput.swift */; };
@@ -105,6 +107,8 @@
 		4D5F85B4280CCF99003BE722 /* PurpleBlob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurpleBlob.swift; sourceTree = "<group>"; };
 		4D5F85B6280CD6A1003BE722 /* Backgrounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Backgrounds.swift; sourceTree = "<group>"; };
 		4D5F85B8280CDDD5003BE722 /* YellowRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YellowRectangle.swift; sourceTree = "<group>"; };
+		4D7720F92815FA0700C5812F /* VerifyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyView.swift; sourceTree = "<group>"; };
+		4D7720FC2815FBAA00C5812F /* DarkBlueBlob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkBlueBlob.swift; sourceTree = "<group>"; };
 		4D796D38280370140020FF26 /* GlasmorphicCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlasmorphicCard.swift; sourceTree = "<group>"; };
 		4D796D792803986E0020FF26 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		4D7F0426281449F5001A3BC4 /* DateInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateInput.swift; sourceTree = "<group>"; };
@@ -224,10 +228,12 @@
 		4D44F56027EBD51400FE8CCB /* screen */ = {
 			isa = PBXGroup;
 			children = (
+				4D7720FB2815FB8D00C5812F /* VerifyView */,
 				4DDF4AFC280E1924001A6D51 /* LoginView */,
 				4D5F85B3280CCF7F003BE722 /* WelcomeView */,
 				4DBDB0C926A4D85300B01255 /* ContentView.swift */,
 				4D5F85B1280CCA94003BE722 /* WelcomeView.swift */,
+				4D7720F92815FA0700C5812F /* VerifyView.swift */,
 				4DDF4AE7280DFC8B001A6D51 /* RegisterView.swift */,
 				4DDF4AEC280DFF32001A6D51 /* LoginView.swift */,
 			);
@@ -266,6 +272,14 @@
 				4D5F85B8280CDDD5003BE722 /* YellowRectangle.swift */,
 			);
 			path = WelcomeView;
+			sourceTree = "<group>";
+		};
+		4D7720FB2815FB8D00C5812F /* VerifyView */ = {
+			isa = PBXGroup;
+			children = (
+				4D7720FC2815FBAA00C5812F /* DarkBlueBlob.swift */,
+			);
+			path = VerifyView;
 			sourceTree = "<group>";
 		};
 		4D796D3728036FF20020FF26 /* display */ = {
@@ -652,6 +666,7 @@
 				4DBDB0CA26A4D85300B01255 /* ContentView.swift in Sources */,
 				4DB61A59280A392D00D900C0 /* RadioButtonOO.swift in Sources */,
 				4DB61A55280A369100D900C0 /* RadioButtonGroup.swift in Sources */,
+				4D7720FA2815FA0700C5812F /* VerifyView.swift in Sources */,
 				4D796D39280370140020FF26 /* GlasmorphicCard.swift in Sources */,
 				4DFC3F072812176200CAE539 /* StatusBar.swift in Sources */,
 				4D5F85B7280CD6A1003BE722 /* Backgrounds.swift in Sources */,
@@ -664,6 +679,7 @@
 				4DE3146126A78F6A007A51FE /* ContentOO.swift in Sources */,
 				4D8AB48C280B7C72006A3B2F /* Toast.swift in Sources */,
 				4D28C7812806360C00F3A2AE /* TextInputs.swift in Sources */,
+				4D7720FD2815FBAA00C5812F /* DarkBlueBlob.swift in Sources */,
 				4D58FFFD2809FD17002337AE /* CountryPickerOO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
