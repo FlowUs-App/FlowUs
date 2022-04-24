@@ -113,6 +113,7 @@ struct SecondaryButton: View {
     @Environment(\.colorScheme) var colorScheme
     var action: () -> Void
     var text: String = "Button"
+    var shadowsEnabled: Bool = true
     var body: some View {
         Button(action: action) {
             CommonTextC(text: text, semibold: true, color: .black)
@@ -124,11 +125,15 @@ struct SecondaryButton: View {
                         startPoint: .topLeading,
                         endPoint: .bottomLeading
                     ))
-                .cornerRadius(20).shadow(
-                    color:
-                    colorScheme == .light ? .init(hex: "CEDBEF") : .clear,
-                    radius: colorScheme == .light ? 20 : 0, x: 0, y: 20
-                ).overlay(
+                .cornerRadius(20)
+                .if(shadowsEnabled, transform: { view in
+                    view.shadow(
+                        color:
+                        colorScheme == .light ? .init(hex: "CEDBEF") : .clear,
+                        radius: colorScheme == .light ? 20 : 0, x: 0, y: 20
+                    )
+                })
+                .overlay(
                     RoundedRectangle(cornerRadius: 20)
                         .stroke(.black,
                                 lineWidth: 1)
@@ -221,6 +226,6 @@ struct Buttons_Previews: PreviewProvider {
             Spacer()
             SecondaryButton(action: dummyFunction, text: "Login")
             Spacer()
-        })
+        }, gradient: true)
     }
 }

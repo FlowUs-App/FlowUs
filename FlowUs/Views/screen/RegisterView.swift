@@ -15,6 +15,8 @@ struct RegisterView: View {
     @State var secondInput: String = ""
     @State var thirdInput: String = ""
     @State var date: Date = .init()
+    @State var passwordInput: String = ""
+    @State var repeatPasswordInput: String = ""
 
     var body: some View {
         RegisterViewScrollView(content: {
@@ -26,6 +28,17 @@ struct RegisterView: View {
                                     secondInput: secondInput,
                                     thirdInput: thirdInput)
             RegisterBirthInfo(date: date)
+            RegisterPassword(password: passwordInput,
+                             repeatPassword: repeatPasswordInput)
+                .frame(width: UIScreen.screenWidth)
+            VStack {
+                SecondaryButton(
+                    action: dummyFunction,
+                    text: "register.step.one".l10n(),
+                    shadowsEnabled: false)
+            }
+            .padding(.top, 24)
+            .padding(.bottom, 48)
         }).enableLightStatusBar()
     }
 }
@@ -134,13 +147,26 @@ struct RegisterBirthInfo: View {
 }
 
 struct RegisterPassword: View {
+    var password: String
+    var repeatPassword: String
+
     var body: some View {
         ZStack {
-            Icon(resize: true, path: "ScreenAssets/Register/Spring-1")
-                .frame(width: 180, height: 180)
-                .padding(.leading, 320)
-            HeadingB(text: "register.creat.account".l10n())
-                .foregroundStyle(.white)
+            TextInputDouble(inputFirst: password,
+                            inputSecond: repeatPassword,
+                            placeholderTextFirst: "Password",
+                            placeholderTextSecond: "Repeat Password")
+            HStack {
+                Spacer()
+                CircleIconButton(content: {
+                    Icon(path: "Icons/Eye")
+                }, action: dummyFunction,
+                shadowColor: .yellow,
+                width: 32,
+                height: 32)
+                    .padding(.trailing, 16)
+                    .padding(.top, -52)
+            }.frame(width: UIScreen.screenWidth)
         }
     }
 }
