@@ -22,32 +22,10 @@ struct RegisterView: View {
             RegisterHeading()
                 .frame(width: UIScreen.screenWidth, height: 60)
                 .padding(.top, 12)
-            RegisterFirstSection(firstInput: firstInput,
-                                 secondInput: secondInput,
-                                 thirdInput: thirdInput)
-            HStack {
-                CommonText(
-                    text: "register.mail.verify".l10n(),
-                    semibold: true)
-                    .foregroundColor(.white)
-                Spacer()
-            }.frame(width: UIScreen.screenWidth - 15)
-                .padding(.top, 8)
-            HStack {
-                VStack {
-                    DateInput(date: date,
-                              width: UIScreen.screenWidth / 3,
-                              height: 40)
-                        .padding(.top, 52)
-                    Icon(resize: true, path: "ScreenAssets/Register/CurvyLine")
-                        .frame(width: 180, height: 140)
-                }
-                SelectionInput(
-                    items: ["Male", "Female", "Other"],
-                    text: "Choose sex",
-                    color: .white)
-                    .padding()
-            }.padding(.top, -16)
+            RegisterUserInfoSection(firstInput: firstInput,
+                                    secondInput: secondInput,
+                                    thirdInput: thirdInput)
+            RegisterBirthInfo(date: date)
         }).enableLightStatusBar()
     }
 }
@@ -86,7 +64,7 @@ struct RegisterHeading: View {
     }
 }
 
-struct RegisterFirstSection: View {
+struct RegisterUserInfoSection: View {
     var firstInput: String = ""
     var secondInput: String = ""
     var thirdInput: String = ""
@@ -119,6 +97,51 @@ struct RegisterFirstSection: View {
                 .frame(width: 60, height: 28)
         }.frame(width: UIScreen.screenWidth - 15)
             .padding(.top, -152)
+    }
+}
+
+struct RegisterBirthInfo: View {
+    var date: Date
+    var body: some View {
+        HStack {
+            CommonText(
+                text: "register.mail.verify".l10n(),
+                semibold: true)
+                .foregroundColor(.white)
+            Spacer()
+        }
+        .frame(width: UIScreen.screenWidth - 15)
+        .padding(.top, 8)
+
+        HStack {
+            VStack {
+                DateInput(date: date,
+                          width: UIScreen.screenWidth / 3.2,
+                          height: 40,
+                          placeholderText: "register.birthday".l10n())
+                    .padding(.top, 52)
+                Icon(resize: true, path: "ScreenAssets/Register/CurvyLine")
+                    .frame(width: 180, height: 140)
+            }
+            SelectionInput(
+                items: ["Male", "Female", "Other"],
+                text: "Choose sex",
+                color: .white)
+                .padding(.trailing, 12)
+        }
+        .padding(.top, -16)
+    }
+}
+
+struct RegisterPassword: View {
+    var body: some View {
+        ZStack {
+            Icon(resize: true, path: "ScreenAssets/Register/Spring-1")
+                .frame(width: 180, height: 180)
+                .padding(.leading, 320)
+            HeadingB(text: "register.creat.account".l10n())
+                .foregroundStyle(.white)
+        }
     }
 }
 
