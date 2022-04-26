@@ -11,6 +11,7 @@ enum AppRoute: Equatable {
     case Welcome
     case Login
     case Register
+    case Verify
 }
 
 struct CommonBackground: View {

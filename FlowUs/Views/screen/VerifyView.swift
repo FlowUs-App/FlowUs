@@ -29,7 +29,15 @@ struct VerifyView: View {
                     .padding(.horizontal, 100)
                     .foregroundColor(.white)
                     .padding(.top, -32)
-                    
+                MagicNumersInput()
+                    .padding(.top, 52)
+                Icon(resize: true, path: "ScreenAssets/Verify/Saturn")
+                    .frame(width: 380, height: 380)
+                    .padding(.top, -60)
+                    .padding(.leading, 40)
+                    .rotationEffect(Angle(degrees: -15))
+                PrimaryButton(action: dummyFunction, text: "register.step.two".l10n())
+                    .frame(width: UIScreen.screenWidth)
             }
         }
     }
