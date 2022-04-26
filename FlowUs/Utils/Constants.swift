@@ -13,6 +13,14 @@ enum AppRoute: Equatable {
     case Register
 }
 
+struct CommonBackground: View {
+    @Environment(\.colorScheme) var colorScheme
+    var body: some View {
+        colorScheme == .light ?
+            Color(hex: "F5F8FF").ignoresSafeArea() : Color.black.ignoresSafeArea()
+    }
+}
+
 enum DeviceNames: String {
     case iPhone_4s = "iPhone 4s"
     case iPhone_5 = "iPhone 5"

@@ -25,7 +25,7 @@ struct DateInput: View {
                 CommonText(text: calendar.isDateInToday(date) ? placeholderText :
                     date.l10n { formatter in
                         formatter.dateStyle = .medium
-                    }, gutterBottom: false)
+                    })
                     .foregroundColor(color)
                     .opacity(calendar.isDateInToday(date) ? 0.5 : 1)
 

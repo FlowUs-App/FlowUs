@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>verify.description</key>
+	<string>Enter the magic numbers we have sent to your email address to confirm your account and enjoy the app</string>
+	<key>verify.header</key>
+	<string>Last Step</string>
 	<key>register.mail.verify</key>
 	<string>You will receive a code to verify your email</string>
 	<key>register.country</key>
