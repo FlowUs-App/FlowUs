@@ -39,6 +39,8 @@ struct FlowUsApp: App {
                         .navigationBarBackButtonHidden(true))
                 case .Register:
                     return AnyView(RegisterView().navigationBarHidden(true).navigationBarBackButtonHidden(true))
+                case .Verify:
+                    return AnyView(VerifyView().navigationBarHidden(true).navigationBarBackButtonHidden(true))
                 }
             }
         }

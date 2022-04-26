@@ -7,8 +7,11 @@
 
 import L10n_swift
 import SwiftUI
+import UIPilot
 
 struct VerifyView: View {
+    @EnvironmentObject var pilot: UIPilot<AppRoute>
+
     var body: some View {
         ZStack {
             CommonBackground()

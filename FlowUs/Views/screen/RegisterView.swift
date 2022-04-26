@@ -17,6 +17,10 @@ struct RegisterView: View {
     @State var date: Date = .init()
     @State var passwordInput: String = ""
     @State var repeatPasswordInput: String = ""
+    
+    private func navigateToVerify() {
+        pilot.push(.Verify)
+    }
 
     var body: some View {
         RegisterViewScrollView(content: {
@@ -33,7 +37,7 @@ struct RegisterView: View {
                 .frame(width: UIScreen.screenWidth)
             VStack {
                 SecondaryButton(
-                    action: dummyFunction,
+                    action: navigateToVerify,
                     text: "register.step.one".l10n(),
                     shadowsEnabled: false)
             }
