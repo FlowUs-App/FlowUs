@@ -21,6 +21,7 @@ struct LoginView: View {
             ScrollView(showsIndicators: false) {
                 BackBar()
                     .frame(width: UIScreen.screenWidth)
+                    .padding(.top, 12)
                 LoginOpening()
                 LoginMidSection(
                     firstInput: firstInput, secondInput: secondInput)
