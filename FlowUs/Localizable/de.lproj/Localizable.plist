@@ -52,18 +52,8 @@
 	<string>Einloggen</string>
 	<key>welcome.register</key>
 	<string>Registrieren</string>
-	<key>welcome.register.account</key>
-	<string>dann registriere jetzt einen Account</string>
-	<key>welcome.part.of.community</key>
-	<string>Wenn du Teil davon sein möchtest</string>
-	<key>welcome.share.goal</key>
-	<string>die das Ziel der Selbsentwicklung teilen</string>
-	<key>welcome.community.supportive</key>
-	<string>Platform zu bauen mit Usern,</string>
-	<key>welcome.computer.my.mission</key>
-	<string>mit dem Computer. Meine Mission ist es, eine</string>
-	<key>welcome.look.like.guy</key>
-	<string>Ich sehe irgendwie aus wie der Typ oben</string>
+	<key>welcome.text.rest</key>
+	<string>Ich sehe irgendwie aus wie der Typ oben mit dem Computer. Meine Mission ist es, eine Platform zu bauen mit Usern, die das Ziel der Selbsentwicklung teilen. Wenn du Teil davon sein möchtest, dann registriere jetzt einen Account.</string>
 	<key>welcome.thx.for.download</key>
 	<string>Vielen Dank für das Herunterladen der App</string>
 	<key>welcome.my.name.is.lucas</key>

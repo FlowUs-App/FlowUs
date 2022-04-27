@@ -114,17 +114,14 @@ struct WelcomeText: View {
                 CommonText(text: "welcome.hey".l10n())
                 VStack(alignment: .leading, spacing: 0) {
                     CommonText(text: "welcome.my.name.is.lucas".l10n())
+                        .padding(.bottom, 4)
                     HStack {
                         CommonText(text: "welcome.thx.for.download".l10n())
-                        Icon(path: "Icons/Fun").frame(width: 24, height: 24).padding(.bottom, 4)
-                    }
-                    CommonText(text: "welcome.look.like.guy".l10n())
-                    CommonText(text: "welcome.computer.my.mission".l10n())
-                    CommonText(text: "welcome.community.supportive".l10n())
-                    CommonText(text: "welcome.share.goal".l10n())
-                    CommonText(text: "welcome.part.of.community".l10n())
-                    CommonText(text: "welcome.register.account".l10n())
-                }
+                        Icon(path: "Icons/Fun")
+                            .frame(width: 20, height: 20)
+                    }.padding(.bottom, 4)
+                    CommonText(text: "welcome.text.rest".l10n())
+                }.padding(.trailing, 4)
             }
             Spacer()
         }.padding(.leading, 15)

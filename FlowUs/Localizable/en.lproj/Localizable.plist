@@ -52,18 +52,8 @@
 	<string>Sign in</string>
 	<key>welcome.register</key>
 	<string>Join now</string>
-	<key>welcome.register.account</key>
-	<string>to register an account.</string>
-	<key>welcome.part.of.community</key>
-	<string>If you want to be part of it make sure</string>
-	<key>welcome.share.goal</key>
-	<string>that share the goal of self-improvement.</string>
-	<key>welcome.community.supportive</key>
-	<string>a community full of supportive individuals</string>
-	<key>welcome.computer.my.mission</key>
-	<string>with the computer. My mission is to establish</string>
-	<key>welcome.look.like.guy</key>
-	<string>I kind of look like the guy on the top</string>
+	<key>welcome.text.rest</key>
+	<string>I kind of look like the guy on the top with the computer. My mission is to establish a community full of supportive individuals that share the goal of self-improvement. If you want to be part of it make sure to register an account.</string>
 	<key>welcome.thx.for.download</key>
 	<string>Thank you for downloading the app</string>
 	<key>welcome.my.name.is.lucas</key>
