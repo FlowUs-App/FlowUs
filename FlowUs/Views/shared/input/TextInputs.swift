@@ -24,7 +24,7 @@ struct TextInput: View {
                     : color : invalid ? .red : .white)
                 .padding().placeholder(when: input.isEmpty) {
                     Text(placeholderText)
-                        .foregroundColor(colorScheme == .light ? placeholderColor : placeholderColor.opacity(0.5)).padding()
+                        .foregroundColor(placeholderColor).padding()
                 }
         }, addPadding: false, strokeColor: invalid ? .red : .white)
             .frame(width:
@@ -53,8 +53,7 @@ struct TextInputDouble: View {
                     .padding()
                     .placeholder(when: inputFirst.isEmpty) {
                         Text(placeholderTextFirst)
-                            .foregroundColor(colorScheme == .light ? placeholderColor : placeholderColor
-                                .opacity(0.5))
+                            .foregroundColor(placeholderColor)
                             .padding()
                     }
                 Divider().background(invalidFirst || invalidSecond ? .red : .white)
@@ -64,7 +63,7 @@ struct TextInputDouble: View {
                         : color : invalidSecond ? .red : .white)
                     .padding().ignoresSafeArea(.keyboard, edges: .bottom)
                     .placeholder(when: inputSecond.isEmpty) {
-                        Text(placeholderTextSecond).foregroundColor(colorScheme == .light ? placeholderColor : placeholderColor.opacity(0.5))
+                        Text(placeholderTextSecond) .foregroundColor(placeholderColor)
                             .padding()
                     }
             }
@@ -97,8 +96,7 @@ struct TextInputTriple: View {
                     .padding()
                     .placeholder(when: inputFirst.isEmpty) {
                         Text(placeholderTextFirst)
-                            .foregroundColor(colorScheme == .light ? placeholderColor : placeholderColor
-                                .opacity(0.5))
+                            .foregroundColor(placeholderColor)
                             .padding()
                     }
                 Divider().background(invalidFirst || invalidSecond || invalidThird ? .red : .white)
@@ -109,8 +107,7 @@ struct TextInputTriple: View {
                     .padding().ignoresSafeArea(.keyboard, edges: .bottom)
                     .placeholder(when: inputSecond.isEmpty) {
                         Text(placeholderTextSecond)
-                            .foregroundColor(colorScheme == .light ? placeholderColor : placeholderColor
-                                .opacity(0.5))
+                            .foregroundColor(placeholderColor)
                             .padding()
                     }
                 Divider()
@@ -122,8 +119,7 @@ struct TextInputTriple: View {
                     .padding().ignoresSafeArea(.keyboard, edges: .bottom)
                     .placeholder(when: inputThird.isEmpty) {
                         Text(placeholderTextThird)
-                            .foregroundColor(colorScheme == .light ? placeholderColor : placeholderColor
-                                .opacity(0.5))
+                            .foregroundColor(placeholderColor)
                             .padding()
                     }
             }

@@ -54,8 +54,10 @@ struct LoginOpening: View {
 }
 
 struct LoginMidSection: View {
+    @Environment(\.colorScheme) var colorScheme
     var firstInput: String
     var secondInput: String
+
     var body: some View {
         ZStack {
             GreenBlob()
@@ -68,9 +70,9 @@ struct LoginMidSection: View {
                 VStack {
                     TextInputDouble(inputFirst: firstInput,
                                     inputSecond: secondInput,
-                                    color: .white,
+                                    color: colorScheme == .light ? .black : .white,
                                     placeholderColor:
-                                    .white,
+                                    colorScheme == .light ? .black.opacity(0.75) : .white.opacity(0.75),
                                     placeholderTextFirst: "login.email".l10n(),
                                     placeholderTextSecond: "login.password".l10n())
 
