@@ -1490,7 +1490,7 @@
 				4D51010E280C720300BE3988 /* Production Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Production;
+			defaultConfigurationName = "Dev Debug";
 		};
 		4DBDB0D326A4D85300B01255 /* Build configuration list for PBXNativeTarget "FlowUs" */ = {
 			isa = XCConfigurationList;
@@ -1503,7 +1503,7 @@
 				4D51010F280C720300BE3988 /* Production Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Production;
+			defaultConfigurationName = "Dev Debug";
 		};
 		4DE3147526A7912F007A51FE /* Build configuration list for PBXNativeTarget "FlowUsUnitTests" */ = {
 			isa = XCConfigurationList;
@@ -1516,7 +1516,7 @@
 				4D510110280C720300BE3988 /* Production Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Production;
+			defaultConfigurationName = "Dev Debug";
 		};
 		4DE3148726A7935B007A51FE /* Build configuration list for PBXNativeTarget "FlowUsUITests" */ = {
 			isa = XCConfigurationList;
@@ -1529,7 +1529,7 @@
 				4D510111280C720300BE3988 /* Production Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Production;
+			defaultConfigurationName = "Dev Debug";
 		};
 /* End XCConfigurationList section */
 

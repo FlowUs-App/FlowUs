@@ -17,7 +17,7 @@ struct RegisterView: View {
     @State var date: Date = .init()
     @State var passwordInput: String = ""
     @State var repeatPasswordInput: String = ""
-    
+
     private func navigateToVerify() {
         pilot.push(.Verify)
     }
@@ -62,10 +62,11 @@ struct RegisterViewScrollView<Content: View>: View {
                     startPoint: .top,
                     endPoint: .bottom)
                     .frame(height: 1000))
-        }.background(VStack(spacing: 0) {
-            Color(hex: "0D6FCA")
-            Color(hex: "4B0384")
-        }).ignoresSafeArea()
+        }.keyboardAware()
+            .background(VStack(spacing: 0) {
+                Color(hex: "0D6FCA")
+                Color(hex: "4B0384")
+            }).ignoresSafeArea()
     }
 }
 

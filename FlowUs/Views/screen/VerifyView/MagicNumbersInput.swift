@@ -22,6 +22,7 @@ struct MagicNumersInput: View {
 
         // Moving back between numbers
         for index in 1 ... 5 {
+            print("lol")
             if value[index].isEmpty, !value[index - 1].isEmpty {
                 activeField = magicNumbersOO.activeState(index: index - 1)
             }

@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>select.country</key>
+	<string>Wähle ein Land</string>
+	<key>search</key>
+	<string>Suche</string>
+	<key>close</key>
+	<string>Schließen</string>
 	<key>verify.description</key>
 	<string>Geben Sie die magischen Zahlen ein, die wir an Ihre E-Mail-Adresse geschickt haben, um Ihr Konto zu bestätigen, und genießen Sie die App</string>
 	<key>verify.header</key>

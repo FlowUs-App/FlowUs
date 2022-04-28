@@ -7,6 +7,7 @@
 
 import CountryPicker
 import SwiftUI
+import L10n_swift
 
 struct CountryInput: View {
     @Environment(\.colorScheme) var colorScheme
@@ -24,9 +25,9 @@ struct CountryInput: View {
         selectedCountryCodeCornerRadius: CGFloat(15),
         closeButtonTextColor: UIColor.red,
         closeButtonFont: UIFont.systemFont(ofSize: 16),
-        closeButtonText: "Close",
-        titleText: "Select Country",
-        searchBarPlaceholder: "Search",
+        closeButtonText: "close".l10n(),
+        titleText: "select.country".l10n(),
+        searchBarPlaceholder: "search".l10n(),
         searchBarFont: UIFont.systemFont(ofSize: 16),
         searchBarCornerRadius: CGFloat(15))
 
