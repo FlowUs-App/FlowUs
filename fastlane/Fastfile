@@ -22,20 +22,20 @@ platform :ios do
   end
 
   desc "Push a new beta build to TestFlight from Dev"
-  lane :dev do
+  lane :dev_release do
     increment_build_number
     build_app(scheme: "FlowUs-Dev")
     upload_to_testflight
   end
 
   desc "Push a new beta build to TestFlight from Staging"
-  lane :staging do
+  lane :staging_release do
     build_app(scheme: "FlowUs-Staging")
     upload_to_testflight
   end
 
   desc "Push a new beta build to TestFlight from Production"
-  lane :prod do
+  lane :prod_release do
     build_app(scheme: "FlowUs-Production")
     upload_to_testflight
   end

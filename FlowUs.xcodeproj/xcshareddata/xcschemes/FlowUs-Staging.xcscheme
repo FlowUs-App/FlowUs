@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4DBDB0C326A4D85300B01255"
-               BuildableName = "FlowUs-Dev.app"
+               BuildableName = "FlowUs.app"
                BlueprintName = "FlowUs"
                ReferencedContainer = "container:FlowUs.xcodeproj">
             </BuildableReference>
@@ -65,7 +65,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4DBDB0C326A4D85300B01255"
-            BuildableName = "FlowUs-Dev.app"
+            BuildableName = "FlowUs.app"
             BlueprintName = "FlowUs"
             ReferencedContainer = "container:FlowUs.xcodeproj">
          </BuildableReference>
@@ -82,7 +82,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4DBDB0C326A4D85300B01255"
-            BuildableName = "FlowUs-Dev.app"
+            BuildableName = "FlowUs.app"
             BlueprintName = "FlowUs"
             ReferencedContainer = "container:FlowUs.xcodeproj">
          </BuildableReference>
