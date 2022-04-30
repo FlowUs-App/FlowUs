@@ -11,26 +11,39 @@ struct MagicNumersInput: View {
     @StateObject var magicNumbersOO: MagicNumbersInputOO = .init()
     @FocusState var activeField: MagicNumberField?
 
-    func magicNumberCondition(value: [String]) {
-        //  Moving forward between numbers
-        for index in 0 ..< 5 {
-            if value[index].count == 1, magicNumbersOO.activeState(index: index) == activeField {
-                activeField =
-                    magicNumbersOO.activeState(index: index + 1)
-            }
-        }
-
-        // Moving back between numbers
-        for index in 1 ... 5 {
-            print("lol")
-            if value[index].isEmpty, !value[index - 1].isEmpty {
-                activeField = magicNumbersOO.activeState(index: index - 1)
-            }
-        }
-
+    func magicNumberCondition(values: [String]) {
         for index in 0 ..< 6 {
-            if value[index].count > 1 {
-                magicNumbersOO.magicNumberFields[index] = String(value[index].last!)
+            if values[index].count > 1 {
+                magicNumbersOO.magicNumberFields[index] = String(values[index].last!)
+            }
+        }
+
+        //  Handles backward/forward movement of fields
+        //  when user inputs or deletes a number
+
+        for index in 0 ... 5 {
+            if index > 0 {
+                //  Go one field back
+                if values[index].isEmpty, !values[index - 1].isEmpty {
+                    activeField = magicNumbersOO.activeState(index: index - 1)
+                }
+                //  Move one field forward
+                if values[index].count == 1,
+                   magicNumbersOO.activeState(index: index) == activeField,
+                   index != 5
+                {
+                    activeField =
+                        magicNumbersOO.activeState(index: index + 1)
+                }
+            } else {
+                //  Move one field forward
+                if values[index].count == 1,
+                   magicNumbersOO.activeState(index: index) == activeField,
+                   index != 5
+                {
+                    activeField =
+                        magicNumbersOO.activeState(index: index + 1)
+                }
             }
         }
     }
@@ -46,12 +59,12 @@ struct MagicNumersInput: View {
                             .multilineTextAlignment(.center)
                             .focused($activeField, equals: magicNumbersOO.activeState(index: index))
                             .font(Font.body.weight(.semibold))
-                            .frame(width: 12, height: 28)
-                    }, strokeColor: activeField == magicNumbersOO.activeState(index: index)
+                            .frame(width: 40, height: 56)
+                    }, addPadding: false, strokeColor: activeField == magicNumbersOO.activeState(index: index)
                         ? .blue : .white)
                 }
             }.onChange(of: magicNumbersOO.magicNumberFields) { newValue in
-                magicNumberCondition(value: newValue)
+                magicNumberCondition(values: newValue)
             }
         }
     }
