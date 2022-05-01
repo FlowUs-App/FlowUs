@@ -157,10 +157,11 @@ struct RegisterPassword: View {
 
     var body: some View {
         ZStack {
-            TextInputDouble(inputFirst: password,
-                            inputSecond: repeatPassword,
-                            placeholderTextFirst: "Password",
-                            placeholderTextSecond: "Repeat Password")
+            // TODO: add Bindings
+//            TextInputDouble(inputFirst: password,
+//                            inputSecond: repeatPassword,
+//                            placeholderTextFirst: "Password",
+//                            placeholderTextSecond: "Repeat Password")
             HStack {
                 Spacer()
                 CircleIconButton(content: {

@@ -36,5 +36,8 @@ class LoginOO: ObservableObject {
 
     func sendForgotPasswordEmail() {}
 
-    func signIn() {}
+    func signIn() {
+        print(email)
+        print(password)
+    }
 }

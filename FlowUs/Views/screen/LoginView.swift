@@ -13,8 +13,6 @@ struct LoginView: View {
     @StateObject var loginOO: LoginOO = .init()
     @EnvironmentObject var pilot: UIPilot<AppRoute>
     @Environment(\.colorScheme) var colorScheme
-    @State var firstInput: String = ""
-    @State var secondInput: String = ""
 
     private func navigateToRegister() {
         pilot.push(.Register)
@@ -29,9 +27,9 @@ struct LoginView: View {
                     .padding(.top, 12)
                 LoginOpening(loginOO: loginOO)
                 LoginMidSection(
-                    firstInput: firstInput, secondInput: secondInput)
+                    firstInput: $loginOO.email, secondInput: $loginOO.password)
                     .padding(.top, 16)
-                PrimaryButton(action: dummyFunction,
+                PrimaryButton(action: loginOO.signIn,
                               text: "login.login".l10n())
                     .frame(width: UIScreen.screenWidth)
                 Button(action: navigateToRegister, label: {
@@ -63,8 +61,8 @@ struct LoginOpening: View {
 
 struct LoginMidSection: View {
     @Environment(\.colorScheme) var colorScheme
-    var firstInput: String
-    var secondInput: String
+    @Binding var firstInput: String
+    @Binding var secondInput: String
 
     var body: some View {
         ZStack {
@@ -76,8 +74,8 @@ struct LoginMidSection: View {
             ZStack {
                 LoginMidSectionBlurredItems()
                 VStack {
-                    TextInputDouble(inputFirst: firstInput,
-                                    inputSecond: secondInput,
+                    TextInputDouble(inputFirst: $firstInput,
+                                    inputSecond: $secondInput,
                                     color: colorScheme == .light ? .black : .white,
                                     placeholderColor:
                                     colorScheme == .light ? .black.opacity(0.75) : .white.opacity(0.75),

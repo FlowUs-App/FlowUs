@@ -34,8 +34,8 @@ struct TextInput: View {
 
 struct TextInputDouble: View {
     @Environment(\.colorScheme) var colorScheme
-    @State var inputFirst: String = ""
-    @State var inputSecond: String = ""
+    @Binding var inputFirst: String
+    @Binding var inputSecond: String
     @State var invalidFirst: Bool = false
     @State var invalidSecond: Bool = false
     var color: Color = .black
@@ -128,20 +128,20 @@ struct TextInputTriple: View {
     }
 }
 
-struct TextInputs_Previews: PreviewProvider {
-    static var previews: some View {
-        DefaultPreview(content: VStack {
-            TextInput()
-            TextInput(input: "Example")
-            TextInput(input: "Example", invalid: true)
-            HStack {
-                TextInput(small: true)
-                TextInput(input: "Example", invalid: true, small: true)
-            }
-            TextInputDouble()
-            TextInputDouble(inputFirst: "Example", inputSecond: "Example", invalidSecond: true)
-            TextInputTriple(inputFirst: "Example", inputSecond: "Example", invalidSecond: true)
-            Spacer()
-        }, gradient: true)
-    }
-}
+//struct TextInputs_Previews: PreviewProvider {
+//    static var previews: some View {
+//        DefaultPreview(content: VStack {
+//            TextInput()
+//            TextInput(input: "Example")
+//            TextInput(input: "Example", invalid: true)
+//            HStack {
+//                TextInput(small: true)
+//                TextInput(input: "Example", invalid: true, small: true)
+//            }
+//            TextInputDouble()
+//            TextInputDouble(inputFirst: "Example", inputSecond: "Example", invalidSecond: true)
+//            TextInputTriple(inputFirst: "Example", inputSecond: "Example", invalidSecond: true)
+//            Spacer()
+//        }, gradient: true)
+//    }
+//}
