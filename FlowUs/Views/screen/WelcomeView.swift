@@ -98,6 +98,7 @@ struct WelcomeThirdLayer: View {
 
 struct WelcomeText: View {
     let welcome = "welcome.to.flowus.welcome".l10n() + "\n" + "welcome.to.flowus".l10n()
+
     var body: some View {
         HStack {
             HeadingBGradient(text: welcome,
@@ -105,7 +106,9 @@ struct WelcomeText: View {
                                  colors: [.init(hex: "E100FF"), .init(hex: "5F3DDD")],
                                  startPoint: .top,
                                  endPoint: .bottom
-                             )).padding(.leading, 15)
+                             ))
+                             .padding(.leading, 15)
+
             Spacer()
         }.frame(width: UIScreen.screenWidth)
             .padding(.bottom, 12)

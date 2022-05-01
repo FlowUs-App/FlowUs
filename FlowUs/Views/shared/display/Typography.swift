@@ -20,6 +20,7 @@ struct HeadingBGradient: View {
         startPoint: .leading,
         endPoint: .trailing
     )
+
     var body: some View {
         Text(.init(text)).font(.system(size: 48))
             .fontWeight(.bold)

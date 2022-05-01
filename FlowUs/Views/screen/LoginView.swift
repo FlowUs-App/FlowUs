@@ -10,10 +10,15 @@ import SwiftUI
 import UIPilot
 
 struct LoginView: View {
+    @StateObject var loginOO: LoginOO = .init()
     @EnvironmentObject var pilot: UIPilot<AppRoute>
     @Environment(\.colorScheme) var colorScheme
     @State var firstInput: String = ""
     @State var secondInput: String = ""
+
+    private func navigateToRegister() {
+        pilot.push(.Register)
+    }
 
     var body: some View {
         ZStack {
@@ -22,17 +27,18 @@ struct LoginView: View {
                 BackBar()
                     .frame(width: UIScreen.screenWidth)
                     .padding(.top, 12)
-                LoginOpening()
+                LoginOpening(loginOO: loginOO)
                 LoginMidSection(
                     firstInput: firstInput, secondInput: secondInput)
                     .padding(.top, 16)
                 PrimaryButton(action: dummyFunction,
                               text: "login.login".l10n())
                     .frame(width: UIScreen.screenWidth)
-                Button(action: dummyFunction, label: {
-                    CommonText(text: "Not a member yet? **Register now**".l10n())
+                Button(action: navigateToRegister, label: {
+                    CommonText(text: "login.not.a.member".l10n())
                         .foregroundColor(colorScheme == .light ? .black : .white)
                 }).padding(.vertical, 16)
+                    .buttonStyle(ScaleButtonStyle())
             }.frame(width: UIScreen.screenWidth)
                 .keyboardAware()
         }
@@ -40,12 +46,13 @@ struct LoginView: View {
 }
 
 struct LoginOpening: View {
+    let loginOO: LoginOO
     var body: some View {
         HStack {
             HeadingB(text: "login.welcome.again".l10n())
             CircleIconButton(content: {
                 Icon(path: "Icons/Frog")
-            }, action: dummyFunction,
+            }, action: loginOO.playFrogSound,
             shadowColor: .green,
             width: 32,
             height: 32)
@@ -81,6 +88,7 @@ struct LoginMidSection: View {
                         CommonText(text: "login.forgot.password".l10n(), semibold: true)
                             .foregroundColor(.white)
                     }).padding(.leading, 220)
+                        .buttonStyle(ScaleButtonStyle())
                 }.padding(.top, 40)
                 HStack {
                     Spacer()

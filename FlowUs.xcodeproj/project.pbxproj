@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D0DBFFF281DF9AB00AED34B /* LoginOO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0DBFFE281DF9AB00AED34B /* LoginOO.swift */; };
+		4D0DC002281E03DB00AED34B /* Frog.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4D0DC001281E03DB00AED34B /* Frog.mp3 */; };
 		4D112F5F27F3BBB2002957E8 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 4D112F5E27F3BBB2002957E8 /* .swiftlint.yml */; };
 		4D28C77F280613B900F3A2AE /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D28C77E280613B900F3A2AE /* Buttons.swift */; };
 		4D28C7812806360C00F3A2AE /* TextInputs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D28C7802806360C00F3A2AE /* TextInputs.swift */; };
@@ -89,6 +91,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D0DBFFE281DF9AB00AED34B /* LoginOO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginOO.swift; sourceTree = "<group>"; };
+		4D0DC001281E03DB00AED34B /* Frog.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Frog.mp3; sourceTree = "<group>"; };
 		4D112F5E27F3BBB2002957E8 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		4D28C77E280613B900F3A2AE /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		4D28C7802806360C00F3A2AE /* TextInputs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputs.swift; sourceTree = "<group>"; };
@@ -187,6 +191,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D0DC003281E058C00AED34B /* ExtraAssets */ = {
+			isa = PBXGroup;
+			children = (
+				4D0DC001281E03DB00AED34B /* Frog.mp3 */,
+			);
+			path = ExtraAssets;
+			sourceTree = "<group>";
+		};
 		4D28C77C2806130E00F3A2AE /* action */ = {
 			isa = PBXGroup;
 			children = (
@@ -333,6 +345,7 @@
 		4DBDB0C626A4D85300B01255 /* FlowUs */ = {
 			isa = PBXGroup;
 			children = (
+				4D0DC003281E058C00AED34B /* ExtraAssets */,
 				4D5F85A7280CC58B003BE722 /* Localizable */,
 				4D796D76280394E20020FF26 /* Utils */,
 				4DE33C0D27F8FE470029E0CF /* Firebase */,
@@ -381,6 +394,7 @@
 				4D58FFFC2809FD17002337AE /* CountryPickerOO.swift */,
 				4DB61A58280A392D00D900C0 /* RadioButtonOO.swift */,
 				4DDCC2F72818921E00FD7EB5 /* MagicNumbersInputOO.swift */,
+				4D0DBFFE281DF9AB00AED34B /* LoginOO.swift */,
 			);
 			path = ObservableObjects;
 			sourceTree = "<group>";
@@ -581,6 +595,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D0DC002281E03DB00AED34B /* Frog.mp3 in Resources */,
 				4D112F5F27F3BBB2002957E8 /* .swiftlint.yml in Resources */,
 				4D5F85A9280CC646003BE722 /* Localizable.plist in Resources */,
 				4D5F85B0280CC6F7003BE722 /* Localizable.plist in Resources */,
@@ -681,6 +696,7 @@
 				4D5F85B2280CCA94003BE722 /* WelcomeView.swift in Sources */,
 				4DDF4AFE280E1931001A6D51 /* GreenBlob.swift in Sources */,
 				4DE3146126A78F6A007A51FE /* ContentOO.swift in Sources */,
+				4D0DBFFF281DF9AB00AED34B /* LoginOO.swift in Sources */,
 				4D8AB48C280B7C72006A3B2F /* Toast.swift in Sources */,
 				4D28C7812806360C00F3A2AE /* TextInputs.swift in Sources */,
 				4D7720FD2815FBAA00C5812F /* DarkBlueBlob.swift in Sources */,

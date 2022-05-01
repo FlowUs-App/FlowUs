@@ -44,16 +44,11 @@ struct Toast: View {
                         .fixedSize(horizontal: false, vertical: true)
                 }
                 Spacer()
-            }.frame(maxWidth: UIScreen.screenWidth - 64, minHeight: 64)
+            }.frame(maxWidth: UIScreen.screenWidth - 64,
+                    minHeight: 64)
         }
     }
 }
-
-var LongText = """
-This goes
-over multiple
-lines
-"""
 
 struct ToastPreview: View {
     @State var showToast: Bool = false
