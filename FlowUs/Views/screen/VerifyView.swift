@@ -11,6 +11,11 @@ import UIPilot
 
 struct VerifyView: View {
     @EnvironmentObject var pilot: UIPilot<AppRoute>
+    @StateObject var data: VerifyOO = .init()
+
+    private func printNumbers() {
+        print(data.getCurrentNumbers())
+    }
 
     var body: some View {
         ZStack {
@@ -23,7 +28,7 @@ struct VerifyView: View {
                     VStack {
                         BackBar()
                             .frame(width: UIScreen.screenWidth)
-                            
+
                         HStack {
                             HeadingB(text: "verify.header".l10n())
                                 .foregroundColor(.white)
@@ -35,14 +40,16 @@ struct VerifyView: View {
                             .padding(.horizontal, 60)
                             .foregroundColor(.white)
                             .padding(.top, -32)
-                        MagicNumersInput()
+                        MagicNumersInput(magicNumbers: $data.magicNumbers,
+                                         magicNumberFields: $data.magicNumberFields)
                             .padding(.top, 52)
                         Icon(resize: true, path: "ScreenAssets/Verify/Saturn")
                             .frame(width: 380, height: 380)
                             .padding(.top, -72)
                             .padding(.leading, 40)
                             .rotationEffect(Angle(degrees: -15))
-                        PrimaryButton(action: dummyFunction, text: "register.step.two".l10n())
+                        PrimaryButton(action: printNumbers,
+                                      text: "register.step.two".l10n())
                             .frame(width: UIScreen.screenWidth)
                     }
                 }

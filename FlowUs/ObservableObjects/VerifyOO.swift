@@ -1,13 +1,15 @@
 //
-//  MagicNumbersInputOO.swift
+//  VerifyOO.swift
 //  FlowUs
 //
-//  Created by Lucas Goldner on 26.04.22.
+//  Created by Lucas Goldner on 04.05.22.
 //
+
+import Foundation
 
 import SwiftUI
 
-class MagicNumbersInputOO: ObservableObject {
+class VerifyOO: ObservableObject {
     @Published var magicNumbers: String = ""
     @Published var magicNumberFields: [String] = Array(repeating: "", count: 6)
 
@@ -21,13 +23,8 @@ class MagicNumbersInputOO: ObservableObject {
         default: return .field6
         }
     }
-}
 
-enum MagicNumberField {
-    case field1
-    case field2
-    case field3
-    case field4
-    case field5
-    case field6
+    func getCurrentNumbers() -> Int {
+        return Int(magicNumberFields.joined()) ?? 0
+    }
 }

@@ -35,7 +35,7 @@ struct RegisterView: View {
                 .frame(width: UIScreen.screenWidth)
             VStack {
                 SecondaryButton(
-                    action: registerOO.verifyFields,
+                    action: navigateToVerify,
                     text: "register.step.one".l10n(),
                     shadowsEnabled: false)
             }

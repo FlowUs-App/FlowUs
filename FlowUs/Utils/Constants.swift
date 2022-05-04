@@ -14,6 +14,15 @@ enum AppRoute: Equatable {
     case Verify
 }
 
+enum MagicNumberField {
+    case field1
+    case field2
+    case field3
+    case field4
+    case field5
+    case field6
+}
+
 struct CommonBackground: View {
     @Environment(\.colorScheme) var colorScheme
     var body: some View {
