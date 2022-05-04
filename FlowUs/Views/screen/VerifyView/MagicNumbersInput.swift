@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-
 struct MagicNumersInput: View {
     @FocusState var activeField: MagicNumberField?
     @Binding var magicNumbers: String
     @Binding var magicNumberFields: [String]
-    
+    var color: Color = .white
+
     func activeState(index: Int) -> MagicNumberField {
         switch index {
         case 0: return .field1
@@ -72,6 +72,7 @@ struct MagicNumersInput: View {
                             .multilineTextAlignment(.center)
                             .focused($activeField, equals: activeState(index: index))
                             .font(Font.body.weight(.semibold))
+                            .foregroundColor(color)
                             .frame(width: 40, height: 56)
                     }, addPadding: false, strokeColor: activeField == activeState(index: index)
                         ? .blue : .white)
@@ -83,8 +84,12 @@ struct MagicNumersInput: View {
     }
 }
 
-//struct MagicNumersInput_Previews: PreviewProvider {
-//    static var previews: some View {
-//        DefaultPreview(content: MagicNumersInput(), gradient: true)
-//    }
-//}
+struct MagicNumersInput_Previews: PreviewProvider {
+    static var previews: some View {
+        DefaultPreview(content:
+            MagicNumersInput(magicNumbers: .constant(""),
+                             magicNumberFields:
+                             .constant(Array(repeating: "", count: 6))),
+            gradient: true)
+    }
+}

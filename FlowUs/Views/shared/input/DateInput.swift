@@ -40,10 +40,13 @@ struct DateInput: View {
     }
 }
 
-//struct DateInput_Previews: PreviewProvider {
-//    static var previews: some View {
-//        DefaultPreview(content:
-//            DateInput(width: UIScreen.screenWidth / 2.5, height: 40, placeholderText: "Birthday"),
-//            gradient: true)
-//    }
-//}
+struct DateInput_Previews: PreviewProvider {
+    static var previews: some View {
+        DefaultPreview(content:
+            DateInput(date: .constant(Date.now),
+                      width: UIScreen.screenWidth / 2.5,
+                      height: 40,
+                      placeholderText: "Birthday"),
+            gradient: true)
+    }
+}

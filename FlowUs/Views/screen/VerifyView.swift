@@ -41,7 +41,8 @@ struct VerifyView: View {
                             .foregroundColor(.white)
                             .padding(.top, -32)
                         MagicNumersInput(magicNumbers: $data.magicNumbers,
-                                         magicNumberFields: $data.magicNumberFields)
+                                         magicNumberFields: $data.magicNumberFields,
+                                         color: .white)
                             .padding(.top, 52)
                         Icon(resize: true, path: "ScreenAssets/Verify/Saturn")
                             .frame(width: 380, height: 380)
