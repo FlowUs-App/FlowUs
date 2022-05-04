@@ -5,18 +5,14 @@
 //  Created by Lucas Goldner on 18.04.22.
 //
 
+import CountryPicker
 import L10n_swift
 import SwiftUI
 import UIPilot
 
 struct RegisterView: View {
+    @StateObject var registerOO: RegisterOO = .init()
     @EnvironmentObject var pilot: UIPilot<AppRoute>
-    @State var firstInput: String = ""
-    @State var secondInput: String = ""
-    @State var thirdInput: String = ""
-    @State var date: Date = .init()
-    @State var passwordInput: String = ""
-    @State var repeatPasswordInput: String = ""
 
     private func navigateToVerify() {
         pilot.push(.Verify)
@@ -28,16 +24,18 @@ struct RegisterView: View {
             RegisterHeading()
                 .frame(width: UIScreen.screenWidth, height: 60)
                 .padding(.top, 12)
-            RegisterUserInfoSection(firstInput: firstInput,
-                                    secondInput: secondInput,
-                                    thirdInput: thirdInput)
-            RegisterBirthInfo(date: date)
-            RegisterPassword(password: passwordInput,
-                             repeatPassword: repeatPasswordInput)
-                .frame(width: UIScreen.screenWidth)
+            RegisterUserInfoSection(nameInput: $registerOO.data.name,
+                                    userNameInput: $registerOO.data.username,
+                                    emailInput: $registerOO.data.email,
+                                    countryInput: $registerOO.data.country)
+            RegisterBirthInfo(date: $registerOO.data.birthday,
+                              sex: $registerOO.data.sex)
+//            RegisterPassword(password: passwordInput,
+//                             repeatPassword: repeatPasswordInput)
+//                .frame(width: UIScreen.screenWidth)
             VStack {
                 SecondaryButton(
-                    action: navigateToVerify,
+                    action: registerOO.verifyFields,
                     text: "register.step.one".l10n(),
                     shadowsEnabled: false)
             }
@@ -83,16 +81,18 @@ struct RegisterHeading: View {
 }
 
 struct RegisterUserInfoSection: View {
-    var firstInput: String = ""
-    var secondInput: String = ""
-    var thirdInput: String = ""
+    @Binding var nameInput: String
+    @Binding var userNameInput: String
+    @Binding var emailInput: String
+    @Binding var countryInput: Country?
+
     var body: some View {
         ZStack {
             Icon(resize: false, path: "ScreenAssets/Register/Explore")
                 .padding(.leading, 10)
-            TextInputTriple(inputFirst: firstInput,
-                            inputSecond: secondInput,
-                            inputThird: thirdInput,
+            TextInputTriple(inputFirst: $nameInput,
+                            inputSecond: $userNameInput,
+                            inputThird: $emailInput,
                             color: .white,
                             placeholderTextFirst: "register.real.name".l10n(),
                             placeholderTextSecond: "register.user.name".l10n(),
@@ -103,12 +103,12 @@ struct RegisterUserInfoSection: View {
                 .padding(.trailing, 360)
                 .padding(.top, 152)
                 .frame(height: 150)
-            CountryInput(width: 60, height: 28,
+            CountryInput(country: $countryInput, width: 60, height: 28,
                          placeholderText: "register.country".l10n())
                 .padding(.top, 328)
                 .padding(.leading, 292)
                 .frame(width: 60, height: 28).blur(radius: 10)
-            CountryInput(width: 60, height: 28,
+            CountryInput(country: $countryInput, width: 60, height: 28,
                          placeholderText: "register.country".l10n())
                 .padding(.top, 328)
                 .padding(.leading, 292)
@@ -119,7 +119,9 @@ struct RegisterUserInfoSection: View {
 }
 
 struct RegisterBirthInfo: View {
-    var date: Date
+    @Binding var date: Date
+    @Binding var sex: String
+
     var body: some View {
         HStack {
             CommonText(
@@ -133,7 +135,7 @@ struct RegisterBirthInfo: View {
 
         HStack {
             VStack {
-                DateInput(date: date,
+                DateInput(date: $date,
                           width: UIScreen.screenWidth / 3.2,
                           height: 40,
                           placeholderText: "register.birthday".l10n())

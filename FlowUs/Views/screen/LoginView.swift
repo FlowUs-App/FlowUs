@@ -27,7 +27,7 @@ struct LoginView: View {
                     .padding(.top, 12)
                 LoginOpening(loginOO: loginOO)
                 LoginMidSection(
-                    firstInput: $loginOO.email, secondInput: $loginOO.password)
+                    firstInput: $loginOO.data.email, secondInput: $loginOO.data.password)
                     .padding(.top, 16)
                 PrimaryButton(action: loginOO.signIn,
                               text: "login.login".l10n())

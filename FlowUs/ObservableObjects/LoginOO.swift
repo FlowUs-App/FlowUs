@@ -9,16 +9,19 @@ import AVFoundation
 import Foundation
 
 class LoginOO: ObservableObject {
-    @Published var email: String = ""
-    @Published var password: String = ""
-    @Published var showPassword: Bool = false
+    @Published var data: LoginDO
     var audioPlayer: AVAudioPlayer?
 
+    init() {
+        data = .init(id: "",
+                     email: "",
+                     password: "",
+                     showPassword: false)
+    }
+
     func playFrogSound() {
-        print("Played")
         let soundFileName = "Frog"
         guard let soundURL = Bundle.main.url(forResource: soundFileName, withExtension: "mp3") else {
-            print("Hund")
             return
         }
 
@@ -31,13 +34,14 @@ class LoginOO: ObservableObject {
     }
 
     func toogleViewPassword() {
-        showPassword.toggle()
+        data.showPassword.toggle()
     }
 
     func sendForgotPasswordEmail() {}
 
     func signIn() {
-        print(email)
-        print(password)
+        // TODO: Add login functionality
+        print(data.email)
+        print(data.password)
     }
 }

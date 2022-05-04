@@ -10,7 +10,7 @@ import SwiftUI
 
 struct DateInput: View {
     @Environment(\.colorScheme) var colorScheme
-    @State var date = Date()
+    @Binding var date: Date
     @State private var dateID: String = UUID().uuidString
     let calendar = Calendar.current
     let width: Double
@@ -40,10 +40,10 @@ struct DateInput: View {
     }
 }
 
-struct DateInput_Previews: PreviewProvider {
-    static var previews: some View {
-        DefaultPreview(content:
-            DateInput(width: UIScreen.screenWidth / 2.5, height: 40, placeholderText: "Birthday"),
-            gradient: true)
-    }
-}
+//struct DateInput_Previews: PreviewProvider {
+//    static var previews: some View {
+//        DefaultPreview(content:
+//            DateInput(width: UIScreen.screenWidth / 2.5, height: 40, placeholderText: "Birthday"),
+//            gradient: true)
+//    }
+//}

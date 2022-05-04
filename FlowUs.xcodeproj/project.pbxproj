@@ -70,6 +70,9 @@
 		4DE33C3027F902BB0029E0CF /* FirebasePerformance in Frameworks */ = {isa = PBXBuildFile; productRef = 4DE33C2F27F902BB0029E0CF /* FirebasePerformance */; };
 		4DE33C3227F902BB0029E0CF /* FirebaseRemoteConfigSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 4DE33C3127F902BB0029E0CF /* FirebaseRemoteConfigSwift-Beta */; };
 		4DE33C3427F902BB0029E0CF /* FirebaseStorageSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 4DE33C3327F902BB0029E0CF /* FirebaseStorageSwift-Beta */; };
+		4DE90A5C2820718D0096FE22 /* RegisterOO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE90A5B2820718D0096FE22 /* RegisterOO.swift */; };
+		4DE90A5E282072760096FE22 /* RegisterDO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE90A5D282072760096FE22 /* RegisterDO.swift */; };
+		4DE90A602820779A0096FE22 /* LoginDO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE90A5F2820779A0096FE22 /* LoginDO.swift */; };
 		4DFC3F072812176200CAE539 /* StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFC3F062812176200CAE539 /* StatusBar.swift */; };
 /* End PBXBuildFile section */
 
@@ -145,6 +148,9 @@
 		4DE33C1127F8FE9B0029E0CF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4DE33C1327F8FEB70029E0CF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4DE33C1527F8FF250029E0CF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4DE90A5B2820718D0096FE22 /* RegisterOO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterOO.swift; sourceTree = "<group>"; };
+		4DE90A5D282072760096FE22 /* RegisterDO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterDO.swift; sourceTree = "<group>"; };
+		4DE90A5F2820779A0096FE22 /* LoginDO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDO.swift; sourceTree = "<group>"; };
 		4DFC3F062812176200CAE539 /* StatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -395,6 +401,7 @@
 				4DB61A58280A392D00D900C0 /* RadioButtonOO.swift */,
 				4DDCC2F72818921E00FD7EB5 /* MagicNumbersInputOO.swift */,
 				4D0DBFFE281DF9AB00AED34B /* LoginOO.swift */,
+				4DE90A5B2820718D0096FE22 /* RegisterOO.swift */,
 			);
 			path = ObservableObjects;
 			sourceTree = "<group>";
@@ -404,6 +411,8 @@
 			children = (
 				4DE3146426A78FDE007A51FE /* ContentDO.swift */,
 				4DB61A56280A38C800D900C0 /* RadioButtonDO.swift */,
+				4DE90A5D282072760096FE22 /* RegisterDO.swift */,
+				4DE90A5F2820779A0096FE22 /* LoginDO.swift */,
 			);
 			path = DataObjects;
 			sourceTree = "<group>";
@@ -664,6 +673,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DDCC2F6281890F300FD7EB5 /* MagicNumbersInput.swift in Sources */,
+				4DE90A5C2820718D0096FE22 /* RegisterOO.swift in Sources */,
 				4D58FFF82809F8B3002337AE /* CountryInput.swift in Sources */,
 				4D5141692804D7EC00D37C33 /* Typography.swift in Sources */,
 				4DB61A53280A253E00D900C0 /* SelectionInput.swift in Sources */,
@@ -689,6 +699,7 @@
 				4D7720FA2815FA0700C5812F /* VerifyView.swift in Sources */,
 				4D796D39280370140020FF26 /* GlasmorphicCard.swift in Sources */,
 				4DFC3F072812176200CAE539 /* StatusBar.swift in Sources */,
+				4DE90A5E282072760096FE22 /* RegisterDO.swift in Sources */,
 				4DDF4AED280DFF32001A6D51 /* LoginView.swift in Sources */,
 				4DBDB0C826A4D85300B01255 /* FlowUsApp.swift in Sources */,
 				4D5F85B5280CCF99003BE722 /* PurpleBlob.swift in Sources */,
@@ -700,6 +711,7 @@
 				4D8AB48C280B7C72006A3B2F /* Toast.swift in Sources */,
 				4D28C7812806360C00F3A2AE /* TextInputs.swift in Sources */,
 				4D7720FD2815FBAA00C5812F /* DarkBlueBlob.swift in Sources */,
+				4DE90A602820779A0096FE22 /* LoginDO.swift in Sources */,
 				4D58FFFD2809FD17002337AE /* CountryPickerOO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

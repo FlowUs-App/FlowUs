@@ -74,9 +74,9 @@ struct TextInputDouble: View {
 
 struct TextInputTriple: View {
     @Environment(\.colorScheme) var colorScheme
-    @State var inputFirst: String = ""
-    @State var inputSecond: String = ""
-    @State var inputThird: String = ""
+    @Binding var inputFirst: String
+    @Binding var inputSecond: String
+    @Binding var inputThird: String
     @State var invalidFirst: Bool = false
     @State var invalidSecond: Bool = false
     @State var invalidThird: Bool = false
