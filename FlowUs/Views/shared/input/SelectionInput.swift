@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SelectionInput: View {
     @Environment(\.colorScheme) var colorScheme
+    @Binding var selectedItem: String
     let items: [String]
     let text: String
     var color: Color = .black
@@ -27,7 +28,7 @@ struct SelectionInput: View {
                     RadioButtonGroup(items: items,
                                      selectedId: "1. Option",
                                      callback: { selected in
-                                         print("Selected is: \(selected)")
+                                         selectedItem = selected
                                      },
                                      dividersOn: true,
                                      color: color)
@@ -49,13 +50,13 @@ struct SelectionInput: View {
     }
 }
 
-struct SelectionInput_Previews: PreviewProvider {
-    static var previews: some View {
-        DefaultPreview(content: VStack { HStack {
-            SelectionInput(items: ["1. Option", "2. Option", "3. Option Long"], text: "Choose 1, 2 or 3")
-            SelectionInput(items: ["1. Option", "2. Option", "3. Option", "4. Option"], text: "Choose 1, 2, 3 or 4")
-        }
-        SelectionInput(items: ["1. Option", "2. Option", "3. Option", "4. Option", "5. Option"], text: "Choose 1, 2, 3, 4 or 5")
-        }, gradient: true)
-    }
-}
+// struct SelectionInput_Previews: PreviewProvider {
+//    static var previews: some View {
+//        DefaultPreview(content: VStack { HStack {
+//            SelectionInput(items: ["1. Option", "2. Option", "3. Option Long"], text: "Choose 1, 2 or 3")
+//            SelectionInput(items: ["1. Option", "2. Option", "3. Option", "4. Option"], text: "Choose 1, 2, 3 or 4")
+//        }
+//        SelectionInput(items: ["1. Option", "2. Option", "3. Option", "4. Option", "5. Option"], text: "Choose 1, 2, 3, 4 or 5")
+//        }, gradient: true)
+//    }
+// }

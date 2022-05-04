@@ -30,9 +30,9 @@ struct RegisterView: View {
                                     countryInput: $registerOO.data.country)
             RegisterBirthInfo(date: $registerOO.data.birthday,
                               sex: $registerOO.data.sex)
-//            RegisterPassword(password: passwordInput,
-//                             repeatPassword: repeatPasswordInput)
-//                .frame(width: UIScreen.screenWidth)
+            RegisterPassword(password: $registerOO.data.password,
+                             repeatPassword: $registerOO.data.confirmPassword)
+                .frame(width: UIScreen.screenWidth)
             VStack {
                 SecondaryButton(
                     action: registerOO.verifyFields,
@@ -144,6 +144,7 @@ struct RegisterBirthInfo: View {
                     .frame(width: 180, height: 140)
             }
             SelectionInput(
+                selectedItem: $sex,
                 items: ["Male", "Female", "Other"],
                 text: "Choose sex",
                 color: .white)
@@ -154,16 +155,18 @@ struct RegisterBirthInfo: View {
 }
 
 struct RegisterPassword: View {
-    var password: String
-    var repeatPassword: String
+    @Binding var password: String
+    @Binding var repeatPassword: String
 
     var body: some View {
         ZStack {
-            // TODO: add Bindings
-//            TextInputDouble(inputFirst: password,
-//                            inputSecond: repeatPassword,
-//                            placeholderTextFirst: "Password",
-//                            placeholderTextSecond: "Repeat Password")
+            TextInputDouble(
+                inputFirst: $password,
+                inputSecond: $repeatPassword,
+                color: .white,
+                placeholderTextFirst: "Password",
+                placeholderTextSecond: "Repeat Password")
+
             HStack {
                 Spacer()
                 CircleIconButton(content: {
