@@ -31,7 +31,9 @@ struct RegisterView: View {
             RegisterBirthInfo(date: $registerOO.data.birthday,
                               sex: $registerOO.data.sex)
             RegisterPassword(password: $registerOO.data.password,
-                             repeatPassword: $registerOO.data.confirmPassword)
+                             repeatPassword: $registerOO.data.confirmPassword,
+                             isPasswordShown: $registerOO.data.showPassword,
+                             registerOO: registerOO)
                 .frame(width: UIScreen.screenWidth)
             VStack {
                 SecondaryButton(
@@ -157,24 +159,27 @@ struct RegisterBirthInfo: View {
 struct RegisterPassword: View {
     @Binding var password: String
     @Binding var repeatPassword: String
+    @Binding var isPasswordShown: Bool
+    let registerOO: RegisterOO
 
     var body: some View {
         ZStack {
-            TextInputDouble(
+            SecureTextInputDouble(
                 inputFirst: $password,
                 inputSecond: $repeatPassword,
+                showFirst: $isPasswordShown,
+                showSecond: .constant(false),
                 color: .white,
                 placeholderTextFirst: "Password",
                 placeholderTextSecond: "Repeat Password")
 
             HStack {
                 Spacer()
-                CircleIconButton(content: {
-                    Icon(path: "Icons/Eye")
-                }, action: dummyFunction,
-                shadowColor: .yellow,
-                width: 32,
-                height: 32)
+                ShowPasswordButton(isShown: $isPasswordShown,
+                                   action: registerOO.toogleViewPassword,
+                                   shadowColor: .yellow,
+                                   width: 32,
+                                   height: 32)
                     .padding(.trailing, 16)
                     .padding(.top, -52)
             }.frame(width: UIScreen.screenWidth)

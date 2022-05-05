@@ -37,6 +37,10 @@ class RegisterOO: ObservableObject {
         print(data.confirmPassword)
         print(data.showPassword)
     }
+    
+    func toogleViewPassword() {
+        data.showPassword.toggle()
+    }
 
     func callAccountCreation() {}
 

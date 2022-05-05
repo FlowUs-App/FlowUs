@@ -27,8 +27,12 @@ struct LoginView: View {
                     .padding(.top, 12)
                 LoginOpening(loginOO: loginOO)
                 LoginMidSection(
-                    firstInput: $loginOO.data.email, secondInput: $loginOO.data.password)
-                    .padding(.top, 16)
+                    email: $loginOO.data.email,
+                    password: $loginOO.data.password,
+                    showPassword: $loginOO.data.showPassword,
+                    loginOO: loginOO
+                )
+                .padding(.top, 16)
                 PrimaryButton(action: loginOO.signIn,
                               text: "login.login".l10n())
                     .frame(width: UIScreen.screenWidth)
@@ -61,8 +65,10 @@ struct LoginOpening: View {
 
 struct LoginMidSection: View {
     @Environment(\.colorScheme) var colorScheme
-    @Binding var firstInput: String
-    @Binding var secondInput: String
+    @Binding var email: String
+    @Binding var password: String
+    @Binding var showPassword: Bool
+    let loginOO: LoginOO
 
     var body: some View {
         ZStack {
@@ -74,14 +80,15 @@ struct LoginMidSection: View {
             ZStack {
                 LoginMidSectionBlurredItems()
                 VStack {
-                    TextInputDouble(inputFirst: $firstInput,
-                                    inputSecond: $secondInput,
-                                    color: colorScheme == .light ? .black : .white,
-                                    placeholderColor:
-                                    colorScheme == .light ? .black.opacity(0.75) : .white.opacity(0.75),
-                                    placeholderTextFirst: "login.email".l10n(),
-                                    placeholderTextSecond: "login.password".l10n())
-
+                    SecureTextInputDouble(inputFirst: $email,
+                                          inputSecond: $password,
+                                          showFirst: .constant(false),
+                                          showSecond: $showPassword,
+                                          color: colorScheme == .light ? .black : .white,
+                                          placeholderColor:
+                                          colorScheme == .light ? .black.opacity(0.75) : .white.opacity(0.75),
+                                          placeholderTextFirst: "login.email".l10n(),
+                                          placeholderTextSecond: "login.password".l10n())
                     Button(action: dummyFunction, label: {
                         CommonText(text: "login.forgot.password".l10n(), semibold: true)
                             .foregroundColor(.white)
@@ -90,12 +97,11 @@ struct LoginMidSection: View {
                 }.padding(.top, 40)
                 HStack {
                     Spacer()
-                    CircleIconButton(content: {
-                        Icon(path: "Icons/Eye")
-                    }, action: dummyFunction,
-                    shadowColor: .yellow,
-                    width: 32,
-                    height: 32)
+                    ShowPasswordButton(isShown: $showPassword,
+                                       action: loginOO.toogleViewPassword,
+                                       shadowColor: .yellow,
+                                       width: 32,
+                                       height: 32)
                         .padding(.trailing, 16)
                         .padding(.top, 64)
                 }.frame(width: UIScreen.screenWidth)
@@ -118,7 +124,8 @@ struct LoginMidSectionBlurredItems: View {
             .padding(.leading, 280)
             .mask(Rectangle()
                 .frame(
-                    width: UIScreen.screenWidth - 40, height: 100)
+                    width: UIScreen.screenWidth - 40, height: 100
+                )
             ).blur(radius: 20)
             .frame(width: UIScreen.screenWidth)
     }

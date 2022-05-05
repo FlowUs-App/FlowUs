@@ -36,6 +36,38 @@ struct CircleIconButton<Content: View>: View {
     }
 }
 
+struct ShowPasswordButton: View {
+    @Environment(\.colorScheme) var colorScheme
+    @Binding var isShown: Bool
+    let action: () -> Void
+    var shadowColor: Color = .black
+    var width: Double = 48
+    var height: Double = 48
+    var padding: Double = 8
+
+    var body: some View {
+        Button(action: action) {
+            Icon(path: isShown ? "Icons/Eye" : "Icons/Eye-Off")
+                .frame(width: width, height: height)
+                .padding(.all, padding)
+                .background(.ultraThinMaterial, in: Circle())
+                .opacity(0.8)
+                .mask(
+                    Circle())
+                .overlay(
+                    Circle()
+                        .stroke(lineWidth: 0.5)
+                        .fill(.white)
+                        .opacity(
+                            colorScheme == .light ?
+                                0.5 : 0.35))
+                .shadow(color: .yellow.opacity(0.3),
+                        radius: 20, x: 0, y: 20)
+        }
+        .buttonStyle(ScaleButtonStyle())
+    }
+}
+
 struct HexagonIconButton<Content: View>: View {
     @Environment(\.colorScheme) var colorScheme
     @ViewBuilder var content: Content
@@ -71,6 +103,9 @@ struct IconButtons_Previews: PreviewProvider {
             CircleIconButton(content: {
                 Icon(path: "Icons/Frog")
             }, action: dummyFunction, shadowColor: .green)
+            ShowPasswordButton(isShown: .constant(true),
+                               action: dummyFunction,
+                               shadowColor: .green)
             HexagonIconButton(content: {
                 Icon(path: "Icons/Frog")
             }, action: dummyFunction, shadowColor: .green)

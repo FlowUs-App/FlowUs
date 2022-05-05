@@ -63,9 +63,76 @@ struct TextInputDouble: View {
                         : color : invalidSecond ? .red : .white)
                     .padding().ignoresSafeArea(.keyboard, edges: .bottom)
                     .placeholder(when: inputSecond.isEmpty) {
-                        Text(placeholderTextSecond) .foregroundColor(placeholderColor)
+                        Text(placeholderTextSecond).foregroundColor(placeholderColor)
                             .padding()
                     }
+            }
+        }, addPadding: false, strokeColor: invalidFirst || invalidSecond ? .red : .white)
+            .frame(width: UIScreen.screenWidth - 15)
+    }
+}
+
+struct SecureTextInputDouble: View {
+    @Environment(\.colorScheme) var colorScheme
+    @Binding var inputFirst: String
+    @Binding var inputSecond: String
+    @Binding var showFirst: Bool
+    @Binding var showSecond: Bool
+    @State var invalidFirst: Bool = false
+    @State var invalidSecond: Bool = false
+    var color: Color = .black
+    var placeholderColor: Color = .white
+    var placeholderTextFirst: String = "Placeholder"
+    var placeholderTextSecond: String = "Placeholder"
+
+    var body: some View {
+        GlasmorphicCard(content: {
+            VStack(spacing: 0) {
+                if showFirst {
+                    TextField(placeholderTextFirst, text: $inputFirst)
+                        .foregroundColor(colorScheme == .light
+                            ? invalidFirst ? .red
+                            : color : invalidFirst ? .red : .white)
+                        .padding()
+                        .placeholder(when: inputFirst.isEmpty) {
+                            Text(placeholderTextFirst)
+                                .foregroundColor(placeholderColor)
+                                .padding()
+                        }
+                } else {
+                    SecureField(placeholderTextFirst, text: $inputFirst)
+                        .foregroundColor(colorScheme == .light
+                            ? invalidFirst ? .red
+                            : color : invalidFirst ? .red : .white)
+                        .padding()
+                        .placeholder(when: inputFirst.isEmpty) {
+                            Text(placeholderTextFirst)
+                                .foregroundColor(placeholderColor)
+                                .padding()
+                        }
+                }
+                Divider().background(invalidFirst || invalidSecond ? .red : .white)
+                if showSecond {
+                    TextField(placeholderTextSecond, text: $inputSecond)
+                        .foregroundColor(colorScheme == .light
+                            ? invalidSecond ? .red
+                            : color : invalidSecond ? .red : .white)
+                        .padding().ignoresSafeArea(.keyboard, edges: .bottom)
+                        .placeholder(when: inputSecond.isEmpty) {
+                            Text(placeholderTextSecond).foregroundColor(placeholderColor)
+                                .padding()
+                        }
+                } else {
+                    SecureField(placeholderTextSecond, text: $inputSecond)
+                        .foregroundColor(colorScheme == .light
+                            ? invalidSecond ? .red
+                            : color : invalidSecond ? .red : .white)
+                        .padding().ignoresSafeArea(.keyboard, edges: .bottom)
+                        .placeholder(when: inputSecond.isEmpty) {
+                            Text(placeholderTextSecond).foregroundColor(placeholderColor)
+                                .padding()
+                        }
+                }
             }
         }, addPadding: false, strokeColor: invalidFirst || invalidSecond ? .red : .white)
             .frame(width: UIScreen.screenWidth - 15)
@@ -128,7 +195,7 @@ struct TextInputTriple: View {
     }
 }
 
-//struct TextInputs_Previews: PreviewProvider {
+// struct TextInputs_Previews: PreviewProvider {
 //    static var previews: some View {
 //        DefaultPreview(content: VStack {
 //            TextInput()
@@ -144,4 +211,4 @@ struct TextInputTriple: View {
 //            Spacer()
 //        }, gradient: true)
 //    }
-//}
+// }
