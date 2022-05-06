@@ -13,11 +13,12 @@ class RegisterOO: ObservableObject {
     @Published var data: RegisterDO
 
     init() {
+        let langStr = Locale.current.regionCode
         data = .init(id: "",
                      name: "",
                      username: "",
                      email: "",
-                     country: Country.init(isoCode: "US"),
+                     country: Country(isoCode: langStr ?? "US"),
                      birthday: Date.now,
                      sex: "",
                      password: "",
@@ -37,7 +38,7 @@ class RegisterOO: ObservableObject {
         print(data.confirmPassword)
         print(data.showPassword)
     }
-    
+
     func toogleViewPassword() {
         data.showPassword.toggle()
     }
