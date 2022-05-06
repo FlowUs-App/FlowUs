@@ -25,6 +25,9 @@ struct FlowUsApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     @StateObject var pilot = UIPilot(initial: AppRoute.Welcome)
     @Environment(\.colorScheme) var colorScheme
+    init() {
+        UIScrollView.appearance().keyboardDismissMode = .interactive
+    }
 
     var body: some Scene {
         WindowGroup {
@@ -38,9 +41,13 @@ struct FlowUsApp: App {
                         .navigationBarHidden(true)
                         .navigationBarBackButtonHidden(true))
                 case .Register:
-                    return AnyView(RegisterView().navigationBarHidden(true).navigationBarBackButtonHidden(true))
+                    return AnyView(RegisterView()
+                        .navigationBarHidden(true)
+                        .navigationBarBackButtonHidden(true))
                 case .Verify:
-                    return AnyView(VerifyView().navigationBarHidden(true).navigationBarBackButtonHidden(true))
+                    return AnyView(VerifyView()
+                        .navigationBarHidden(true)
+                        .navigationBarBackButtonHidden(true))
                 }
             }
         }

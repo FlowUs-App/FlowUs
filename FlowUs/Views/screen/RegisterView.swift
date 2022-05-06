@@ -49,8 +49,12 @@ struct RegisterView: View {
 
 struct RegisterViewScrollView<Content: View>: View {
     @ViewBuilder var content: Content
+    @State var verticalOffset: CGFloat = 0.0
+
     var body: some View {
-        ScrollView(showsIndicators: false) {
+        OffsettableScrollView { point in
+            verticalOffset = point.y
+        } content: {
             VStack {
                 content
             }.padding(.top, UIDevice.current.hasNotch ? 48 : 24)
@@ -62,11 +66,13 @@ struct RegisterViewScrollView<Content: View>: View {
                     startPoint: .top,
                     endPoint: .bottom)
                     .frame(height: 1000))
-        }.keyboardAware()
-            .background(VStack(spacing: 0) {
-                Color(hex: "0D6FCA")
-                Color(hex: "4B0384")
-            }).ignoresSafeArea()
+        }
+        .keyboardAware()
+        .background(VStack(spacing: 0) {
+            -verticalOffset / UIScreen.screenHeight >= 0.25 ?
+                Color(hex: "4B0384") : Color(hex: "0D6FCA")
+            Color(hex: "4B0384")
+        }).ignoresSafeArea()
     }
 }
 
@@ -133,7 +139,6 @@ struct RegisterBirthInfo: View {
             Spacer()
         }
         .frame(width: UIScreen.screenWidth - 15)
-        .padding(.top, 8)
 
         HStack {
             VStack {

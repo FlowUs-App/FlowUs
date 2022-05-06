@@ -73,6 +73,7 @@
 		4DE90A5E282072760096FE22 /* RegisterDO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE90A5D282072760096FE22 /* RegisterDO.swift */; };
 		4DE90A602820779A0096FE22 /* LoginDO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE90A5F2820779A0096FE22 /* LoginDO.swift */; };
 		4DE90A6228231A770096FE22 /* VerifyOO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE90A6128231A770096FE22 /* VerifyOO.swift */; };
+		4DE90A652825DF360096FE22 /* OffsettableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE90A642825DF360096FE22 /* OffsettableScrollView.swift */; };
 		4DFC3F072812176200CAE539 /* StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFC3F062812176200CAE539 /* StatusBar.swift */; };
 /* End PBXBuildFile section */
 
@@ -152,6 +153,7 @@
 		4DE90A5F2820779A0096FE22 /* LoginDO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDO.swift; sourceTree = "<group>"; };
 		4DE90A6128231A770096FE22 /* VerifyOO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyOO.swift; sourceTree = "<group>"; };
 		4DE90A632825D41B0096FE22 /* FlowUs.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FlowUs.entitlements; sourceTree = "<group>"; };
+		4DE90A642825DF360096FE22 /* OffsettableScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffsettableScrollView.swift; sourceTree = "<group>"; };
 		4DFC3F062812176200CAE539 /* StatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -311,6 +313,7 @@
 				4D5141682804D7EC00D37C33 /* Typography.swift */,
 				4D58FFF02809D8FE002337AE /* Icon.swift */,
 				4D8AB48B280B7C72006A3B2F /* Toast.swift */,
+				4DE90A642825DF360096FE22 /* OffsettableScrollView.swift */,
 			);
 			path = display;
 			sourceTree = "<group>";
@@ -684,6 +687,7 @@
 				4D58FFF12809D8FE002337AE /* Icon.swift in Sources */,
 				4D510113280C753500BE3988 /* Configuration.swift in Sources */,
 				4D510105280C6EE200BE3988 /* Constants.swift in Sources */,
+				4DE90A652825DF360096FE22 /* OffsettableScrollView.swift in Sources */,
 				4D7F0427281449F5001A3BC4 /* DateInput.swift in Sources */,
 				4DE3146526A78FDE007A51FE /* ContentDO.swift in Sources */,
 				4D28C77F280613B900F3A2AE /* Buttons.swift in Sources */,
