@@ -109,7 +109,7 @@ struct SecureTextInputDouble: View {
                             Text(placeholderTextFirst)
                                 .foregroundColor(placeholderColor)
                                 .padding()
-                        }
+                        }.textContentType(.oneTimeCode)
                 }
                 Divider().background(invalidFirst || invalidSecond ? .red : .white)
                 if showSecond {
@@ -131,7 +131,7 @@ struct SecureTextInputDouble: View {
                         .placeholder(when: inputSecond.isEmpty) {
                             Text(placeholderTextSecond).foregroundColor(placeholderColor)
                                 .padding()
-                        }
+                        }.textContentType(.oneTimeCode)
                 }
             }
         }, addPadding: false, strokeColor: invalidFirst || invalidSecond ? .red : .white)

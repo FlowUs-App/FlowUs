@@ -151,6 +151,7 @@
 		4DE90A5D282072760096FE22 /* RegisterDO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterDO.swift; sourceTree = "<group>"; };
 		4DE90A5F2820779A0096FE22 /* LoginDO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDO.swift; sourceTree = "<group>"; };
 		4DE90A6128231A770096FE22 /* VerifyOO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyOO.swift; sourceTree = "<group>"; };
+		4DE90A632825D41B0096FE22 /* FlowUs.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FlowUs.entitlements; sourceTree = "<group>"; };
 		4DFC3F062812176200CAE539 /* StatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -351,6 +352,7 @@
 		4DBDB0C626A4D85300B01255 /* FlowUs */ = {
 			isa = PBXGroup;
 			children = (
+				4DE90A632825D41B0096FE22 /* FlowUs.entitlements */,
 				4D0DC003281E058C00AED34B /* ExtraAssets */,
 				4D5F85A7280CC58B003BE722 /* Localizable */,
 				4D796D76280394E20020FF26 /* Utils */,
@@ -826,6 +828,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Dev";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FlowUs/FlowUs.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FlowUs/Preview Content\"";
@@ -951,6 +954,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Staging";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FlowUs/FlowUs.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FlowUs/Preview Content\"";
@@ -1074,6 +1078,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FlowUs/FlowUs.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FlowUs/Preview Content\"";
@@ -1256,6 +1261,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Dev";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FlowUs/FlowUs.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FlowUs/Preview Content\"";
@@ -1281,6 +1287,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FlowUs/FlowUs.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FlowUs/Preview Content\"";
@@ -1446,6 +1453,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Staging";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FlowUs/FlowUs.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FlowUs/Preview Content\"";
