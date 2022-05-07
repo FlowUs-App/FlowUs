@@ -38,6 +38,7 @@
 		4D8AB48A280B7C54006A3B2F /* SimpleToast in Frameworks */ = {isa = PBXBuildFile; productRef = 4D8AB489280B7C54006A3B2F /* SimpleToast */; };
 		4D8AB48C280B7C72006A3B2F /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8AB48B280B7C72006A3B2F /* Toast.swift */; };
 		4D8AB48F280B8EA0006A3B2F /* Colorful in Frameworks */ = {isa = PBXBuildFile; productRef = 4D8AB48E280B8EA0006A3B2F /* Colorful */; };
+		4D949EA02826D42600C88B64 /* RegisterViewUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D949E9F2826D42600C88B64 /* RegisterViewUITest.swift */; };
 		4DB61A53280A253E00D900C0 /* SelectionInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB61A52280A253E00D900C0 /* SelectionInput.swift */; };
 		4DB61A55280A369100D900C0 /* RadioButtonGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB61A54280A369100D900C0 /* RadioButtonGroup.swift */; };
 		4DB61A57280A38C800D900C0 /* RadioButtonDO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB61A56280A38C800D900C0 /* RadioButtonDO.swift */; };
@@ -121,6 +122,7 @@
 		4D796D792803986E0020FF26 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		4D7F0426281449F5001A3BC4 /* DateInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateInput.swift; sourceTree = "<group>"; };
 		4D8AB48B280B7C72006A3B2F /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		4D949E9F2826D42600C88B64 /* RegisterViewUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewUITest.swift; sourceTree = "<group>"; };
 		4DB61A52280A253E00D900C0 /* SelectionInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionInput.swift; sourceTree = "<group>"; };
 		4DB61A54280A369100D900C0 /* RadioButtonGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonGroup.swift; sourceTree = "<group>"; };
 		4DB61A56280A38C800D900C0 /* RadioButtonDO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonDO.swift; sourceTree = "<group>"; };
@@ -436,6 +438,7 @@
 			children = (
 				4DE3148226A7935B007A51FE /* FlowUsUITests.swift */,
 				4DE3148426A7935B007A51FE /* Info.plist */,
+				4D949E9F2826D42600C88B64 /* RegisterViewUITest.swift */,
 			);
 			path = FlowUsUITests;
 			sourceTree = "<group>";
@@ -735,6 +738,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DE3148326A7935B007A51FE /* FlowUsUITests.swift in Sources */,
+				4D949EA02826D42600C88B64 /* RegisterViewUITest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
