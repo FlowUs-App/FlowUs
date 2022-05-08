@@ -59,8 +59,8 @@ struct VerifyView: View {
     }
 }
 
-struct VerifyView_Previews: PreviewProvider {
-    static var previews: some View {
-        DefaultPreview(content: VerifyView())
-    }
-}
+// struct VerifyView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        DefaultPreview(content: VerifyView())
+//    }
+// }

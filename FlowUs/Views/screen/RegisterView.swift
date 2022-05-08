@@ -40,6 +40,7 @@ struct RegisterView: View {
                     action: navigateToVerify,
                     text: "register.step.one".l10n(),
                     shadowsEnabled: false)
+                .accessibilityIdentifier("Verify")
             }
             .padding(.top, 24)
             .padding(.bottom, 48)
@@ -192,8 +193,8 @@ struct RegisterPassword: View {
     }
 }
 
-struct RegisterView_Previews: PreviewProvider {
-    static var previews: some View {
-        DefaultPreview(content: RegisterView())
-    }
-}
+//struct RegisterView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        DefaultPreview(content: RegisterView())
+//    }
+//}
