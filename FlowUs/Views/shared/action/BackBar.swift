@@ -16,7 +16,8 @@ struct BackBar: View {
                 Icon(path: "Icons/Back")
             }, action: { pilot.pop() },
             shadowColor: .pink, width: 32, height: 32)
-                .padding(.leading, 8)
+            .padding(.leading, 8)
+            .accessibilityIdentifier("backButton")
             Spacer()
         }
         .padding(.top, UIDevice.current.hasNotch ? -8 : 0)

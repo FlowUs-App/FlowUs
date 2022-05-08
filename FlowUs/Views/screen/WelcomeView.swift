@@ -37,7 +37,9 @@ struct WelcomeView: View {
                 WelcomeText()
                 HStack(spacing: 40) {
                     SecondaryButtonS(action: navigateToLogin, text: "welcome.login".l10n())
+                        .accessibilityIdentifier("Login")
                     PrimaryButtonS(action: navigateToRegister, text: "welcome.register".l10n())
+                        .accessibilityIdentifier("JoinNow")
                 }.padding(.vertical, 12)
             }.ignoresSafeArea()
         }
@@ -115,6 +117,7 @@ struct WelcomeText: View {
         HStack(spacing: 0) {
             VStack(alignment: .leading, spacing: 0) {
                 CommonText(text: "welcome.hey".l10n())
+                    .padding(.bottom, 4)
                 VStack(alignment: .leading, spacing: 0) {
                     CommonText(text: "welcome.my.name.is.lucas".l10n())
                         .padding(.bottom, 4)
@@ -132,8 +135,8 @@ struct WelcomeText: View {
     }
 }
 
-struct WelcomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        DefaultPreview(content: WelcomeView())
-    }
-}
+// struct WelcomeView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        DefaultPreview(content: WelcomeView())
+//    }
+// }

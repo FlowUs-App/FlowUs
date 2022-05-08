@@ -36,11 +36,13 @@ struct LoginView: View {
                 PrimaryButton(action: loginOO.signIn,
                               text: "login.login".l10n())
                     .frame(width: UIScreen.screenWidth)
+                    .accessibilityIdentifier("SignIn")
                 Button(action: navigateToRegister, label: {
                     CommonText(text: "login.not.a.member".l10n())
                         .foregroundColor(colorScheme == .light ? .black : .white)
                 }).padding(.vertical, 16)
                     .buttonStyle(ScaleButtonStyle())
+                    .accessibilityIdentifier("NotAMember")
             }.frame(width: UIScreen.screenWidth)
                 .keyboardAware()
         }
@@ -82,7 +84,7 @@ struct LoginMidSection: View {
                 VStack {
                     SecureTextInputDouble(inputFirst: $email,
                                           inputSecond: $password,
-                                          showFirst: .constant(false),
+                                          showFirst: .constant(true),
                                           showSecond: $showPassword,
                                           color: colorScheme == .light ? .black : .white,
                                           placeholderColor:
@@ -131,8 +133,8 @@ struct LoginMidSectionBlurredItems: View {
     }
 }
 
-struct LoginView_Previews: PreviewProvider {
-    static var previews: some View {
-        DefaultPreview(content: LoginView())
-    }
-}
+// struct LoginView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        DefaultPreview(content: LoginView())
+//    }
+// }
