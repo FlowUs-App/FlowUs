@@ -24,6 +24,34 @@ struct ImageSamplePreview: View {
     }
 }
 
+struct QuickDefaultPreview<Content: View>: View {
+    let content: Content
+    var gradient: Bool = false
+    var body: some View {
+        Group {
+            ZStack {
+                if gradient {
+                    LinearGradientPreview()
+                } else {
+                    Color.white
+                }
+                VStack {
+                    content
+                }
+            }.previewDevice(PreviewDevice(rawValue: DeviceNames.iPhone_13.rawValue))
+                .previewDisplayName(DeviceNames.iPhone_13.rawValue)
+            ZStack {
+                Color.black
+                VStack {
+                    content
+                }
+            }.previewDevice(PreviewDevice(rawValue: DeviceNames.iPhone_13.rawValue))
+                .previewDisplayName(DeviceNames.iPhone_13.rawValue + " (Dark)")
+                .preferredColorScheme(.dark)
+        }
+    }
+}
+
 struct DefaultPreview<Content: View>: View {
     let content: Content
     var gradient: Bool = false

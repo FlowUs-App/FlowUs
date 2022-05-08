@@ -9,14 +9,17 @@ import SwiftUI
 
 struct SelectionInput: View {
     @Environment(\.colorScheme) var colorScheme
+    @Binding var selectedItem: String
     let items: [String]
     let text: String
+    var color: Color = .black
 
     var body: some View {
         ZStack {
             GlasmorphicCard(content: {
                 VStack(alignment: .leading) {
                     CommonText(text: text, semibold: true)
+                        .foregroundColor(color)
                         .fixedSize(horizontal: false, vertical: true)
                         .padding(.top, 12)
                         .padding(.leading, 12)
@@ -25,10 +28,10 @@ struct SelectionInput: View {
                     RadioButtonGroup(items: items,
                                      selectedId: "1. Option",
                                      callback: { selected in
-                                         print("Selected is: \(selected)")
+                                         selectedItem = selected
                                      },
-                                     dividersOn: true)
-
+                                     dividersOn: true,
+                                     color: color)
                 }.padding(.bottom, 12)
             }, addPadding: false)
         }
@@ -44,17 +47,16 @@ struct SelectionInput: View {
                     colorScheme == .light ?
                         0.5 : 0.35))
         .shadow(color: .black.opacity(0.2), radius: 20, x: 0, y: 20)
-        .padding()
     }
 }
 
-struct SelectionInput_Previews: PreviewProvider {
-    static var previews: some View {
-        DefaultPreview(content: VStack { HStack {
-            SelectionInput(items: ["1. Option", "2. Option", "3. Option Long"], text: "Choose 1, 2 or 3")
-            SelectionInput(items: ["1. Option", "2. Option", "3. Option", "4. Option"], text: "Choose 1, 2, 3 or 4")
-        }
-        SelectionInput(items: ["1. Option", "2. Option", "3. Option", "4. Option", "5. Option"], text: "Choose 1, 2, 3, 4 or 5")
-        }, gradient: true)
-    }
-}
+// struct SelectionInput_Previews: PreviewProvider {
+//    static var previews: some View {
+//        DefaultPreview(content: VStack { HStack {
+//            SelectionInput(items: ["1. Option", "2. Option", "3. Option Long"], text: "Choose 1, 2 or 3")
+//            SelectionInput(items: ["1. Option", "2. Option", "3. Option", "4. Option"], text: "Choose 1, 2, 3 or 4")
+//        }
+//        SelectionInput(items: ["1. Option", "2. Option", "3. Option", "4. Option", "5. Option"], text: "Choose 1, 2, 3, 4 or 5")
+//        }, gradient: true)
+//    }
+// }

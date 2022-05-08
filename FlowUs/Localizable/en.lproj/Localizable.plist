@@ -2,7 +2,71 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>hello.world</key>
-	<string>Hello world</string>
+	<key>select.country</key>
+	<string>Select country</string>
+	<key>search</key>
+	<string>Suche</string>
+	<key>close</key>
+	<string>Close</string>
+	<key>verify.description</key>
+	<string>Enter the magic numbers we have sent to your email address to confirm your account and enjoy the app</string>
+	<key>verify.header</key>
+	<string>Last Step</string>
+	<key>register.mail.verify</key>
+	<string>You will receive a code to verify your email</string>
+	<key>register.country</key>
+	<string>Country</string>
+	<key>register.step.two</key>
+	<string>Register 2/2</string>
+	<key>register.step.one</key>
+	<string>Register 1/2</string>
+	<key>register.password.repeat</key>
+	<string>Repeat password</string>
+	<key>register.password</key>
+	<string>Password</string>
+	<key>register.sex</key>
+	<string>Choose sex</string>
+	<key>register.birthday</key>
+	<string>Birthday</string>
+	<key>register.user.mail</key>
+	<string>Email adress</string>
+	<key>register.user.name</key>
+	<string>Username</string>
+	<key>register.real.name</key>
+	<string>Name</string>
+	<key>register.creat.account</key>
+	<string>Create Account</string>
+	<key>login.not.a.member</key>
+	<string>Not a member yet? **Register now**</string>
+	<key>login.login</key>
+	<string>Sign in</string>
+	<key>login.forgot.password</key>
+	<string>Forgot Password?</string>
+	<key>login.password</key>
+	<string>Password</string>
+	<key>login.email</key>
+	<string>Email adress</string>
+	<key>login.welcome.back</key>
+	<string>Welcome back **you** have been missed!</string>
+	<key>login.welcome.again</key>
+	<string>Hello again</string>
+	<key>welcome.to.flowus</key>
+	<string>FlowUs</string>
+	<key>welcome.to.flowus.welcome</key>
+	<string>Welcome to</string>
+	<key>welcome.login</key>
+	<string>Sign in</string>
+	<key>welcome.register</key>
+	<string>Join now</string>
+	<key>welcome.text.rest</key>
+	<string>I kind of look like the guy on the top with the computer. My mission is to establish a community full of supportive individuals that share the goal of self-improvement. If you want to be part of it make sure to register an account.</string>
+	<key>welcome.thx.for.download</key>
+	<string>Thank you for downloading the app</string>
+	<key>welcome.my.name.is.lucas</key>
+	<string>my name is **Lucas Goldner** welcome to **FlowUs.**</string>
+	<key>welcome.hey</key>
+	<string>Hey,</string>
+	<key>FlowUs</key>
+	<string>FlowUs</string>
 </dict>
 </plist>

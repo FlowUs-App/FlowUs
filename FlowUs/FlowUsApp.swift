@@ -8,6 +8,7 @@
 import Firebase
 import L10n_swift
 import SwiftUI
+import UIPilot
 
 class AppDelegate: NSObject, UIApplicationDelegate {
     func application(_ application: UIApplication,
@@ -22,19 +23,32 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct FlowUsApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    @StateObject var pilot = UIPilot(initial: AppRoute.Welcome)
+    @Environment(\.colorScheme) var colorScheme
+    init() {
+        UIScrollView.appearance().keyboardDismissMode = .interactive
+    }
 
     var body: some Scene {
         WindowGroup {
-            ZStack {
-                LinearGradientPreview()
-                ScrollView {
-                    VStack {
-                        CountryInput()
-                        CommonText(text: "hello.world".l10n())
-                        TextInput()
-                        TextInputDouble()
-                    }
-                }.keyboardAware()
+            UIPilotHost(pilot) { route in
+                switch route {
+                case .Welcome:
+                    return AnyView(WelcomeView()
+                        .navigationBarHidden(true))
+                case .Login:
+                    return AnyView(LoginView()
+                        .navigationBarHidden(true)
+                        .navigationBarBackButtonHidden(true))
+                case .Register:
+                    return AnyView(RegisterView()
+                        .navigationBarHidden(true)
+                        .navigationBarBackButtonHidden(true))
+                case .Verify:
+                    return AnyView(VerifyView()
+                        .navigationBarHidden(true)
+                        .navigationBarBackButtonHidden(true))
+                }
             }
         }
     }

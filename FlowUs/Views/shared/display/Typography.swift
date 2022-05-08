@@ -20,8 +20,9 @@ struct HeadingBGradient: View {
         startPoint: .leading,
         endPoint: .trailing
     )
+
     var body: some View {
-        Text(text).font(.system(size: 48))
+        Text(.init(text)).font(.system(size: 48))
             .fontWeight(.bold)
             .overlay(
                 gradient
@@ -36,28 +37,28 @@ struct HeadingBGradient: View {
 struct HeadingB: View {
     var text = ""
     var body: some View {
-        Text(text).font(.system(size: 48)).fontWeight(.bold)
+        Text(.init(text)).font(.system(size: 48)).fontWeight(.bold)
     }
 }
 
 struct HeadingM: View {
     var text = ""
     var body: some View {
-        Text(text).font(.system(size: 36)).fontWeight(.bold)
+        Text(.init(text)).font(.system(size: 36)).fontWeight(.bold)
     }
 }
 
 struct HeadingS: View {
     var text = ""
     var body: some View {
-        Text(text).font(.system(size: 24)).fontWeight(.bold)
+        Text(.init(text)).font(.system(size: 24)).fontWeight(.bold)
     }
 }
 
 struct Caption: View {
     var text = ""
     var body: some View {
-        Text(text).font(Font.system(size: 18)).fontWeight(.semibold).textCase(.uppercase)
+        Text(.init(text)).font(Font.system(size: 18)).fontWeight(.semibold).textCase(.uppercase)
     }
 }
 
@@ -66,9 +67,10 @@ struct CommonText: View {
     var text = ""
     var semibold = false
     var body: some View {
-        Text(text)
+        Text(.init(text))
             .font(Font.system(size: 16))
             .fontWeight(semibold ? .semibold : .regular)
+            .lineSpacing(4)
     }
 }
 
@@ -78,7 +80,7 @@ struct CommonTextC: View {
     var semibold = false
     var color = Color.black
     var body: some View {
-        Text(text)
+        Text(.init(text))
             .font(Font.system(size: 16))
             .fontWeight(semibold ? .semibold : .regular)
             .foregroundColor(color)
@@ -89,7 +91,7 @@ struct CommonTextS: View {
     var text = ""
     var semibold = false
     var body: some View {
-        Text(text).font(Font.system(size: 14))
+        Text(.init(text)).font(Font.system(size: 14))
             .fontWeight(semibold ? .semibold : .regular)
     }
 }

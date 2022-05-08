@@ -7,12 +7,14 @@
 
 import CountryPicker
 import SwiftUI
+import L10n_swift
 
 struct CountryInput: View {
     @Environment(\.colorScheme) var colorScheme
-    @State private var input: String = ""
-    @State private var country: Country?
+    @Binding var country: Country?
     @State private var showCountryPicker = false
+    let width: Double
+    let height: Double
     var color: Color = .black
     var placeholderColor: Color = .white
     var placeholderText: String = "Placeholder"
@@ -22,9 +24,9 @@ struct CountryInput: View {
         selectedCountryCodeCornerRadius: CGFloat(15),
         closeButtonTextColor: UIColor.red,
         closeButtonFont: UIFont.systemFont(ofSize: 16),
-        closeButtonText: "Close",
-        titleText: "Select Country",
-        searchBarPlaceholder: "Search",
+        closeButtonText: "close".l10n(),
+        titleText: "select.country".l10n(),
+        searchBarPlaceholder: "search".l10n(),
         searchBarFont: UIFont.systemFont(ofSize: 16),
         searchBarCornerRadius: CGFloat(15))
 
@@ -37,7 +39,7 @@ struct CountryInput: View {
                     Text(country?.isoCode.getFlag() ?? "-")
                         .foregroundColor(.white)
                         .font(.system(size: 48))
-                }.frame(width: UIScreen.screenWidth / 5)
+                }.frame(width: width, height: height)
             }.sheet(isPresented: $showCountryPicker) {
                 CountryPicker(country: $country)
             }
@@ -47,8 +49,10 @@ struct CountryInput: View {
     }
 }
 
-struct SelectInputs_Previews: PreviewProvider {
-    static var previews: some View {
-        DefaultPreview(content: CountryInput(), gradient: true)
-    }
-}
+//struct SelectInputs_Previews: PreviewProvider {
+//    static var previews: some View {
+//        DefaultPreview(content:
+//            CountryInput(width: UIScreen.screenWidth / 5, height: 100),
+//            gradient: true)
+//    }
+//}

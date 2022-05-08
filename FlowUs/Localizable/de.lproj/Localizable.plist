@@ -2,7 +2,71 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>hello.world</key>
-	<string>Hallo Welt</string>
+	<key>select.country</key>
+	<string>Wähle ein Land</string>
+	<key>search</key>
+	<string>Suche</string>
+	<key>close</key>
+	<string>Schließen</string>
+	<key>verify.description</key>
+	<string>Geben Sie die magischen Zahlen ein, die wir an Ihre E-Mail-Adresse geschickt haben, um Ihr Konto zu bestätigen, und genießen Sie die App</string>
+	<key>verify.header</key>
+	<string>Fast fertig</string>
+	<key>register.mail.verify</key>
+	<string>Ein Code zur Authentifizierung wird an die Email Adresse gesendet </string>
+	<key>register.country</key>
+	<string>Land</string>
+	<key>register.step.two</key>
+	<string>Registrierung 2/2</string>
+	<key>register.step.one</key>
+	<string>Registrierung 1/2</string>
+	<key>register.password.repeat</key>
+	<string>Passwort wiederholen</string>
+	<key>register.password</key>
+	<string>Passwort</string>
+	<key>register.sex</key>
+	<string>Geschlecht</string>
+	<key>register.birthday</key>
+	<string>Geburtsdatum</string>
+	<key>register.user.mail</key>
+	<string>Email Adresse</string>
+	<key>register.user.name</key>
+	<string>Nutzername</string>
+	<key>register.real.name</key>
+	<string>Name</string>
+	<key>register.creat.account</key>
+	<string>Kontoerstellung</string>
+	<key>login.not.a.member</key>
+	<string>Noch kein Account? **Registriere dich jetzt**</string>
+	<key>login.login</key>
+	<string>Einloggen</string>
+	<key>login.forgot.password</key>
+	<string>Passwort vergessen?</string>
+	<key>login.password</key>
+	<string>Passwort</string>
+	<key>login.email</key>
+	<string>Email Adresse</string>
+	<key>login.welcome.back</key>
+	<string>Wir haben **dich** vermisst!</string>
+	<key>login.welcome.again</key>
+	<string>Wieder da?</string>
+	<key>welcome.to.flowus</key>
+	<string>bei FlowUs</string>
+	<key>welcome.to.flowus.welcome</key>
+	<string>Willkommen</string>
+	<key>welcome.login</key>
+	<string>Einloggen</string>
+	<key>welcome.register</key>
+	<string>Registrieren</string>
+	<key>welcome.text.rest</key>
+	<string>Ich sehe irgendwie aus wie der Typ oben mit dem Computer. Meine Mission ist es, eine Platform zu bauen mit Usern, die das Ziel der Selbsentwicklung teilen. Wenn du Teil davon sein möchtest, dann registriere jetzt einen Account.</string>
+	<key>welcome.thx.for.download</key>
+	<string>Vielen Dank für das Herunterladen der App</string>
+	<key>welcome.my.name.is.lucas</key>
+	<string>ich bin **Lucas Goldner** und das ist **FlowUs.**</string>
+	<key>welcome.hey</key>
+	<string>Servus,</string>
+	<key>FlowUs</key>
+	<string>FlowUs</string>
 </dict>
 </plist>
